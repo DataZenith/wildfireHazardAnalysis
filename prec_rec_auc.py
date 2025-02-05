@@ -33,6 +33,12 @@ x = df['Burn_probability']  # Model's predicted probabilities
 y = df['Fire_occurance']  # binary repsons for fire present or not
 z = df['Random_Values'] #randomly generated numbers to simulate probaiblities
 
+summary_stats = x.describe()
+
+print("Summary Statistics for Burn Probabilities:")
+print(summary_stats)
+
+
 
 # Compute Precision-Recall curve for the model
 precision_model, recall_model, _ = precision_recall_curve(y, x)
