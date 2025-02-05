@@ -51,23 +51,4 @@ The code in this repository is organized to support reproducibility and transpar
   Download QGIS from [qgis.org](https://qgis.org/en/site/).
 
 
-## How to Reproduce the Analysis
 
-1. **Clone the Repository:**  
-   ```bash
-   git clone https://github.com/yourusername/your-project-repo.git
-   ```
-2. **Install Dependencies:**  
-   Ensure you have the required libraries by running:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. **Run the Analysis:**  
-   - Open the Jupyter notebooks in the `/code/notebooks` folder to follow the step-by-step analysis.  
-   - Alternatively, run the standalone scripts in the `/code/scripts` directory for batch processing.
-4. **Review Outputs:**  
-   The generated visualizations and analysis results are stored in the `/results` folder, and a comprehensive summary is available in the final PDF report in the `/docs` folder.
-
-## Transparency and Collaboration
-
-This repository is part of an open research effort to analyze wildfire hazards using robust data-driven methods. By providing access to both the code and detailed documentation of the methodology, we aim to promote transparency, reproducibility, and collaboration. Feedback, contributions, and questions are welcome.
