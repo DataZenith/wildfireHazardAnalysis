@@ -76,7 +76,9 @@ The data used in this analysis comes from multiple sources, including model outp
        - **Min Value**: 0.000000
        - **25th Percentile**: 0.00108
        - **75th Percentile**: 0.01401
-       - **Max Value**: 0.07428 <br>
+       - **Max Value**: 0.07428
+
+         <br>
 
     2. **Fire Occurrence (Binary Indicator)**  
      - Indicates whether a fire historically occurred in that pixel (**2000–2021**).  
