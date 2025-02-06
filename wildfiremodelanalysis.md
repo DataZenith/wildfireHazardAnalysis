@@ -250,9 +250,9 @@ To measure **how much fire risk is overestimated**, we:
 - Picked a **threshold** where **precision and recall are equal** (a balanced point).  
 - Calculated the **overestimation rate** using:  
 
-\[
+$$
 \text{Overestimate Rate} = \frac{\text{False Positives (FP)}}{\text{True Positives (TP)} + \text{False Positives (FP)}}
-\]
+$$
 
 This value represents the percentage of predicted fires that **never actually occurred**.
 
