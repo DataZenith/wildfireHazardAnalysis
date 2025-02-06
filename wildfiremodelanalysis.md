@@ -76,21 +76,19 @@ A full list of dataset links and additional details can be found in the **[GitHu
 ## Wildfire Burn Probability Map  
 The chart represents probability values using a grayscale gradient, where lower probabilities are darker (black) and higher probabilities are lighter (white).
 
-## Color Mapping:
+### Color Mapping:
 - **Black (0.000000 probability)**: Represents the lowest probability.
 - **White (0.072378 probability)**: Represents the highest probability.
 - **Gradient Transition**: Intermediate probabilities transition from black to white.
 
-## Interpretation:
+### Interpretation:
 - **Darker Regions (Near Black)**: Indicate areas with **low probability**.
 - **Lighter Regions (Near White)**: Indicate areas with **high probability**.
 - **Gradual Shading**: Helps visualize the probability distribution smoothly.
 
-## Purpose:
+### Purpose:
 - The grayscale mapping **enhances visibility** of probability changes.
 - It provides a **clear, intuitive** representation without requiring numerical labels.
-
-### Example Visualization:
 
 
 ![Burn Probability Map](images/burn_prob.JPG)
