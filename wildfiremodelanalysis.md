@@ -188,16 +188,35 @@ We need a **balance** between these two, which leads us to the **Precision-Recal
 
 Since precision and recall change depending on how confident the model is in its predictions, we plot a **Precision-Recall Curve** to analyze how it performs across different thresholds.
 
-### **What AUC Represents**
-- **The AUC (Area Under the Curve) is the average performance of the model across all confidence levels.**  
-- A **higher AUC** means the model performs better at distinguishing fire-prone areas.  
-- A **random model’s AUC is equal to the proportion of fire occurrences in the dataset** (21.55% or **0.2155** in this case).  
+### **How AUC is Calculated**
+- The model assigns a probability score (e.g., 0.02, 0.08, 0.15, etc.) to each location, estimating the likelihood of fire occurring.  
+- We **vary the threshold** (the cutoff point for deciding what counts as a "fire prediction") and calculate precision and recall at **each threshold**.  
+- These precision-recall points are **plotted on a graph**, forming the **Precision-Recall Curve**.  
+- The **AUC (Area Under the Curve)** is then calculated by measuring the total area beneath this curve, representing the **average performance** of the model across all confidence levels.
 
 ### **How to Interpret PR-AUC Values**
+#### **Industry Standards for PR-AUC in Imbalanced Datasets**
+Since PR-AUC is particularly useful for **imbalanced datasets**, it is important to compare model performance to known industry standards:
+
+- **Baseline Performance:**  
+  - A **random model** will have a PR-AUC equal to the percentage of positive cases in the dataset (21.55% or **0.2155** in this case).  
+  - A model with a PR-AUC **close to this baseline** is effectively random and not useful.
+
+- **Performance Tiers in Real-World Applications:**  
+  - **0.2155 – 0.4** → Slightly better than random guessing but still weak.  
+  - **0.4 – 0.6** → Moderate predictive power; some meaningful patterns detected.  
+  - **0.6 – 0.8** → Good performance; the model is effective in distinguishing fire-prone areas.  
+  - **0.8 and above** → Strong predictive ability; highly reliable for decision-making.  
+
+- **Comparison with Other Domains:**  
+  - **Fraud detection models**, which also deal with highly imbalanced datasets, typically aim for PR-AUC scores between **0.7 and 0.9**.  
+  - **Medical diagnostics**, where detecting rare conditions is critical, often require PR-AUC values above **0.8** to ensure high sensitivity and precision.  
+
+#### **Baseline (Random Model)**
 - **0.2155 (Baseline - Random Guessing)** → This means that just guessing fire probability at random would result in a PR-AUC of **0.2155** (21.55% of pixels have fire).  
-- **Above 0.2155** → The model is better than random and can help identify fire-prone areas.  
-- **Close to 0.2155** → The model is not useful, as it performs similarly to random guessing.  
-- **Below 0.2155** → The model is worse than random, meaning it is misleading and should not be used.  
+- If the model’s PR-AUC is **above 0.2155**, it is **better than random** and can help identify fire-prone areas.  
+- If it is **close to 0.2155**, it is **not useful** because it performs similarly to random guessing.  
+- If it is **below 0.2155**, the model is misleading and should not be used.  
 
 By comparing the model’s **actual PR-AUC to the baseline (0.2155),** we determine whether it provides **useful predictions** or just reflects the natural frequency of fire occurrences.
 
@@ -227,8 +246,6 @@ This **histogram analysis** helps determine if the model provides meaningful ins
 
 ## **5. Measuring Overestimation (False Alarms and Risk Inflation)**
 
-Another important question is: **Does the model overestimate fire risk?**  
-
 To measure **how much fire risk is overestimated**, we:  
 - Picked a **threshold** where **precision and recall are equal** (a balanced point).  
 - Calculated the **overestimation rate** using:  
@@ -255,13 +272,4 @@ This analysis **quantifies how much the model exaggerates fire likelihood**, ens
 ✅ **Histogram analysis** helps confirm whether the model’s predictions form a clear pattern or are indistinguishable from random noise.  
 ✅ **The overestimation analysis** ensures the model is not **artificially inflating fire risk** by predicting too many false fires.  
 
-This approach allows us to **assess model reliability and guide its use in decision-making.**  
-
----
-
-## **Final Thoughts**
-By performing these tests, we can **validate the model’s performance** and determine whether it is useful for identifying areas at risk of fire. The combination of **precision-recall analysis, random model comparison, histogram visualization, and overestimation estimation** ensures a thorough evaluation.
-
-Would you like to add **simple visual examples** (charts) to illustrate these concepts in your report? 🚀
-
-
+This approach allows us to **assess model reliability and guide its use in decision-making.**
