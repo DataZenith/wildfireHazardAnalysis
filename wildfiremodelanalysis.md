@@ -101,18 +101,18 @@ A full list of dataset links and additional details can be found in the **[GitHu
   The chart represents probability values using a grayscale gradient, where lower probabilities are darker (black) and higher probabilities are lighter (white).
 
   ### Color Mapping:
-    - **Black (0.000000 probability)**: Represents the lowest probability.
-    - **White (0.072378 probability)**: Represents the highest probability.
-    - **Gradient Transition**: Intermediate probabilities transition from black to white.
+  - **Black (0.000000 probability)**: Represents the lowest probability.
+  - **White (0.072378 probability)**: Represents the highest probability.
+  - **Gradient Transition**: Intermediate probabilities transition from black to white.
 
   ### Interpretation:
-    - **Darker Regions (Near Black)**: Indicate areas with **low probability**.
-    - **Lighter Regions (Near White)**: Indicate areas with **high probability**.
-    - **Gradual Shading**: Helps visualize the probability distribution smoothly.
+  - **Darker Regions (Near Black)**: Indicate areas with **low probability**.
+  - **Lighter Regions (Near White)**: Indicate areas with **high probability**.
+  - **Gradual Shading**: Helps visualize the probability distribution smoothly.
 
   ### Purpose:
-    - The grayscale mapping **enhances visibility** of probability changes.
-    - It provides a **clear, intuitive** representation without requiring numerical labels.
+  - The grayscale mapping **enhances visibility** of probability changes.
+  - It provides a **clear, intuitive** representation without requiring numerical labels.
 
 
 ![Burn Probability Map](images/burn_prob.JPG)
