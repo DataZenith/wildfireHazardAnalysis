@@ -85,12 +85,6 @@ The data used in this analysis comes from multiple sources, including model outp
      - **0 (No Fire)**: 78.45% of pixels  
      - **1 (Fire Occurred)**: 21.55% of pixels  
 
-    ### Key Notes:
-    - **Burn probability is continuous**, while **fire occurrence is binary (0 or 1).**
-    - **Fire occurrence colors do not represent severity—only presence.**
-    - The dataset provides **historical fire data** but does not predict future fire risk.
-
-    This transformed dataset is used to analyze spatial burn probability while overlaying past fire occurrences.
 
   
 - **2) Wildfire Hazard Model Data:**  
@@ -103,22 +97,22 @@ The data used in this analysis comes from multiple sources, including model outp
 
 A full list of dataset links and additional details can be found in the **[GitHub README](https://github.com/yourusername/wildfire-risk-analysis/blob/main/README.md)**. For further information or verification, inquiries can be directed to **OSUwildfirerisk@oregonstate.edu**.
 
-    ## Wildfire Burn Probability Map  
-    The chart represents probability values using a grayscale gradient, where lower probabilities are darker (black) and higher probabilities are lighter (white).
+  ## Wildfire Burn Probability Map  
+  The chart represents probability values using a grayscale gradient, where lower probabilities are darker (black) and higher probabilities are lighter (white).
 
-    ### Color Mapping:
-      - **Black (0.000000 probability)**: Represents the lowest probability.
-      - **White (0.072378 probability)**: Represents the highest probability.
-      - **Gradient Transition**: Intermediate probabilities transition from black to white.
+  ### Color Mapping:
+    - **Black (0.000000 probability)**: Represents the lowest probability.
+    - **White (0.072378 probability)**: Represents the highest probability.
+    - **Gradient Transition**: Intermediate probabilities transition from black to white.
 
-    ### Interpretation:
-      - **Darker Regions (Near Black)**: Indicate areas with **low probability**.
-      - **Lighter Regions (Near White)**: Indicate areas with **high probability**.
-      - **Gradual Shading**: Helps visualize the probability distribution smoothly.
+  ### Interpretation:
+    - **Darker Regions (Near Black)**: Indicate areas with **low probability**.
+    - **Lighter Regions (Near White)**: Indicate areas with **high probability**.
+    - **Gradual Shading**: Helps visualize the probability distribution smoothly.
 
-    ### Purpose:
-      - The grayscale mapping **enhances visibility** of probability changes.
-      - It provides a **clear, intuitive** representation without requiring numerical labels.
+  ### Purpose:
+    - The grayscale mapping **enhances visibility** of probability changes.
+    - It provides a **clear, intuitive** representation without requiring numerical labels.
 
 
 ![Burn Probability Map](images/burn_prob.JPG)
@@ -129,7 +123,7 @@ This map overlays the model’s burn probability layer with historical fire occu
 ![Burn Probability + Fire Overlay](images/burn_overlay.JPG)
 
 
-### Data Preparation  
+## Data Preparation  
 
 The data was processed using **QGIS**, an open-source geographic information system. A full guide to downloading and installing **QGIS** can be found in the **[GitHub README](https://github.com/yourusername/wildfire-risk-analysis/blob/main/README.md)**. The following steps were taken to compile the **Transformed Data** for analysis:  
 
