@@ -63,7 +63,7 @@ The data used in this analysis comes from multiple sources, including model outp
   - **Fire Occurrence Flag:** A binary indicator (1 = fire occurred, 0 = no fire) derived from historical wildfire data.  
   - **Spatial Resolution:** Each pixel is spaced **500 feet apart** both vertically and horizontally, ensuring a uniform grid structure.
 
-### Transformed Dataset Description
+  ### Transformed Dataset Description
 
 The dataset consists of two columns:
 
