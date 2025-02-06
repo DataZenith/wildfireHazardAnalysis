@@ -23,7 +23,7 @@
 
 <hr>
 
-## 1. Executive Summary
+# 1. Executive Summary
 
 In public policy, models are expected to provide reliable, evidence-based insights that inform critical decisions. They must be rigorously validated and demonstrate predictive performance well above trivial baselines. It is unacceptable for a model—especially one that influences resource allocation and public safety—to perform on par with a random number generator.
 
@@ -37,7 +37,7 @@ These findings raise serious questions about the validity of the methods used in
 <hr>
 
 
-## 2. Introduction
+# 2. Introduction
 
 **Background:**  
 Wildfire hazard assessment is a critical tool for land management, public policy, and disaster preparedness. These assessments rely on models that estimate the likelihood and potential impact of wildfires based on environmental conditions, historical data, and fire behavior simulations. A key component of these assessments is burn probability, which represents the estimated likelihood of a fire occurring in a given area. This probability is often combined with fire intensity predictions to produce a final hazard rating used in risk mitigation strategies. However, the modeling process used to esimate the 2025 Oregon Wildfire hazard map is not well documented, making it difficult to assess the validity of its outputs.
@@ -51,7 +51,7 @@ This analysis focuses on probability model outputs for all of Oregon to determin
 
 <hr>
 
-## 3. Data and Methodology
+# 3. Data and Methodology
 
 ### Data Sources  
 
