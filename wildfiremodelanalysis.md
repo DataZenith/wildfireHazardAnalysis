@@ -273,3 +273,39 @@ This analysis **quantifies how much the model exaggerates fire likelihood**, ens
 ✅ **The overestimation analysis** ensures the model is not **artificially inflating fire risk** by predicting too many false fires.  
 
 This approach allows us to **assess model reliability and guide its use in decision-making.**
+
+# **References**
+
+Below are the sources used to support the methodology and evaluation of the model:
+
+1. **Precision and Recall Definitions**  
+   - Google Developers Machine Learning Crash Course:  
+     [Classification: Accuracy, Precision, Recall](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall)
+
+2. **Precision-Recall Curve and AUC Calculation**  
+   - Scikit-learn documentation:  
+     [Precision-Recall — scikit-learn documentation](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
+
+3. **Industry Standards for PR-AUC in Imbalanced Datasets**  
+   - Aporia Machine Learning Guide:  
+     [Ultimate Guide to PR-AUC: Calculations, Uses, and Limitations](https://www.aporia.com/learn/ultimate-guide-to-precision-recall-auc-understanding-calculating-using-pr-auc-in-ml/)  
+   - Deepchecks Blog:  
+     [Understanding F1 Score, Accuracy, ROC-AUC & PR-AUC Metrics](https://www.deepchecks.com/f1-score-accuracy-roc-auc-and-pr-auc-metrics-for-models/)
+
+4. **Overestimation Rate Calculation**  
+   - Python Scikit-learn Guide:  
+     [Compute the AUC of Precision-Recall Curve](https://sinyi-chou.github.io/python-sklearn-precision-recall/)
+
+5. **Comparison to a Random Model**  
+   - Arize AI Blog:  
+     [What Is PR AUC?](https://arize.com/blog/what-is-pr-auc/)
+
+6. **Visual Analysis Using Histograms**  
+   - Medium Article on Precision-Recall Curves:  
+     [Precision-Recall Curves](https://medium.com/@douglaspsteen/precision-recall-curves-d32e5b290248)
+
+7. **Importance of Precision-Recall Curves in Imbalanced Datasets**  
+   - Scikit-learn Documentation:  
+     [Precision-Recall — scikit-learn documentation](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
+
+
