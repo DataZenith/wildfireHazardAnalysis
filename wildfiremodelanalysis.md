@@ -53,11 +53,11 @@ This analysis focuses on probability model outputs for all of Oregon to determin
 
 # 3. Data and Methodology
 
-### Data Sources  
+## Data Sources  
 
 The data used in this analysis comes from multiple sources, including model outputs from Oregon State University, historical wildfire occurrence records, and a transformed dataset created by combining these sources. These datasets were obtained through Oregon State’s Wildfire Hazard Risk **Point of Contact (POC)** and serve as the foundation for evaluating the burn probability component of the wildfire hazard model.
 
-- **Transformed Data:**  
+- **1) Transformed Data:**  
   This dataset is derived from a combination of **burn probability estimates** from the wildfire hazard model and **historical wildfire records**. Each row in the dataset represents a single **pixel** where these two datasets overlap. The dataset includes:  
   - **Burn Probability:** The probability of fire occurrence for that pixel, as assigned by the wildfire hazard model.  
   - **Fire Occurrence Flag:** A binary indicator (1 = fire occurred, 0 = no fire) derived from historical wildfire data.  
