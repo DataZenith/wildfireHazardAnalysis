@@ -25,7 +25,7 @@ Due to file size limitations, the actual raw datasets are not stored in this rep
 
 3. **Historical Fire Data**  
    - **Description:**  
-     This dataset contains historical fire events, which were used to validate and compare with the model outcomes.  This dataset contains recorded wildfire events from **2000 to 2021** and was used to validate the model’s predictive accuracy. The dataset includes only fire events where **acres burned exceeded 247**, ensuring that only significant fire occurrences were considered. To maintain the focus on naturally occurring and uncontrolled wildfire events, **prescribed burns and resource management fires were excluded** from the analysis. Comparing actual fire occurrences with the model’s probability outputs allowed for a direct assessment of its reliability.
+     This dataset contains historical fire events, which were used to validate and compare with the model outcomes.  This dataset contains recorded wildfire events from **2000 to 2021** and was used to validate the model’s predictive accuracy. The dataset includes only fire events where **acres burned exceeded 247**, ensuring that only significant fire occurrences were considered. To maintain the focus on naturally occurring and uncontrolled wildfire events, **prescribed burns and resource management fires were excluded** from the analysis. 
      
    - **Download Link:**  
      [Historical Fire Data](https://oregonstate.box.com/s/wllct446dgf76fcj1fc2x17vtbm0t14g)
