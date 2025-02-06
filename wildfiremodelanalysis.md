@@ -63,6 +63,36 @@ The data used in this analysis comes from multiple sources, including model outp
   - **Fire Occurrence Flag:** A binary indicator (1 = fire occurred, 0 = no fire) derived from historical wildfire data.  
   - **Spatial Resolution:** Each pixel is spaced **500 feet apart** both vertically and horizontally, ensuring a uniform grid structure.
 
+## Transformed Dataset Description
+
+The dataset consists of two columns:
+
+1. **Burn Probability**  
+   - Represents the probability of a fire occurring in a given pixel, ranging from **0.000000** to **0.074283**.  
+   - Uses a **grayscale gradient**, where black represents low probability and white represents high probability.  
+   - **Descriptive Statistics:**
+     - **Total Count**: 12,019,460 pixels
+     - **Mean**: 0.00925
+     - **Median (50%)**: 0.00621
+     - **Standard Deviation**: 0.01021
+     - **Min Value**: 0.000000
+     - **25th Percentile**: 0.00108
+     - **75th Percentile**: 0.01401
+     - **Max Value**: 0.07428
+
+2. **Fire Occurrence (Binary Indicator)**  
+   - Indicates whether a fire historically occurred in that pixel (**2000–2021**).  
+   - **0 (No Fire)**: 78.45% of pixels  
+   - **1 (Fire Occurred)**: 21.55% of pixels  
+
+## Key Notes:
+- **Burn probability is continuous**, while **fire occurrence is binary (0 or 1).**
+- **Fire occurrence colors do not represent severity—only presence.**
+- The dataset provides **historical fire data** but does not predict future fire risk.
+
+This transformed dataset is used to analyze spatial burn probability while overlaying past fire occurrences.
+
+  
 - **Wildfire Hazard Model Data:**  
   This dataset, provided by Oregon State, was used to build the wildfire hazard model. The burn probability outputs are stored in a geodatabase and were extracted for analysis.  
   **Path to Burn Probabilities:**  
@@ -94,7 +124,7 @@ The chart represents probability values using a grayscale gradient, where lower 
 ![Burn Probability Map](images/burn_prob.JPG)
 
 ## Burn Probability Overlaid with Historical Fire Data  
-This map overlays the model’s burn probability layer with historical fire occurrences (2000-2021), highlighting areas where the model predicted fire risk versus actual fire events.
+This map overlays the model’s burn probability layer with historical fire occurrences (2000-2021), highlighting areas where the model predicted fire risk versus actual fire events.  The gradient color is just to make it more visually appealing
 
 ![Burn Probability + Fire Overlay](images/burn_overlay.JPG)
 
