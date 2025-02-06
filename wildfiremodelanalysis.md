@@ -63,7 +63,7 @@ The data used in this analysis comes from multiple sources, including model outp
   - **Fire Occurrence Flag:** A binary indicator (1 = fire occurred, 0 = no fire) derived from historical wildfire data.  
   - **Spatial Resolution:** Each pixel is spaced **500 feet apart** both vertically and horizontally, ensuring a uniform grid structure.
 
-## Transformed Dataset Description
+### Transformed Dataset Description
 
 The dataset consists of two columns:
 
@@ -85,7 +85,7 @@ The dataset consists of two columns:
    - **0 (No Fire)**: 78.45% of pixels  
    - **1 (Fire Occurred)**: 21.55% of pixels  
 
-## Key Notes:
+### Key Notes:
 - **Burn probability is continuous**, while **fire occurrence is binary (0 or 1).**
 - **Fire occurrence colors do not represent severity—only presence.**
 - The dataset provides **historical fire data** but does not predict future fire risk.
