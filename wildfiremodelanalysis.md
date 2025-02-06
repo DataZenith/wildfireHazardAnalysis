@@ -65,60 +65,60 @@ The data used in this analysis comes from multiple sources, including model outp
 
   ### Transformed Dataset Description
 
-The dataset consists of two columns:
+    The dataset consists of two columns:
 
-1. **Burn Probability**  
-   - Represents the probability of a fire occurring in a given pixel, ranging from **0.000000** to **0.074283**.  
-   - Uses a **grayscale gradient**, where black represents low probability and white represents high probability.  
-   - **Descriptive Statistics:**
-     - **Total Count**: 12,019,460 pixels
-     - **Mean**: 0.00925
-     - **Median (50%)**: 0.00621
-     - **Standard Deviation**: 0.01021
-     - **Min Value**: 0.000000
-     - **25th Percentile**: 0.00108
-     - **75th Percentile**: 0.01401
-     - **Max Value**: 0.07428
+      1. **Burn Probability**  
+       - Represents the probability of a fire occurring in a given pixel, ranging from **0.000000** to **0.074283**.  
+       - Uses a **grayscale gradient**, where black represents low probability and white represents high probability.  
+       - **Descriptive Statistics:**
+         - **Total Count**: 12,019,460 pixels
+         - **Mean**: 0.00925
+         - **Median (50%)**: 0.00621
+         - **Standard Deviation**: 0.01021
+         - **Min Value**: 0.000000
+         - **25th Percentile**: 0.00108
+         - **75th Percentile**: 0.01401
+         - **Max Value**: 0.07428
 
-2. **Fire Occurrence (Binary Indicator)**  
-   - Indicates whether a fire historically occurred in that pixel (**2000–2021**).  
-   - **0 (No Fire)**: 78.45% of pixels  
-   - **1 (Fire Occurred)**: 21.55% of pixels  
+      2. **Fire Occurrence (Binary Indicator)**  
+       - Indicates whether a fire historically occurred in that pixel (**2000–2021**).  
+       - **0 (No Fire)**: 78.45% of pixels  
+       - **1 (Fire Occurred)**: 21.55% of pixels  
 
-### Key Notes:
-- **Burn probability is continuous**, while **fire occurrence is binary (0 or 1).**
-- **Fire occurrence colors do not represent severity—only presence.**
-- The dataset provides **historical fire data** but does not predict future fire risk.
+      ### Key Notes:
+      - **Burn probability is continuous**, while **fire occurrence is binary (0 or 1).**
+      - **Fire occurrence colors do not represent severity—only presence.**
+      - The dataset provides **historical fire data** but does not predict future fire risk.
 
-This transformed dataset is used to analyze spatial burn probability while overlaying past fire occurrences.
+      This transformed dataset is used to analyze spatial burn probability while overlaying past fire occurrences.
 
   
-- **Wildfire Hazard Model Data:**  
+- **2) Wildfire Hazard Model Data:**  
   This dataset, provided by Oregon State, was used to build the wildfire hazard model. The burn probability outputs are stored in a geodatabase and were extracted for analysis.  
   **Path to Burn Probabilities:**  
   `SB80PublicData >> FireModelingData >> FireModeling_FuelscapeData.gdb >> BurnProbability`
 
-- **Historical Fire Data:**  
+- **3) Historical Fire Data:**  
   This dataset contains recorded wildfire events from **2000 to 2021** and was used to validate the model’s predictive accuracy. The dataset includes only fire events where **acres burned exceeded 247**, ensuring that only significant fire occurrences were considered. To maintain the focus on naturally occurring and uncontrolled wildfire events, **prescribed burns and resource management fires were excluded** from the analysis.
 
 A full list of dataset links and additional details can be found in the **[GitHub README](https://github.com/yourusername/wildfire-risk-analysis/blob/main/README.md)**. For further information or verification, inquiries can be directed to **OSUwildfirerisk@oregonstate.edu**.
 
-## Wildfire Burn Probability Map  
-The chart represents probability values using a grayscale gradient, where lower probabilities are darker (black) and higher probabilities are lighter (white).
+    ## Wildfire Burn Probability Map  
+    The chart represents probability values using a grayscale gradient, where lower probabilities are darker (black) and higher probabilities are lighter (white).
 
-### Color Mapping:
-- **Black (0.000000 probability)**: Represents the lowest probability.
-- **White (0.072378 probability)**: Represents the highest probability.
-- **Gradient Transition**: Intermediate probabilities transition from black to white.
+    ### Color Mapping:
+      - **Black (0.000000 probability)**: Represents the lowest probability.
+      - **White (0.072378 probability)**: Represents the highest probability.
+      - **Gradient Transition**: Intermediate probabilities transition from black to white.
 
-### Interpretation:
-- **Darker Regions (Near Black)**: Indicate areas with **low probability**.
-- **Lighter Regions (Near White)**: Indicate areas with **high probability**.
-- **Gradual Shading**: Helps visualize the probability distribution smoothly.
+    ### Interpretation:
+      - **Darker Regions (Near Black)**: Indicate areas with **low probability**.
+      - **Lighter Regions (Near White)**: Indicate areas with **high probability**.
+      - **Gradual Shading**: Helps visualize the probability distribution smoothly.
 
-### Purpose:
-- The grayscale mapping **enhances visibility** of probability changes.
-- It provides a **clear, intuitive** representation without requiring numerical labels.
+    ### Purpose:
+      - The grayscale mapping **enhances visibility** of probability changes.
+      - It provides a **clear, intuitive** representation without requiring numerical labels.
 
 
 ![Burn Probability Map](images/burn_prob.JPG)
