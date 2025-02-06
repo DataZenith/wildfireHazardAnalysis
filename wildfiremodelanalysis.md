@@ -161,7 +161,8 @@ This transformed dataset serves as the foundation for evaluating the **relations
 To evaluate how well the model predicts fire occurrences, we conducted several tests. These tests help determine whether the model provides meaningful predictions or if its results are no better than random guessing. Below, we explain these tests in simple terms and why they matter.
 
 ---
-# **1. Evaluating Model Performance**
+
+## **1. Evaluating Model Performance**
 
 Predicting fire occurrences requires a balance between two key factors: **precision and recall**. Additionally, we use the **Precision-Recall Curve and its Area Under the Curve (PR-AUC)** to assess the model’s overall effectiveness.
 
@@ -206,28 +207,57 @@ Since PR-AUC is particularly useful for **imbalanced datasets**, it is important
 - If it is **close to 0.2155**, it is **not useful** because it performs similarly to random guessing.
 - If it is **below 0.2155**, the model is misleading and should not be used.
 
-By comparing the model’s **actual PR-AUC to the baseline (0.2155),** we determine whether it provides **useful predictions** or just reflects the natural frequency of fire occurrences.
+---
+
+## **2. Comparing to a Random Model**
+To test whether the model is **actually predicting fires or just guessing**, we compared it to a **random number generator** that assigns probabilities at random.
+
+- If the model **performs better than random**, it means it has **some ability to identify fire-prone areas**.
+- If the model **performs similarly to random**, it means the predictions **aren’t useful for decision-making**.
+- This comparison ensures that the model has **actual predictive power** rather than just appearing to perform well by coincidence.
 
 ---
 
-### **1.4 Why This Matters**
+## **3. Visual Analysis: Histogram Layover**
+To further evaluate the model, we **compared the histograms of predicted probabilities** for locations where fires occurred and where they did not.
+
+- If the model is working well, the histogram of fire locations should **show higher predicted probabilities** compared to non-fire locations.
+- If the two histograms **overlap significantly**, it suggests the model struggles to distinguish between fire-prone and non-fire areas.
+- This comparison **visually confirms whether the model's predictions form a pattern or are randomly distributed**.
+
+This **histogram analysis** helps determine if the model provides meaningful insights or if it fails to separate fire-prone areas from non-fire areas.
+
+---
+
+## **4. Measuring Overestimation (False Alarms and Risk Inflation)**
+To measure **how much fire risk is overestimated**, we:
+- Picked a **threshold** where **precision and recall are equal** (a balanced point).
+- Calculated the **overestimation rate** using:
+
+$$
+\text{Overestimate Rate} = \frac{\text{False Positives (FP)}}{\text{True Positives (TP)} + \text{False Positives (FP)}}
+$$
+
+This value represents the percentage of predicted fires that **never actually occurred**.
+
+### **How to Interpret Overestimation**
+- If the overestimation rate is **high**, it means the model **predicts too many fires that never happen**, inflating fire risk.
+- If the rate is **low**, it suggests the model is more conservative but may **miss some real fires**.
+- This overestimation can be **expressed as a percentage**, meaning the model overstates fire risk by **X% more than actual fires**.
+
+This analysis **quantifies how much the model exaggerates fire likelihood**, ensuring its predictions are **not misleading**.
+
+---
+
+## **5. Why This Matters**
 ✅ **A high PR-AUC** means the model is **better than random guessing** and can help identify fire-prone areas.  
 ✅ **Understanding precision and recall** helps determine whether the model is prone to **false alarms or missed fires**.  
 ✅ **The PR-AUC score reflects the model’s overall ability** to distinguish fire-prone areas, rather than relying on a single threshold.  
 ✅ **Comparing to the baseline (random model)** ensures we are measuring true predictive power rather than overfitting.  
-✅ **Industry benchmarks provide context** for interpreting whether the PR-AUC score is good enough for real-world applications.  
+✅ **Histogram analysis provides a visual check** on whether predicted probabilities actually differentiate fire-prone and non-fire areas.  
+✅ **The overestimation analysis ensures** that the model is not **artificially inflating fire risk** by predicting too many false fires.  
 
 ---
-
-### **Why This Works Better:**
-✅ **More structured** – The entire **model performance evaluation** is in **one place**.  
-✅ **Logical flow** – **Concepts → Calculation → Interpretation → Why it Matters**  
-✅ **Easier to digest** – The **"Why This Matters"** bullet points wrap up everything cleanly.  
-
----
-
-Would you like any **further refinements** to formatting, such as bolded keywords or additional clarifications? 🚀
-
 
 
 # **References**
