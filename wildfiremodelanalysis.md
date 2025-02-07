@@ -299,11 +299,15 @@ To validate this comparison, we:
 
 If both values are similar, then the OSU model **is functionally random and does not improve fire risk classification**.
 
+<div align="center">
+
 ### **Performance Comparison Chart**
 | Model                     | PR AUC Score |
 |---------------------------|-------------|
 | **OSU Burn Probability Model** | **0.22** |
 | **Random Probability Model**   | **0.22** |
+
+</div>
 
 This confirms that the **burn probability model does not provide any additional value over a purely random model**.
 
