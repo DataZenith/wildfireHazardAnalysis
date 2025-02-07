@@ -587,18 +587,14 @@ Below are the sources used to support the methodology, evaluation of the model, 
    - Oregon State University, 2025  
    - Retrieved from: [OSU Wildfire Hazard Map Methods](https://hazardmap.forestry.oregonstate.edu/sites/default/files/OSU_2025_HazardMapMethods.pdf)  
 
-10. **Email Correspondence with OSU Wildfire Risk POC**  
-   - Personal communication, [date of email]  
-   - Information regarding the **26 board members determining hazard classifications**  
-
-11. **Pew-MacArthur Results First Initiative: Oregon’s Evidence-Based Policy Framework**  
+10. **Pew-MacArthur Results First Initiative: Oregon’s Evidence-Based Policy Framework**  
    - Retrieved from: [Pew Trusts](https://www.pewtrusts.org/en/research-and-analysis/articles/2017/03/15/oregons-framework-of-laws-advances-evidence-based-policymaking)  
 
-12. **Oregon Department of Forestry – Wildfire Risk Map & Public Policy Impacts**  
+11. **Oregon Department of Forestry – Wildfire Risk Map & Public Policy Impacts**  
    - Official Website: [ODF Wildfire Risk Map](https://www.oregon.gov/odf/fire/pages/wildfire-risk-map.aspx)  
 
 ## **Data Sources**  
 
-13. **Dataset Repository & README File (Contains Burn Probability & Historical Fire Data)**  
+12. **Dataset Repository & README File (Contains Burn Probability & Historical Fire Data)**  
    - 📌 **GitHub README with Data Sources:**  
      **[GitHub README](https://github.com/yourusername/wildfire-risk-analysis/blob/main/README.md)**  
