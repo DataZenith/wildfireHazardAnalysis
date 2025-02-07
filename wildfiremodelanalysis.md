@@ -377,7 +377,63 @@ These results strongly suggest that the **burn probability model is not a reliab
 
 ---
 
+## Overestimation of Fire Risk Predictions  
 
+### **Determining the Classification Threshold**  
+
+Since the burn probability model provides **continuous probability estimates**, we must set a **threshold** to classify whether a fire is predicted to occur.  
+
+We selected the **threshold where precision and recall are equal**, ensuring that:  
+- The model is **not favoring one metric over the other**.  
+- Predictions balance the **trade-off between missing fires (false negatives) and overpredicting fire risk (false positives)**.
+
+**Selected Threshold: `0.015`**  
+- **Best Threshold (Equal Precision & Recall):** `0.015`  
+- **Best Threshold (Highest F1-Score):** `0.072`  
+
+At this threshold, the model classifies fire risk as follows:
+
+| Metric | Value |
+|--------|--------|
+| **True Negatives (TN)** | `7,365,736` |
+| **True Positives (TP)** | `527,835` |
+| **False Positives (FP)** | `2,062,943` |
+| **False Negatives (FN)** | `2,062,943` |
+| **Precision** | `0.2037` |
+| **Recall** | `0.2037` |
+
+---
+
+### **Overprediction Rate and Model Performance**  
+
+One of the most concerning findings is the **high rate of false positives**, leading to an **overestimation of fire risk**.  
+
+We calculate the **Overprediction Rate** as:  
+$$
+\text{Overprediction Rate} = \frac{\text{False Positives (FP)}}{\text{False Positives (FP)} + \text{True Positives (TP)}}
+$$
+
+At the selected threshold:  
+- **False Positives (FP):** `2,062,943`  
+- **True Positives (TP):** `527,835`  
+- **Overprediction Rate:** `79.63%`  
+
+This means that **nearly 80% of areas classified as high fire risk did not actually experience a fire**.
+
+---
+
+### **What This Means for the Model**  
+
+A **79.63% overprediction rate** suggests that the burn probability model is **highly unreliable for operational decision-making**, as it **predicts fire risk in too many areas that do not experience wildfires**.
+
+**Implications:**  
+❌ **Inefficient Resource Allocation:** Fire suppression efforts could be **spread too thin** by prioritizing areas that are **not at risk**.  
+❌ **Loss of Public Trust:** If the model is used for fire management policy, landowners and communities may **lose confidence** in wildfire risk assessments.  
+❌ **Model Is Overly Conservative:** While erring on the side of caution is sometimes useful, an **extreme overestimation of risk** reduces the model’s **practical utility**.  
+
+These results further confirm that the **burn probability model is not a reliable tool for predicting wildfire occurrences**.
+
+---
 
 
 # **References**
