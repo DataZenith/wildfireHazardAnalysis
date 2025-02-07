@@ -277,7 +277,7 @@ For imbalanced datasets, standard metrics like **accuracy can be misleading**, s
 ## Performance of the Burn Probability Model  
 To evaluate the **Burn Probability Model (OSU’s model)**, we compute the **Precision-Recall AUC (PR AUC)** score.
 
-- **PR AUC of OSU’s Model** = **X.XX**
+- **PR AUC of OSU’s Model** = **0.22**
 - **AUC Interpretation**: Higher values indicate better classification performance.
 
 To understand whether the model is **better than random guessing**, we compare its performance to a **random probability generator**.
@@ -285,12 +285,12 @@ To understand whether the model is **better than random guessing**, we compare i
 ---
 
 ## Benchmarking Against Random Predictions  
-When a classification model **performs no better than random**, its performance simply reflects the balance of the dataset. Since **fires occur in 21.55% of the dataset**, a completely **random model’s PR AUC should be approximately 0.2155**.
+When a classification model **performs no better than random**, its performance simply reflects the balance of the dataset. Since **fires occur in 21.55% of the dataset**, a completely **random model’s PR AUC should be approximately 0.22**.
 
 To determine if the **OSU burn probability model provides meaningful classification**, we generate **random probabilities** and calculate the **PR AUC** for these random scores.
 
-- **PR AUC of a Random Model** = **Y.YY**
-- **If the OSU model's PR AUC is close to or worse than random (0.2155), then it provides no meaningful predictive power.**
+- **PR AUC of a Random Model** = **0.22**
+- **Since the OSU model's PR AUC is identical to the random classifier (0.22), it provides no meaningful predictive power.**
 
 To validate this comparison, we:
 1. **Generate random probabilities** sampled from a uniform distribution between 0 and 1.
@@ -299,39 +299,47 @@ To validate this comparison, we:
 
 If both values are similar, then the OSU model **is functionally random and does not improve fire risk classification**.
 
-![PR AUC Comparison](images/prec_recall.png)
+### **Performance Comparison Chart**
+| Model                     | PR AUC Score |
+|---------------------------|-------------|
+| **OSU Burn Probability Model** | **0.22** |
+| **Random Probability Model**   | **0.22** |
+
+This confirms that the **burn probability model does not provide any additional value over a purely random model**.
+
+![PR AUC Comparison](images/pr_auc_comparison.png)
 
 ---
 
-## Visualization of Performance  
-To illustrate these findings, we generate **Precision-Recall AUC curves** for:  
-📌 **OSU’s Burn Probability Model**  
-📌 **A Random Model (Uniform Probability Distribution)**
+## Interpreting the Results  
 
-These **PR curves** allow us to see whether the OSU model **meaningfully distinguishes fire risk** or if it behaves like random noise.
+The Precision-Recall AUC comparison shows that the **Burn Probability Model does not meaningfully distinguish fire from non-fire events**.  
 
-Additionally, we analyze:  
-📌 **Histogram of Burn Probabilities** → To check if the burn probabilities are skewed or clustered near zero.  
-📌 **Precision & Recall at Different Probability Thresholds** → To see if the model’s classification improves at different cutoffs.
+- Since the **OSU model’s PR AUC is equal to the PR AUC of a random classifier (0.22)**, it is **no better than guessing**.  
+- A useful model should have a **significantly higher PR AUC**, demonstrating that it can **correctly separate fire-prone and non-fire areas**.  
+- The fact that both models perform identically indicates that **the OSU model adds no predictive value** to fire risk classification.  
 
----
-
-## Key Takeaways  
-- **A well-performing model should effectively separate fire vs. no-fire events**.
-- **PR AUC quantifies whether the model is better than random in making these classifications**.
-- **If PR AUC is close to random (0.2155), the model lacks predictive value and does not contribute useful information for fire risk assessment**.
-- **A meaningful model should have a significantly higher PR AUC than 0.2155, proving that it correctly separates fire-prone and non-fire areas**.
-- **If the model’s performance remains near random, using it for wildfire risk assessment is questionable.**
+These results indicate that the **Burn Probability Model does not provide actionable fire risk predictions**. If a model’s **classification power is no better than random**, then its outputs **cannot be relied upon for decision-making**.
 
 ---
 
-## Next Steps  
-The next section will interpret these results and discuss the implications of using **a model that does not meaningfully distinguish fire risk**. If the **OSU model performs no better than rando
+## Additional Considerations
 
+Even if a classification model **performs randomly**, it still produces probability estimates. However, if these probabilities **do not actually separate fire and no-fire events**, then the model is simply reflecting the **underlying class distribution**, rather than learning any real patterns.
 
+For example:
+- A **perfectly random model** would have an AUC equal to the **percentage of fire occurrences in the dataset (0.22)**.
+- If the OSU model’s PR AUC **matches this value**, it means the model is simply reflecting dataset balance and not learning from meaningful fire risk patterns.
+
+In practice, this means that using this model for **public policy decisions** would be highly questionable, as it **does not improve decision-making beyond what could be achieved through random chance**.
 
 ---
 
+## Conclusion  
+
+The results of this analysis raise significant concerns about the **Burn Probability Model's reliability for wildfire risk assessment**. If a model does not meaningfully classify fire-prone areas better than random chance, then its use in **wildfire hazard mapping and public safety decisions should be reconsidered**. 
+
+The next section will explore the **implications of these findings**, including how this model's shortcomings impact wildfire preparedness and mitigation efforts.
 
 # **References**
 
