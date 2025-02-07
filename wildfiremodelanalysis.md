@@ -323,23 +323,6 @@ These results indicate that the **Burn Probability Model does not provide action
 
 ---
 
-## Additional Considerations
-
-Even if a classification model **performs randomly**, it still produces probability estimates. However, if these probabilities **do not actually separate fire and no-fire events**, then the model is simply reflecting the **underlying class distribution**, rather than learning any real patterns.
-
-For example:
-- A **perfectly random model** would have an AUC equal to the **percentage of fire occurrences in the dataset (0.22)**.
-- If the OSU model’s PR AUC **matches this value**, it means the model is simply reflecting dataset balance and not learning from meaningful fire risk patterns.
-
-In practice, this means that using this model for **public policy decisions** would be highly questionable, as it **does not improve decision-making beyond what could be achieved through random chance**.
-
----
-
-## Conclusion  
-
-The results of this analysis raise significant concerns about the **Burn Probability Model's reliability for wildfire risk assessment**. If a model does not meaningfully classify fire-prone areas better than random chance, then its use in **wildfire hazard mapping and public safety decisions should be reconsidered**. 
-
-The next section will explore the **implications of these findings**, including how this model's shortcomings impact wildfire preparedness and mitigation efforts.
 
 # **References**
 
