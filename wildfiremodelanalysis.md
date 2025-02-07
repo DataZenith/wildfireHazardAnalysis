@@ -326,6 +326,57 @@ The Precision-Recall AUC comparison shows that the **Burn Probability Model does
 These results indicate that the **Burn Probability Model does not provide actionable fire risk predictions**. If a model’s **classification power is no better than random**, then its outputs **cannot be relied upon for decision-making**.
 
 ---
+## Histogram Overlap of Burn Probabilities  
+
+### **Understanding the Burn Probability Histograms**  
+
+The histograms display the **distribution of burn probabilities** assigned by the OSU model for two different classes:  
+- **Fire Pixels** → Locations where actual wildfires occurred.  
+- **No-Fire Pixels** → Locations where no wildfire was recorded.  
+
+Each pixel in the dataset is assigned a **burn probability** between **0 and 1**, indicating how likely the model believes a fire will occur at that location. If the model is performing well, **fire pixels should have systematically higher probabilities than no-fire pixels**.
+
+---
+
+### **Why Overlapping Should Show Separation Between Classes**  
+
+In a well-calibrated classification model, burn probabilities should serve as a **meaningful decision boundary** between fire-prone and safe areas. That means:  
+- Fire-prone areas should have **higher burn probabilities**, forming a **distribution shifted to the right**.  
+- No-fire areas should have **lower burn probabilities**, forming a **distribution shifted to the left**.  
+
+When visualized in a **histogram**, this would appear as two distributions with **minimal overlap**, clearly distinguishing high-risk areas from low-risk areas.
+
+---
+
+### **Histogram Comparison of Burn Probabilities**  
+
+The histogram below overlays the **burn probability distributions** for both fire and no-fire pixels.
+
+<div align="center">
+  <img src="images/burn_probability_histogram.png" alt="Burn Probability Histogram" width="70%">
+</div>
+
+---
+
+### **Interpreting the Results**  
+
+A well-performing model should **assign significantly different burn probabilities to fire and no-fire locations**, resulting in two distinct histogram distributions.
+
+However, in this case:  
+❌ **The fire and no-fire distributions overlap significantly**, meaning the model **fails to meaningfully separate fire-prone areas** from non-fire areas.  
+❌ **Fire locations do not have significantly higher burn probabilities than no-fire locations**.  
+❌ **The burn probabilities are not predictive of actual fire occurrence** and appear to be assigned randomly.  
+
+Since the **burn probability distributions for fire and no-fire pixels are nearly identical**, this confirms that:  
+- **The model does not successfully differentiate between high-risk and low-risk areas.**  
+- **Burn probabilities are not useful for decision-making in wildfire risk assessment.**  
+- **This supports the PR AUC findings, which showed that the model performs no better than random guessing.**  
+
+These results strongly suggest that the **burn probability model is not a reliable tool for wildfire risk assessment**.
+
+---
+
+
 
 
 # **References**
