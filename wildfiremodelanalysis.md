@@ -542,38 +542,63 @@ This decision-making process **does not align with Oregon’s laws on evidence-b
 
 🚨 **Key Concern:** 🔹 **Without these improvements, the use of burn probability in public policy may remain legally and scientifically unjustified.**  
 
-# **References**
+# **References**  
 
-Below are the sources used to support the methodology and evaluation of the model:
+Below are the sources used to support the methodology, evaluation of the model, and supporting data sources.  
+
+## **Machine Learning & Model Evaluation**  
 
 1. **Precision and Recall Definitions**  
    - Google Developers Machine Learning Crash Course:  
-     [Classification: Accuracy, Precision, Recall](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall)
+     [Classification: Accuracy, Precision, Recall](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall)  
 
 2. **Precision-Recall Curve and AUC Calculation**  
    - Scikit-learn documentation:  
-     [Precision-Recall — scikit-learn documentation](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
+     [Precision-Recall — scikit-learn documentation](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)  
 
 3. **Industry Standards for PR-AUC in Imbalanced Datasets**  
    - Aporia Machine Learning Guide:  
      [Ultimate Guide to PR-AUC: Calculations, Uses, and Limitations](https://www.aporia.com/learn/ultimate-guide-to-precision-recall-auc-understanding-calculating-using-pr-auc-in-ml/)  
    - Deepchecks Blog:  
-     [Understanding F1 Score, Accuracy, ROC-AUC & PR-AUC Metrics](https://www.deepchecks.com/f1-score-accuracy-roc-auc-and-pr-auc-metrics-for-models/)
+     [Understanding F1 Score, Accuracy, ROC-AUC & PR-AUC Metrics](https://www.deepchecks.com/f1-score-accuracy-roc-auc-and-pr-auc-metrics-for-models/)  
 
 4. **Overestimation Rate Calculation**  
    - Python Scikit-learn Guide:  
-     [Compute the AUC of Precision-Recall Curve](https://sinyi-chou.github.io/python-sklearn-precision-recall/)
+     [Compute the AUC of Precision-Recall Curve](https://sinyi-chou.github.io/python-sklearn-precision-recall/)  
 
 5. **Comparison to a Random Model**  
    - Arize AI Blog:  
-     [What Is PR AUC?](https://arize.com/blog/what-is-pr-auc/)
+     [What Is PR AUC?](https://arize.com/blog/what-is-pr-auc/)  
 
 6. **Visual Analysis Using Histograms**  
    - Medium Article on Precision-Recall Curves:  
-     [Precision-Recall Curves](https://medium.com/@douglaspsteen/precision-recall-curves-d32e5b290248)
+     [Precision-Recall Curves](https://medium.com/@douglaspsteen/precision-recall-curves-d32e5b290248)  
 
 7. **Importance of Precision-Recall Curves in Imbalanced Datasets**  
    - Scikit-learn Documentation:  
-     [Precision-Recall — scikit-learn documentation](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
+     [Precision-Recall — scikit-learn documentation](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)  
 
+## **Legal & Policy Considerations in Oregon**  
 
+8. **Oregon Revised Statutes (ORS) 182.525** – **Evidence-Based Programs Requirement**  
+   - Retrieved from: [Oregon Public Law](https://oregon.public.law/statutes/ors_182.525)  
+
+9. **Oregon Wildfire Hazard Map: Methodology & Data Sources**  
+   - Oregon State University, 2025  
+   - Retrieved from: [OSU Wildfire Hazard Map Methods](https://hazardmap.forestry.oregonstate.edu/sites/default/files/OSU_2025_HazardMapMethods.pdf)  
+
+10. **Email Correspondence with OSU Wildfire Risk POC**  
+   - Personal communication, [date of email]  
+   - Information regarding the **26 board members determining hazard classifications**  
+
+11. **Pew-MacArthur Results First Initiative: Oregon’s Evidence-Based Policy Framework**  
+   - Retrieved from: [Pew Trusts](https://www.pewtrusts.org/en/research-and-analysis/articles/2017/03/15/oregons-framework-of-laws-advances-evidence-based-policymaking)  
+
+12. **Oregon Department of Forestry – Wildfire Risk Map & Public Policy Impacts**  
+   - Official Website: [ODF Wildfire Risk Map](https://www.oregon.gov/odf/fire/pages/wildfire-risk-map.aspx)  
+
+## **Data Sources**  
+
+13. **Dataset Repository & README File (Contains Burn Probability & Historical Fire Data)**  
+   - 📌 **GitHub README with Data Sources:**  
+     **[GitHub README](https://github.com/yourusername/wildfire-risk-analysis/blob/main/README.md)**  
