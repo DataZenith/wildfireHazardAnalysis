@@ -449,6 +449,84 @@ The model’s **severe overestimation** of wildfire risk has **direct consequenc
 ❌ Public policy decisions that rely on this model may be **based on inaccurate, overly cautious fire risk assessments** rather than actual fire-prone conditions.
 
 ---
+# Discussion & Implications  
+
+## **Why Model Accuracy Matters in Public Policy**  
+
+The findings in this report demonstrate that the **burn probability model does not provide meaningful predictive power**. Since the **Hazard Risk Map** relies on this model to classify wildfire risk, this raises serious concerns about **policy decisions being made based on unreliable data**.  
+
+In public policy, models should meet **two key requirements**:  
+1️⃣ **Empirical Accuracy** → The model should **differentiate between fire-prone and non-fire areas**.  
+2️⃣ **Legal & Ethical Justification** → Policies based on the model should comply with **Oregon’s legal standards for evidence-based decision-making**.  
+
+The **current burn probability model fails on both counts**, creating **unjustified regulatory burdens for property owners** and **potential legal challenges**.
+
+---
+
+## **Regulatory Implications for Property Owners**  
+
+The Oregon Department of Forestry (ODF) uses the **Hazard Risk Map**, which incorporates burn probability into its overall wildfire risk classifications. **These classifications directly impact property owners**, as they determine:  
+
+- **Defensible space requirements** for fire mitigation.  
+- **Property development restrictions** in high-risk zones.  
+- **Potential financial burdens** for compliance.  
+
+If the burn probability model **does not actually predict fire occurrence**, then these **risk classifications may be fundamentally flawed**, leading to **unnecessary and costly regulations** for property owners.  
+
+🚨 **Key Concern:** 🔹 **Property owners may be required to take costly mitigation actions based on unreliable wildfire risk classifications.**  
+
+---
+
+## **Legal Concerns: Evidence-Based Policy Requirements in Oregon**  
+
+### **Oregon’s Evidence-Based Policy Mandates**  
+Oregon law emphasizes **evidence-based decision-making** in public policy. **ORS 182.525** requires state agencies to allocate funding to **programs backed by scientific research and empirical validation**.  
+
+🔹 **Applying This to the Burn Probability Model:**  
+- If **burn probability fails to distinguish fire-prone areas**, then it **does not meet the legal standard for evidence-based policymaking**.  
+- Using a **scientifically unvalidated model** to impose regulations could **violate Oregon’s legal requirements** for public policy decisions.  
+
+🚨 **Key Concern:** 🔹 **If the model is not empirically valid, its use in regulatory decision-making may not comply with Oregon law.**  
+
+---
+
+## **Potential Insurance Implications**  
+
+Although **Oregon law prohibits insurance companies from using the Hazard Risk Map directly**, many homeowners **have reported premium increases or policy cancellations** since the map’s release.  
+
+📌 **Key Considerations:**  
+- **There is no direct proof that insurance companies are using this map.**  
+- **Housing costs and other economic factors may also contribute to changes in premiums.**  
+- **Without transparency, it remains unclear whether insurers are indirectly using the wildfire risk classifications.**  
+
+If insurers **informally incorporate** the classifications from the Hazard Risk Map into underwriting decisions, **then any errors in the burn probability model could have financial consequences for homeowners**.  
+
+🚨 **Key Concern:** 🔹 **A flawed model could be indirectly influencing insurance costs, even if the law prohibits its direct use.**  
+
+---
+
+## **Public Trust & Policy Legitimacy**  
+
+Wildfire risk models should be **transparent, scientifically validated, and publicly accountable**. If the burn probability model:  
+- **Does not differentiate fire-prone from non-fire areas**, and  
+- **Is still used to justify regulations and land-use decisions**,  
+
+then the **legitimacy of the entire Hazard Risk Map is undermined**.  
+
+🚨 **Key Concern:** 🔹 **If policymakers use an unreliable model to enforce regulations, it could erode public trust in wildfire risk management policies.**  
+
+---
+
+# **Next Steps & Recommendations**  
+
+Based on these findings, several **policy changes and model improvements** should be considered:  
+
+1️⃣ **Empirical Validation of Burn Probability** → The burn probability model should be tested against real-world fire data to determine **if it provides predictive value**.  
+2️⃣ **Transparency in Modeling Methods** → The methodology for assigning burn probabilities should be **publicly documented and independently reviewed**.  
+3️⃣ **Re-Evaluation of Risk Classifications** → If burn probability does not contribute meaningful fire risk information, the **Hazard Risk Map should be revised** to avoid misclassification.  
+4️⃣ **Public Accountability & Policy Justification** → The state should provide **clear evidence** that wildfire risk classifications **are based on sound science** before imposing regulatory requirements on property owners.  
+
+🚨 **Key Concern:** 🔹 **Without these improvements, the use of burn probability in public policy may remain legally and scientifically unjustified.**  
 
 
 # **References**
