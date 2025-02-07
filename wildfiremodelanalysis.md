@@ -449,7 +449,7 @@ The model’s **severe overestimation** of wildfire risk has **direct consequenc
 ❌ Public policy decisions that rely on this model may be **based on inaccurate, overly cautious fire risk assessments** rather than actual fire-prone conditions.
 
 ---
-# Discussion & Implications  
+### 5. Discussion & Implications  
 
 ## **Why Model Accuracy Matters in Public Policy**  
 
