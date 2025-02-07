@@ -257,7 +257,7 @@ This analysis **quantifies how much the model exaggerates fire likelihood**, ens
 ✅ **Histogram analysis provides a visual check** on whether predicted probabilities actually differentiate fire-prone and non-fire areas.  
 ✅ **The overestimation analysis ensures** that the model is not **artificially inflating fire risk** by predicting too many false fires.  
 
-#4) Results & Analysis
+# 4. Results & Analysis
 
 ## Understanding the Evaluation Process  
 The **burn probability model** is designed to classify areas based on the likelihood of fire occurrence. Since our goal is to assess how well it differentiates between fire and no-fire events, we evaluate it as a **classification model**.
