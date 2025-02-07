@@ -518,14 +518,25 @@ then the **legitimacy of the entire Hazard Risk Map is undermined**.
 
 # **Next Steps & Recommendations**  
 
-Based on these findings, several **policy changes and model improvements** should be considered:  
+🚨 **The final wildfire risk classifications in the Hazard Risk Map were not based on a scientific approach.**  
+It was confirmed via **email correspondence with the OSU point of contact** that the **thresholds for wildfire risk were determined by a vote among 26 board members, rather than an empirical analysis**.  
 
-1️⃣ **Empirical Validation of Burn Probability** → The burn probability model should be tested against real-world fire data to determine **if it provides predictive value**.  
-2️⃣ **Transparency in Modeling Methods** → The methodology for assigning burn probabilities should be **publicly documented and independently reviewed**.  
-3️⃣ **Re-Evaluation of Risk Classifications** → If burn probability does not contribute meaningful fire risk information, the **Hazard Risk Map should be revised** to avoid misclassification.  
-4️⃣ **Public Accountability & Policy Justification** → The state should provide **clear evidence** that wildfire risk classifications **are based on sound science** before imposing regulatory requirements on property owners.  
+This decision-making process **does not align with Oregon’s laws on evidence-based policymaking** and raises serious concerns about **the validity of the final classifications used to enforce regulations on property owners**.  
+
+🔹 **Recommended Next Steps:**  
+
+1️⃣ **Empirical Validation of Burn Probability** → The burn probability model should be tested against **historical wildfire data** using a method similar to the analysis in this report. If the model **does not show meaningful predictive ability**, it should be revised or replaced.  
+
+2️⃣ **Transparency in Model Development** → The decision-making process for wildfire risk classifications should be **publicly disclosed**, including how thresholds were set and whether they align with scientific best practices.  
+
+3️⃣ **Disclosure of Board Members' Classifications** → The 26 board members who voted on the risk classification thresholds should **disclose which classification their own properties fall under**. If those who determined the risk thresholds are **exempt from the classifications they impose on others**, this raises ethical concerns and potential conflicts of interest.  
+
+4️⃣ **Re-Evaluation of Risk Classifications** → If burn probability does not contribute meaningful fire risk information, the **Hazard Risk Map should be revised** to avoid misclassification.  
+
+5️⃣ **Public Accountability & Policy Justification** → State agencies should provide **clear evidence** that wildfire risk classifications **are based on sound science** before imposing regulatory requirements on property owners.  
 
 🚨 **Key Concern:** 🔹 **Without these improvements, the use of burn probability in public policy may remain legally and scientifically unjustified.**  
+
 
 
 # **References**
