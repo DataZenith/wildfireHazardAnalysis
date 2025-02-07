@@ -429,17 +429,24 @@ This means that **nearly 80% of areas classified as high fire risk did not actua
 
 ---
 
-### **What This Means for the Model**  
+### **Interpreting the Results**  
 
-A **79.63% overprediction rate** suggests that the burn probability model is **highly unreliable for operational decision-making**, as it **predicts fire risk in too many areas that do not experience wildfires**.
+The model’s **severe overestimation** of wildfire risk has **direct consequences** that affect both **resource allocation and public trust**.
 
-**Implications:**  
-❌ **Inefficient Resource Allocation:** Fire suppression efforts could be **spread too thin** by prioritizing areas that are **not at risk**.  
-❌ **Loss of Public Trust:** If the model is used for fire management policy, landowners and communities may **lose confidence** in wildfire risk assessments.  
-❌ **Model Is Overly Conservative:** While erring on the side of caution is sometimes useful, an **extreme overestimation of risk** reduces the model’s **practical utility**.  
+### **1️⃣ Misallocation of Resources**  
+❌ **Fire management resources may be deployed inefficiently**, focusing on areas that are not actually at risk.  
+❌ Firefighters and emergency responders may be directed **away from actual fire-prone areas**, increasing the risk of uncontrolled wildfires in critical regions.  
+❌ Public funds may be **misallocated**, prioritizing fuel reduction efforts and fire mitigation strategies in areas with little actual wildfire threat.
 
-These results further confirm that the **burn probability model is not a reliable tool for predicting wildfire occurrences**.
+### **2️⃣ Loss of Public Trust in Wildfire Models**  
+❌ If **false alarms become frequent**, landowners, policymakers, and the public may **lose confidence in wildfire risk assessments**.  
+❌ Communities may **ignore future warnings**, assuming fire risk predictions are unreliable.  
+❌ Overuse of exaggerated hazard maps may create **fire fatigue**, where stakeholders no longer react to critical fire danger warnings.
 
+### **3️⃣ Overstating Actual Wildfire Hazard Risk**  
+❌ A **79.63% overestimation rate** inflates perceived wildfire hazard, **misrepresenting true fire danger**.  
+❌ Fire insurance policies and land management decisions may be **negatively impacted by excessive risk classifications**.  
+❌ Public policy decisions that rely on this model may be **based on inaccurate, overly cautious fire risk assessments** rather than actual fire-prone conditions.
 ---
 
 
