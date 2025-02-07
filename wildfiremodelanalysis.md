@@ -394,6 +394,7 @@ We selected the **threshold where precision and recall are equal**, ensuring tha
 At this threshold, the model classifies fire risk as follows:
 
 <div align="center">
+  
 | Metric | Value |
 |--------|--------|
 | **True Negatives (TN)** | `7,365,736` |
@@ -402,6 +403,7 @@ At this threshold, the model classifies fire risk as follows:
 | **False Negatives (FN)** | `2,062,943` |
 | **Precision** | `0.2037` |
 | **Recall** | `0.2037` |
+
 </div>
 
 ---
@@ -412,7 +414,9 @@ One of the most concerning findings is the **high rate of false positives**, lea
 
 We calculate the **Overprediction Rate** as:  
 $$
+
 \text{Overprediction Rate} = \frac{\text{False Positives (FP)}}{\text{False Positives (FP)} + \text{True Positives (TP)}}
+
 $$
 
 At the selected threshold:  
