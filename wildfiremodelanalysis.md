@@ -311,7 +311,7 @@ If both values are similar, then the OSU model **is functionally random and does
 
 This confirms that the **burn probability model does not provide any additional value over a purely random model**.
 
-![PR AUC Comparison](images/prec_recall.jpg)
+![PR AUC Comparison](images/prec_recall.JPG)
 
 ---
 
