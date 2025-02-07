@@ -447,6 +447,7 @@ The model’s **severe overestimation** of wildfire risk has **direct consequenc
 ❌ A **79.63% overestimation rate** inflates perceived wildfire hazard, **misrepresenting true fire danger**.  
 ❌ Fire insurance policies and land management decisions may be **negatively impacted by excessive risk classifications**.  
 ❌ Public policy decisions that rely on this model may be **based on inaccurate, overly cautious fire risk assessments** rather than actual fire-prone conditions.
+
 ---
 
 
