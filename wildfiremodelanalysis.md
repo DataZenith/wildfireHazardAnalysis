@@ -450,12 +450,16 @@ The model’s **severe overestimation** of wildfire risk has **direct consequenc
 ---
 # 5. Discussion & Implications  
 
+# Discussion & Implications  
+
 ## **Why Model Accuracy Matters in Public Policy**  
 
 The findings in this report demonstrate that the **burn probability model does not provide meaningful predictive power**. Since the **Hazard Risk Map** relies on this model to classify wildfire risk, this raises serious concerns about **policy decisions being made based on unreliable data**.  
 
+Furthermore, not only does the model fail to predict fire occurrence, but it also **grossly overestimates actual fire risk**. This overestimation means that **a significant number of areas classified as high-risk may not actually be at risk**, leading to **unwarranted regulations, increased costs for property owners, and potential misallocation of fire mitigation resources**.  
+
 In public policy, models should meet **two key requirements**:  
-1️⃣ **Empirical Accuracy** → The model should **differentiate between fire-prone and non-fire areas**.  
+1️⃣ **Empirical Accuracy** → The model should **differentiate between fire-prone and non-fire areas** and **should not significantly overestimate risk**.  
 2️⃣ **Legal & Ethical Justification** → Policies based on the model should comply with **Oregon’s legal standards for evidence-based decision-making**.  
 
 The **current burn probability model fails on both counts**, creating **unjustified regulatory burdens for property owners** and **potential legal challenges**.
@@ -470,7 +474,7 @@ The Oregon Department of Forestry (ODF) uses the **Hazard Risk Map**, which inco
 - **Property development restrictions** in high-risk zones.  
 - **Potential financial burdens** for compliance.  
 
-If the burn probability model **does not actually predict fire occurrence**, then these **risk classifications may be fundamentally flawed**, leading to **unnecessary and costly regulations** for property owners.  
+If the burn probability model **does not actually predict fire occurrence** and **systematically overestimates fire risk**, then these **risk classifications may be fundamentally flawed**, leading to **unnecessary and costly regulations** for property owners.  
 
 🚨 **Key Concern:** 🔹 **Property owners may be required to take costly mitigation actions based on unreliable wildfire risk classifications.**  
 
@@ -482,7 +486,7 @@ If the burn probability model **does not actually predict fire occurrence**, the
 Oregon law emphasizes **evidence-based decision-making** in public policy. **ORS 182.525** requires state agencies to allocate funding to **programs backed by scientific research and empirical validation**.  
 
 🔹 **Applying This to the Burn Probability Model:**  
-- If **burn probability fails to distinguish fire-prone areas**, then it **does not meet the legal standard for evidence-based policymaking**.  
+- If **burn probability fails to distinguish fire-prone areas** and **overestimates fire risk**, then it **does not meet the legal standard for evidence-based policymaking**.  
 - Using a **scientifically unvalidated model** to impose regulations could **violate Oregon’s legal requirements** for public policy decisions.  
 
 🚨 **Key Concern:** 🔹 **If the model is not empirically valid, its use in regulatory decision-making may not comply with Oregon law.**  
@@ -507,7 +511,8 @@ If insurers **informally incorporate** the classifications from the Hazard Risk 
 ## **Public Trust & Policy Legitimacy**  
 
 Wildfire risk models should be **transparent, scientifically validated, and publicly accountable**. If the burn probability model:  
-- **Does not differentiate fire-prone from non-fire areas**, and  
+- **Does not differentiate fire-prone from non-fire areas**,  
+- **Overestimates fire risk**, and  
 - **Is still used to justify regulations and land-use decisions**,  
 
 then the **legitimacy of the entire Hazard Risk Map is undermined**.  
@@ -525,19 +530,17 @@ This decision-making process **does not align with Oregon’s laws on evidence-b
 
 🔹 **Recommended Next Steps:**  
 
-1️⃣ **Empirical Validation of Burn Probability** → The burn probability model should be tested against **historical wildfire data** using a method similar to the analysis in this report. If the model **does not show meaningful predictive ability**, it should be revised or replaced.  
+1️⃣ **Empirical Validation of Final Hazard Scores** → The final wildfire risk classifications (not just burn probability) should be tested against **historical wildfire data** using an approach similar to this report. If the **Hazard Risk Map’s classifications do not align with actual fire occurrences**, they should be revised or removed.  
 
 2️⃣ **Transparency in Model Development** → The decision-making process for wildfire risk classifications should be **publicly disclosed**, including how thresholds were set and whether they align with scientific best practices.  
 
 3️⃣ **Disclosure of Board Members' Classifications** → The 26 board members who voted on the risk classification thresholds should **disclose which classification their own properties fall under**. If those who determined the risk thresholds are **exempt from the classifications they impose on others**, this raises ethical concerns and potential conflicts of interest.  
 
-4️⃣ **Re-Evaluation of Risk Classifications** → If burn probability does not contribute meaningful fire risk information, the **Hazard Risk Map should be revised** to avoid misclassification.  
+4️⃣ **Re-Evaluation of Risk Classifications** → If the final hazard scores **do not align with real-world fire data**, the **Hazard Risk Map should be revised** to avoid misclassification.  
 
 5️⃣ **Public Accountability & Policy Justification** → State agencies should provide **clear evidence** that wildfire risk classifications **are based on sound science** before imposing regulatory requirements on property owners.  
 
 🚨 **Key Concern:** 🔹 **Without these improvements, the use of burn probability in public policy may remain legally and scientifically unjustified.**  
-
-
 
 # **References**
 
