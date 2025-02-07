@@ -257,6 +257,79 @@ This analysis **quantifies how much the model exaggerates fire likelihood**, ens
 ✅ **Histogram analysis provides a visual check** on whether predicted probabilities actually differentiate fire-prone and non-fire areas.  
 ✅ **The overestimation analysis ensures** that the model is not **artificially inflating fire risk** by predicting too many false fires.  
 
+#4) Results & Analysis
+
+## Understanding the Evaluation Process  
+The **burn probability model** is designed to classify areas based on the likelihood of fire occurrence. Since our goal is to assess how well it differentiates between fire and no-fire events, we evaluate it as a **classification model**.
+
+A key challenge in this analysis is the **imbalance in the dataset**, where **fire events are much rarer than no-fire events**:
+
+- **No Fire (0): 78.45% of pixels**  
+- **Fire Occurred (1): 21.55% of pixels**  
+
+For imbalanced datasets, standard metrics like **accuracy can be misleading**, since a model could predict **"No Fire" for all pixels and still achieve high accuracy**. Instead, we focus on **Precision-Recall AUC (PR AUC)** because:
+
+- **PR AUC is a better metric for imbalanced datasets**, as it evaluates the trade-off between detecting fires (**recall**) and avoiding false positives (**precision**).
+- **A high PR AUC indicates that a model successfully distinguishes fire vs. no-fire events**, while a low PR AUC suggests that the model lacks predictive power.
+
+---
+
+## Performance of the Burn Probability Model  
+To evaluate the **Burn Probability Model (OSU’s model)**, we compute the **Precision-Recall AUC (PR AUC)** score.
+
+- **PR AUC of OSU’s Model** = **X.XX**
+- **AUC Interpretation**: Higher values indicate better classification performance.
+
+To understand whether the model is **better than random guessing**, we compare its performance to a **random probability generator**.
+
+---
+
+## Benchmarking Against Random Predictions  
+When a classification model **performs no better than random**, its performance simply reflects the balance of the dataset. Since **fires occur in 21.55% of the dataset**, a completely **random model’s PR AUC should be approximately 0.2155**.
+
+To determine if the **OSU burn probability model provides meaningful classification**, we generate **random probabilities** and calculate the **PR AUC** for these random scores.
+
+- **PR AUC of a Random Model** = **Y.YY**
+- **If the OSU model's PR AUC is close to or worse than random (0.2155), then it provides no meaningful predictive power.**
+
+To validate this comparison, we:
+1. **Generate random probabilities** sampled from a uniform distribution between 0 and 1.
+2. **Compute PR AUC** for these random probabilities.
+3. **Compare the OSU model’s PR AUC to this random baseline**.
+
+If both values are similar, then the OSU model **is functionally random and does not improve fire risk classification**.
+
+![PR AUC Comparison](images/prec_recall.png)
+
+---
+
+## Visualization of Performance  
+To illustrate these findings, we generate **Precision-Recall AUC curves** for:  
+📌 **OSU’s Burn Probability Model**  
+📌 **A Random Model (Uniform Probability Distribution)**
+
+These **PR curves** allow us to see whether the OSU model **meaningfully distinguishes fire risk** or if it behaves like random noise.
+
+Additionally, we analyze:  
+📌 **Histogram of Burn Probabilities** → To check if the burn probabilities are skewed or clustered near zero.  
+📌 **Precision & Recall at Different Probability Thresholds** → To see if the model’s classification improves at different cutoffs.
+
+---
+
+## Key Takeaways  
+- **A well-performing model should effectively separate fire vs. no-fire events**.
+- **PR AUC quantifies whether the model is better than random in making these classifications**.
+- **If PR AUC is close to random (0.2155), the model lacks predictive value and does not contribute useful information for fire risk assessment**.
+- **A meaningful model should have a significantly higher PR AUC than 0.2155, proving that it correctly separates fire-prone and non-fire areas**.
+- **If the model’s performance remains near random, using it for wildfire risk assessment is questionable.**
+
+---
+
+## Next Steps  
+The next section will interpret these results and discuss the implications of using **a model that does not meaningfully distinguish fire risk**. If the **OSU model performs no better than rando
+
+
+
 ---
 
 
