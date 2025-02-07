@@ -389,7 +389,6 @@ We selected the **threshold where precision and recall are equal**, ensuring tha
 
 **Selected Threshold: `0.015`**  
 - **Best Threshold (Equal Precision & Recall):** `0.015`  
-- **Best Threshold (Highest F1-Score):** `0.072`  
 
 At this threshold, the model classifies fire risk as follows:
 
