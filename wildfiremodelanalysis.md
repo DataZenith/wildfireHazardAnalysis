@@ -542,6 +542,35 @@ This decision-making process **does not align with Oregon’s laws on evidence-b
 
 🚨 **Key Concern:** 🔹 **Without these improvements, the use of burn probability in public policy may remain legally and scientifically unjustified.**  
 
+# 6. Conclusion  
+
+The findings in this report raise **serious concerns** about the validity and reliability of the **burn probability model** used in Oregon’s **Hazard Risk Map**. Our analysis demonstrates that:  
+
+- **The model provides no meaningful predictive power** and does not successfully distinguish between fire-prone and non-fire areas.  
+- **It grossly overestimates fire risk**, which results in a large number of misclassified areas.  
+- **The final hazard classifications were determined by a vote rather than scientific validation**, making them **arbitrary rather than evidence-based**.  
+- **Oregon law (ORS 182.525) requires evidence-based policymaking**, yet the model and risk classifications do not align with these legal standards.  
+
+Since the **Hazard Risk Map** directly impacts **property regulations, insurance considerations, and public trust in wildfire risk management**, these findings highlight **significant flaws** in how fire risk is being assessed and enforced.
+
+### **The Need for Immediate Action**  
+
+Given the model’s failure to provide reliable risk assessments, **the following steps should be taken immediately**:  
+
+1️⃣ **Empirical Validation of Final Hazard Scores** → The classifications should be tested against **historical fire data** to determine if they reflect real fire risk.  
+2️⃣ **Full Transparency in Methodology** → The decision-making process behind burn probability assignments and final hazard classifications should be **publicly disclosed and independently reviewed**.  
+3️⃣ **Re-Evaluation of Policy Implementation** → If the **burn probability model cannot be improved**, its role in determining wildfire risk should be **reconsidered or removed** from regulatory decision-making.  
+4️⃣ **Public Accountability** → The board members who voted on classification thresholds should **disclose whether their own properties were affected**, ensuring fairness and transparency.  
+
+### **Final Thoughts**  
+
+Wildfire risk management is a critical public safety issue, and it **must be grounded in sound science**. A model that **fails to predict fire risk and overestimates danger** should not be used as the foundation for **statewide regulatory decisions**.  
+
+Without **urgent validation and reform**, the continued use of this flawed burn probability model in policy decisions **risks imposing unnecessary financial burdens on property owners, eroding public trust, and violating Oregon’s legal standards for evidence-based policymaking**.  
+
+🚨 **If Oregon is to implement fair, effective, and legally compliant wildfire policies, it must prioritize transparency, empirical validation, and scientific integrity in its risk assessments.**  
+
+
 # **References**  
 
 Below are the sources used to support the methodology, evaluation of the model, and supporting data sources.  
