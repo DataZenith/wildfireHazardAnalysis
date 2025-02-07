@@ -412,12 +412,13 @@ At this threshold, the model classifies fire risk as follows:
 
 One of the most concerning findings is the **high rate of false positives**, leading to an **overestimation of fire risk**.  
 
-We calculate the **Overprediction Rate** as:  
-$$
+We calculate the **Overprediction Rate** as:
 
+$$
 \text{Overprediction Rate} = \frac{\text{False Positives (FP)}}{\text{False Positives (FP)} + \text{True Positives (TP)}}
-
 $$
+
+
 
 At the selected threshold:  
 - **False Positives (FP):** `2,062,943`  
