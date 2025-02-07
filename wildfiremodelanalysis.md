@@ -209,7 +209,7 @@ Since PR-AUC is particularly useful for **imbalanced datasets**, it is important
 
 ---
 
-## **2. Comparing to a Random Model**
+### **2. Comparing to a Random Model**
 To test whether the model is **actually predicting fires or just guessing**, we compared it to a **random number generator** that assigns probabilities at random.
 
 - If the model **performs better than random**, it means it has **some ability to identify fire-prone areas**.
@@ -218,7 +218,7 @@ To test whether the model is **actually predicting fires or just guessing**, we 
 
 ---
 
-## **3. Visual Analysis: Histogram Layover**
+### **3. Visual Analysis: Histogram Layover**
 To further evaluate the model, we **compared the histograms of predicted probabilities** for locations where fires occurred and where they did not.
 
 - If the model is working well, the histogram of fire locations should **show higher predicted probabilities** compared to non-fire locations.
@@ -229,7 +229,7 @@ This **histogram analysis** helps determine if the model provides meaningful ins
 
 ---
 
-## **4. Measuring Overestimation (False Alarms and Risk Inflation)**
+### **4. Measuring Overestimation (False Alarms and Risk Inflation)**
 To measure **how much fire risk is overestimated**, we:
 - Picked a **threshold** where **precision and recall are equal** (a balanced point).
 - Calculated the **overestimation rate** using:
@@ -249,7 +249,7 @@ This analysis **quantifies how much the model exaggerates fire likelihood**, ens
 
 ---
 
-## **5. Why This Matters**
+### **5. Why This Matters**
 ✅ **A high PR-AUC** means the model is **better than random guessing** and can help identify fire-prone areas.  
 ✅ **Understanding precision and recall** helps determine whether the model is prone to **false alarms or missed fires**.  
 ✅ **The PR-AUC score reflects the model’s overall ability** to distinguish fire-prone areas, rather than relying on a single threshold.  
@@ -448,7 +448,7 @@ The model’s **severe overestimation** of wildfire risk has **direct consequenc
 ❌ Public policy decisions that rely on this model may be **based on inaccurate, overly cautious fire risk assessments** rather than actual fire-prone conditions.
 
 ---
-### 5. Discussion & Implications  
+# 5. Discussion & Implications  
 
 ## **Why Model Accuracy Matters in Public Policy**  
 
