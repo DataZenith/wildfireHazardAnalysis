@@ -353,7 +353,7 @@ When visualized in a **histogram**, this would appear as two distributions with 
 The histogram below overlays the **burn probability distributions** for both fire and no-fire pixels.
 
 <div align="center">
-  <img src="images/burn_probability_histogram.png" alt="Burn Probability Histogram" width="70%">
+  <img src="images/histogram.JPG" alt="Burn Probability Histogram" width="70%">
 </div>
 
 ---
