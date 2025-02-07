@@ -1,6 +1,6 @@
 # Wildfire Hazard Risk Analysis
 
-This repository contains the code and documentation used to analyze wildfire hazard risk datasets provided by the Wildfire Hazard Risk Proof of Concept (POC) at Oregon State. The analysis focuses on classifying burn areas, evaluating the distribution of burn probability estimates across fire and non-fire zones, and quantifying the percentage overestimate of predicted burn probabilities.
+This repository contains the code and documentation used to analyze wildfire hazard risk datasets provided by the Wildfire Hazard Risk Point of contact (POC) at Oregon State. The analysis focuses on classifying burn areas, evaluating the distribution of burn probability estimates across fire and non-fire zones, and quantifying the percentage overestimate of predicted burn probabilities.
 
 ## Repository Overview
 
