@@ -615,16 +615,16 @@ Below are the sources used to support the methodology, evaluation of the model, 
 
 ### Comparative Wildfire Models
 
-10. **Zhou, X., et al. (2024). "Advancements in Burn Probability Modeling."**  
+10. **[Zhou, X., et al. (2024). "Advancements in Burn Probability Modeling."](https://example.com/zhou2024)**  
     *Fire Science Journal.*
 
-11. **Soto, J., et al. (2023). "Evaluating Fire Spread and Risk Using Machine Learning."**  
+11. **[Soto, J., et al. (2023). "Evaluating Fire Spread and Risk Using Machine Learning."](https://example.com/soto2023)**  
     *Wildfire Research Quarterly.*
 
-12. **Kong, L. (2024). "Machine Learning Approaches for Wildfire Prediction."**  
+12. **[Kong, L. (2024). "Machine Learning Approaches for Wildfire Prediction."](https://example.com/kong2024)**  
     *Journal of Environmental Hazards.*
 
-13. **Faivre, N., et al. (2024). "Best Practices for Burn Probability Modeling."**  
+13. **[Faivre, N., et al. (2024). "Best Practices for Burn Probability Modeling."](https://example.com/faivre2024)**  
     *Fire Management Journal.*
 
 ### Data Sources
@@ -632,3 +632,4 @@ Below are the sources used to support the methodology, evaluation of the model, 
 14. **Dataset Repository & README File (Contains Burn Probability & Historical Fire Data).**  
     - 📌 **GitHub README with Data Sources:**  
       [GitHub README](https://github.com/yourusername/wildfire-risk-analysis/blob/main/README.md)
+
