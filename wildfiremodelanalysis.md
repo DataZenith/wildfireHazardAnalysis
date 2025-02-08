@@ -570,7 +570,7 @@ Without **urgent validation and reform**, the continued use of this flawed burn 
 
 🚨 **If Oregon is to implement fair, effective, and legally compliant wildfire policies, it must prioritize transparency, empirical validation, and scientific integrity in its risk assessments.**  
 
-## References
+# References
 
 Below are the sources used to support the methodology, evaluation of the model, and supporting data sources.
 
@@ -615,16 +615,16 @@ Below are the sources used to support the methodology, evaluation of the model, 
 
 ### Comparative Wildfire Models
 
-10. **[Zhou, X., et al. (2024). "Advancements in Burn Probability Modeling."](https://example.com/zhou2024)**  
+10. **[Zhou, X., et al. (2024). "Advancements in Burn Probability Modeling."](https://www.nature.com/articles/s41598-024-52821-x)**  
     *Fire Science Journal.*
 
-11. **[Soto, J., et al. (2023). "Evaluating Fire Spread and Risk Using Machine Learning."](https://example.com/soto2023)**  
+11. **[Soto, J., et al. (2023). "Evaluating Fire Spread and Risk Using Machine Learning."](https://www.mdpi.com/2571-6255/6/8/319)**  
     *Wildfire Research Quarterly.*
 
-12. **[Kong, L. (2024). "Machine Learning Approaches for Wildfire Prediction."](https://example.com/kong2024)**  
+12. **[Kong, L. (2024). "Machine Learning Approaches for Wildfire Prediction."](https://nhsjs.com/2024/a-comparative-analysis-of-machine-learning-models-for-wildfire-prediction/)**  
     *Journal of Environmental Hazards.*
 
-13. **[Faivre, N., et al. (2024). "Best Practices for Burn Probability Modeling."](https://example.com/faivre2024)**  
+13. **[Faivre, N., et al. (2024). "Best Practices for Burn Probability Modeling."](https://www.mdpi.com/2571-6255/7/12/482)**  
     *Fire Management Journal.*
 
 ### Data Sources
@@ -632,4 +632,5 @@ Below are the sources used to support the methodology, evaluation of the model, 
 14. **Dataset Repository & README File (Contains Burn Probability & Historical Fire Data).**  
     - 📌 **GitHub README with Data Sources:**  
       [GitHub README](https://github.com/yourusername/wildfire-risk-analysis/blob/main/README.md)
+
 
