@@ -11,7 +11,8 @@ Due to file size limitations, the actual raw datasets are not stored in this rep
 1. **Transformed Data**  
    - **Description:**  
       This dataset is derived from a combination of **burn probability estimates** from the wildfire hazard model and **historical wildfire records**. Each row in the dataset represents a single **pixel** where these two datasets overlap. The dataset includes:  
-   - **Burn Probability:** The probability of fire occurrence for that pixel, as assigned by the wildfire hazard model.  
+   - **Burn Probability:** The probability of fire occurrence for that pixel, as assigned by the wildfire hazard model.
+   - **Wildfire Hazard :** The final hazard scores of the model output.  These do not have the applied averaging by taxlot which is the final step in estimating wildfire hazard.
    - **Fire Occurrence Flag:** A binary indicator (1 = fire occurred, 0 = no fire) derived from historical wildfire data.  
    - **Spatial Resolution:** Each pixel is spaced **500 feet apart** both vertically and horizontally, ensuring a uniform grid structure.
    - **Access Link:**  
