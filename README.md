@@ -26,6 +26,9 @@ Due to file size limitations, the actual raw datasets are not stored in this rep
    - **Path to Final Burn Probabilities:**  
      After downloading, navigate through:  
      `SB80PublicData >> FireModelingData >> FireModeling_FuelscapeData.gdb >> BurnProbability`
+   - **Path to Wildfire Hazards:**
+      After downloading, navigate through:
+     `SB80PublicData >> FireModelingData >> FireModeling_FuelscapeData.gdb >> WildfireHazard`
 
 3. **Historical Fire Data**  
    - **Description:**  
