@@ -80,6 +80,28 @@ This dataset is the result of integrating data from both the **Wildfire Hazard M
 
 Each row in this dataset represents a **single pixel** where these four data sources overlap. The spatial resolution is **500 feet**, with each pixel spaced **500 feet apart both vertically and horizontally**, ensuring a uniform grid structure.
 
+### Visualizing Data Granularity
+
+To better illustrate the structure and granularity of the dataset, the following figures provide a zoomed-in visualization of the spatial data points. Each chart progressively zooms in to show how the dataset is structured at different levels of detail.
+
+#### **Figure 1: Oregon Coast**
+![Full Dataset View](images/point3.PNG)
+
+The first chart displays the entire dataset, highlighting the spatial distribution of data points across the region.
+
+#### **Figure 2: Mid-Level Zoom**
+![Mid-Level Zoom](images/point_2.PNG)
+
+This second chart provides a mid-level zoom, showing how individual data points become more distinguishable.
+
+#### **Figure 3: High-Granularity Zoom**
+![High-Granularity Zoom](images/point.PNG)
+
+The final chart provides a close-up of a **small section** of the dataset, emphasizing the **500-foot pixel resolution** and illustrating the spatial density of the points.
+
+These figures help to contextualize the dataset, ensuring that readers understand the **scale** and **resolution** of the data being analyzed.
+
+
 ### Dataset Structure
 This analysis focuses on a **subset** of the transformed dataset to examine **burn probability distributions, fire occurrence patterns, and final wildfire hazard classifications**.
 
