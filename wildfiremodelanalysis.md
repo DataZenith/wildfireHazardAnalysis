@@ -206,7 +206,7 @@ The wildfire hazard map uses a **grayscale gradient** to represent hazard values
 - Helps **quickly identify high-risk areas** based on modeled hazard values.
 - Provides an **intuitive, easily interpretable representation** of wildfire hazard zones.
 
-![Burn Probability Map](images/hazaard.PNG)
+![Burn Probability Map](images/hazard.PNG)
 
 The hazard map above provides a visual representation of wildfire risk levels across the study area, highlighting **low to high hazard zones** using grayscale intensity.
 
