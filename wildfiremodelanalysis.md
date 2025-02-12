@@ -67,7 +67,6 @@ This analysis examines model outputs across the entire state of Oregon, assessin
 # 3. Data and Methodology
 
 ## Data Sources  
-# Data Description
 
 The data used in this analysis comes from multiple sources, including **model outputs from Oregon State University, historical wildfire occurrence records, and a transformed dataset created by overlapping these sources**. These datasets were obtained through **Oregon State’s Wildfire Hazard Risk Point of Contact (POC)** and serve as the foundation for evaluating both the **burn probability component** and the **final wildfire hazard classifications** of the wildfire hazard model.
 
