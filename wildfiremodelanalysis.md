@@ -181,6 +181,39 @@ A full list of dataset links and additional details can be found in the **[GitHu
 
 ![Burn Probability Map](images/burn_prob.JPG)
 
+### Wildfire Hazard Map Description
+
+The wildfire hazard map uses a **grayscale gradient** to represent hazard values, where **lower hazard areas appear darker (black) and higher hazard areas appear lighter (white).** This visualization helps distinguish varying levels of wildfire hazard based on model outputs.
+
+#### **Color Mapping**
+- **Black (0.00 hazard value)** → Represents the **lowest** wildfire hazard.
+- **White (5.48 hazard value)** → Represents the **highest** wildfire hazard.
+- **Gradient Transition** → Intermediate hazard values **transition smoothly** from black to white.
+
+#### **Interpretation**
+- **Darker Regions (Near Black, Hazard Value Close to 0.00)**
+  - Indicate **low wildfire hazard** areas.
+  - These areas are expected to have **minimal fire risk** based on the model’s calculations.
+- **Lighter Regions (Near White, Hazard Value Close to 5.48)**
+  - Indicate **high wildfire hazard** areas.
+  - These areas are **more prone to fire risk** according to the hazard model.
+- **Gradual Shading**
+  - Helps visualize how hazard values **change across different locations**.
+  - Allows for **smooth interpretation** without needing explicit numerical labels.
+
+#### **Purpose**
+- The **grayscale mapping visually enhances hazard level variations** across the region.
+- Helps **quickly identify high-risk areas** based on modeled hazard values.
+- Provides an **intuitive, easily interpretable representation** of wildfire hazard zones.
+
+#### **Figure 4: Wildfire Hazard Map**
+<div align="center">
+    <img src="images/hazard.PNG" width="60%">
+</div>
+
+The hazard map above provides a visual representation of wildfire risk levels across the study area, highlighting **low to high hazard zones** using grayscale intensity.
+
+
 ## Burn Probability Overlaid with Historical Fire Data  
 This map overlays the model’s burn probability layer with historical fire occurrences (2000-2021), highlighting areas where the model predicted fire risk versus actual fire events.  The gradient color is just to make it more visually appealing
 
