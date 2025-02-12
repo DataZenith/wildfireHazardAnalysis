@@ -41,15 +41,26 @@ These findings raise serious questions about the validity of the methods used to
 
 # 2. Introduction
 
-**Background:**  
-Wildfire hazard assessment is a critical tool for land management, public policy, and disaster preparedness. These assessments rely on models that estimate the likelihood and potential impact of wildfires based on environmental conditions, historical data, and fire behavior simulations. A key component of these assessments is burn probability, which represents the estimated likelihood of a fire occurring in a given area. This probability is often combined with fire intensity predictions to produce a final hazard rating used in risk mitigation strategies. However, the modeling process used to esimate the 2025 Oregon Wildfire hazard map is not well documented, making it difficult to assess the validity of its outputs.
+Wildfire hazard assessment is a critical tool for land management, public policy, and disaster preparedness. These assessments rely on models designed to estimate the likelihood and potential impact of wildfires based on environmental conditions, historical data, and fire behavior simulations. A fundamental expectation of these models is their ability to accurately distinguish between areas historically prone to wildfires and those with little to no fire history.
 
-**Purpose:**  
-This report evaluates the relationship between the model’s probability output and its ability to distinguish between large fire events and non-fire events.
+A key component of wildfire risk assessments is **burn probability**, which is defined as the **average annual likelihood that a specific location will experience wildfire**. Burn probabilities are expressed as fractions, where a value of **0.01 represents a 1% chance of fire in any given year, or one expected fire every 100 years on average**. These probabilities are **long-term averages**, not short-term forecasts, and are used alongside fire intensity information to determine which landscapes are more likely to experience wildfire hazard.
 
-**Scope:**  
-This analysis focuses on probability model outputs for all of Oregon to determine whether the model meets the necessary standards for guiding public policy and wildfire risk management.
+However, **burn probability is only one part of the overall wildfire hazard model**. The final **wildfire hazard output** integrates burn probability with fire intensity modifiers and assigns risk classifications into three designated tiers:
 
+- **High Wildfire Hazard**: Hazard value > 0.137872 (approximately the **90th percentile and above** of tax lot hazard values).
+- **Moderate Wildfire Hazard**: Hazard value > 0.001911 and ≤ 0.137872 (approximately the **40th – 90th percentile**).
+- **Low Wildfire Hazard**: Hazard value ≤ 0.001911 (approximately the **40th percentile and below**).
+
+These hazard classifications were initially developed using hazard values near **structures within the Wildland-Urban Interface (WUI)**. Researchers combined burn probability with fire intensity at a **30 x 30-meter pixel scale**, averaged the values within a three-cell neighborhood, and extracted **792,949** hazard values associated with structures in the WUI. The hazard thresholds for **moderate** and **high** hazard zones were based on the **40th and 90th percentile** of these values, respectively. These thresholds were recommended for adoption by the **Rules Advisory Committee in February 2022** and later **formally adopted by the Board of Forestry in June 2022**.
+
+## Purpose  
+This report evaluates two critical aspects of the wildfire hazard model:
+
+1. **Burn Probability’s Classification Performance** – Does the model’s burn probability output effectively distinguish between fire-prone and non-fire areas? A well-calibrated model should show that areas with high burn probability have historically experienced more fires than those with low burn probability.
+2. **Final Wildfire Hazard Classification** – How well do the **low, moderate, and high hazard designations** align with actual fire history and risk expectations? If hazard tiers fail to correspond with real-world fire patterns, the model’s reliability for policy and mitigation efforts is called into question.
+
+## Scope  
+This analysis examines model outputs across the entire state of Oregon, assessing whether the wildfire hazard model meets the necessary standards for **accurate classification, predictive reliability, and policy relevance** in wildfire risk assessment.
 
 <hr>
 
