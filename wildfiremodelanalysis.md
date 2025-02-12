@@ -67,46 +67,70 @@ This analysis examines model outputs across the entire state of Oregon, assessin
 # 3. Data and Methodology
 
 ## Data Sources  
+# Data Description
 
-The data used in this analysis comes from multiple sources, including model outputs from Oregon State University, historical wildfire occurrence records, and a transformed dataset created by combining these sources. These datasets were obtained through Oregon State’s Wildfire Hazard Risk **Point of Contact (POC)** and serve as the foundation for evaluating the burn probability component of the wildfire hazard model.
+The data used in this analysis comes from multiple sources, including **model outputs from Oregon State University, historical wildfire occurrence records, and a transformed dataset created by overlapping these sources**. These datasets were obtained through **Oregon State’s Wildfire Hazard Risk Point of Contact (POC)** and serve as the foundation for evaluating both the **burn probability component** and the **final wildfire hazard classifications** of the wildfire hazard model.
 
-- **1) Transformed Data:**  
-  This dataset is derived from a combination of **burn probability estimates** from the wildfire hazard model and **historical wildfire records**. Each row in the dataset represents a single **pixel** where these two datasets overlap. The dataset includes:  
-  - **Burn Probability:** The probability of fire occurrence for that pixel, as assigned by the wildfire hazard model.  
-  - **Fire Occurrence Flag:** A binary indicator (1 = fire occurred, 0 = no fire) derived from historical wildfire data.  
-  - **Spatial Resolution:** Each pixel is spaced **500 feet apart** both vertically and horizontally, ensuring a uniform grid structure.
+## 1) Transformed Data (Final Combined Dataset)
+This dataset is the result of integrating data from both the **Wildfire Hazard Model Data** and **Historical Fire Data**. It combines key elements necessary for evaluating the wildfire hazard model:
 
-  The dataset consists of two columns:
+- **Burn Probability**: The probability of fire occurrence for each location, as assigned by the wildfire hazard model.
+- **Wildfire Hazard Value**: A continuous variable representing the final hazard score, derived from burn probability and fire intensity.
+- **Wildfire Hazard Classification**: A categorical variable designating each pixel as **low, moderate, or high hazard**, based on threshold values.
+- **Burn Occurrence**: A binary indicator (**1 = fire occurred, 0 = no fire**) derived from historical wildfire records.
 
-    1. **Burn Probability**  
-     - Represents the probability of a fire occurring in a given pixel, ranging from **0.000000** to **0.074283**.  
-     - Uses a **grayscale gradient**, where black represents low probability and white represents high probability.  
-     - **Descriptive Statistics:**
-       - **Total Count**: 12,019,460 pixels
-       - **Mean**: 0.00925
-       - **Median (50%)**: 0.00621
-       - **Standard Deviation**: 0.01021
-       - **Min Value**: 0.000000
-       - **25th Percentile**: 0.00108
-       - **75th Percentile**: 0.01401
-       - **Max Value**: 0.07428
+Each row in this dataset represents a **single pixel** where these four data sources overlap. The spatial resolution is **500 feet**, with each pixel spaced **500 feet apart both vertically and horizontally**, ensuring a uniform grid structure.
 
-         <br>
+### Dataset Structure
+This analysis focuses on a **subset** of the transformed dataset to examine **burn probability distributions, fire occurrence patterns, and final wildfire hazard classifications**.
 
-    2. **Fire Occurrence (Binary Indicator)**  
-     - Indicates whether a fire historically occurred in that pixel (**2000–2021**).  
-     - **0 (No Fire)**: 78.45% of pixels  
-     - **1 (Fire Occurred)**: 21.55% of pixels  
+- **Burn Probability**
+  - Represents the probability of a fire occurring in a given pixel.
+  - Used to assess whether burn probability aligns with actual fire history.
 
+- **Wildfire Hazard Value**
+  - A continuous variable representing the **final model output**, incorporating both burn probability and fire intensity.
+  - Used to classify pixels into one of three hazard categories.
 
-  
-- **2) Wildfire Hazard Model Data:**  
-  This dataset, provided by Oregon State, was used to build the wildfire hazard model. The burn probability outputs are stored in a geodatabase and were extracted for analysis.  
-  **Path to Burn Probabilities:**  
+- **Wildfire Hazard Classification**
+  - A categorical variable representing the final assigned wildfire risk tier:
+    - **High Hazard** (hazard value > 0.137872)
+    - **Moderate Hazard** (hazard value > 0.001911 and ≤ 0.137872)
+    - **Low Hazard** (hazard value ≤ 0.001911)
+  - Evaluated to determine whether hazard classifications accurately reflect fire-prone areas.
+
+- **Fire Occurrence Flag**
+  - A **binary classification variable** indicating whether a fire has historically occurred in that pixel (**1 = fire, 0 = no fire**).
+
+By analyzing this dataset, we assess whether **burn probability effectively distinguishes between fire-prone and non-fire areas** and whether the **final wildfire hazard classifications** correspond to actual fire history.
+
+---
+
+## 2) Wildfire Hazard Model Data
+This dataset, provided by **Oregon State University (OSU)**, was used to build the wildfire hazard model. It contains **burn probability outputs** and the **final wildfire hazard values**, which were extracted for analysis.
+
+- **Data Source**: Oregon State University
+
+- **Path to Final Burn Probabilities**:  
   `SB80PublicData >> FireModelingData >> FireModeling_FuelscapeData.gdb >> BurnProbability`
 
-- **3) Historical Fire Data:**  
-  This dataset contains recorded wildfire events from **2000 to 2021** and was used to validate the model’s predictive accuracy. The dataset includes only fire events where **acres burned exceeded 247**, ensuring that only significant fire occurrences were considered. To maintain the focus on naturally occurring and uncontrolled wildfire events, **prescribed burns and resource management fires were excluded** from the analysis.
+- **Path to Wildfire Hazards**:  
+  `SB80PublicData >> FireModelingData >> FireModeling_FuelscapeData.gdb >> WildfireHazard`
+
+This dataset provides both the **raw burn probability values** and the **final hazard classifications**, which were later overlaid with historical fire records to evaluate their predictive accuracy.
+
+---
+
+## 3) Historical Fire Data
+This dataset, provided by **Oregon State University (OSU)**, contains **recorded wildfire events from 2000 to 2021** and was used to validate the model’s predictive accuracy.
+
+- **Data Source**: Oregon State University
+- **Inclusion Criteria**:
+  - Only fire events where **acres burned exceeded 247** were included to ensure that only significant fire occurrences were considered.
+  - **Prescribed burns and resource management fires were excluded** to maintain focus on naturally occurring and uncontrolled wildfire events.
+
+This dataset was overlaid with the **Wildfire Hazard Model Data** to create the **Transformed Dataset**, allowing an evaluation of whether **burn probability aligns with historical fire occurrence patterns** and whether **hazard classifications correspond to actual wildfire risk**.
+
 
 A full list of dataset links and additional details can be found in the **[GitHub README](https://github.com/yourusername/wildfire-risk-analysis/blob/main/README.md)**. For further information or verification, inquiries can be directed to **OSUwildfirerisk@oregonstate.edu**.
 
