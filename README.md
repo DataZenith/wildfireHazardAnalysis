@@ -43,17 +43,15 @@ Due to file size limitations, the actual raw datasets are not stored in this rep
 
 The code in this repository is organized to support reproducibility and transparency. It specifically performs the following analyses:
 
-- **Classification of Burn Areas:**
-   - **File:** `prec_rec_auc.py`  
-     The code identifies and categorizes regions based on burn data, distinguishing between areas that have experienced fire and those that have not.
+- **Classification of Burn Areas, Histogram comparison, and Percentile Comparison:**
+   - **File:** `prob.py`  
+     The code identifies and categorizes regions based on burn data, distinguishing between areas that have experienced fire and those that have not, studies histogram probabilities of fire/no fire, and shows the thershold percentials from the WUI subset and the full data.
 
-- **Analysis of Probability Distributions:**
-  - **File:** `histogram_compare.py`  
-     It evaluates and compares the distribution of predicted burn probabilities across fire-affected and non-fire zones.
+- **Hazard Value Overestimation Analysis:**
+  - **File:** `hazard.py`  
+     I evaluate relative hazard within each risk band and estimate the long run overestimation of each risk band.
 
-- **Calculation of Overestimate Percentage:**
-   - **File:** `Overestimate.py`   
-     The analysis computes the percentage overestimate in predicted burn probabilities relative to the actual burn data, providing insights into model performance.
+
 
 ### Programs Used
 
