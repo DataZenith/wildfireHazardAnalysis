@@ -5,8 +5,8 @@ from sklearn.metrics import precision_recall_curve, auc, roc_curve, roc_auc_scor
 #import seaborn as sns
 
 
-
-df = pd.read_csv('D:/fire_data/final_analysis/scrub_data.csv')
+path = #insert path to downloaded data herer
+df = pd.read_csv(path)
 
 
 
