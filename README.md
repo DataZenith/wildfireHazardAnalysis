@@ -15,7 +15,7 @@ Due to file size limitations, the actual raw datasets are not stored in this rep
    - **Fire Occurrence Flag:** A binary indicator (1 = fire occurred, 0 = no fire) derived from historical wildfire data.  
    - **Spatial Resolution:** Each pixel is spaced **500 feet apart** both vertically and horizontally, ensuring a uniform grid structure.
    - **Access Link:**  
-     [Transformed Data (ZIP)](https://drive.google.com/file/d/1ZfwCwuKY_bJ-gGvi1U3fAXznWS4qTicP/view?usp=sharing)
+     [Transformed Data (ZIP)](https://drive.google.com/file/d/1iBR8JbToG7InC1FP4b4zQmXGhPjeJmMK/view?usp=drive_link)
 
 2. **Oregon State Wildfire Hazard Data**  
    - **Description:**  
