@@ -41,7 +41,6 @@ print(f"hazard 40th percentile : {percentile_40}")
 
 X = df['burn_prob1']
 y = df['FIre_flag']
-h = df['hazard_1']
 z = np.random.rand(len(df))
 
 
@@ -57,11 +56,6 @@ pr_auc_rand = auc(recall_rand, precision_rand)
 precision_rand = precision_rand[1:-1]
 recall_rand = recall_rand[1:-1]
 
-# Compute Precision-Recall curve for Random Predictions
-precision_haz, recall_haz, _ = precision_recall_curve(y, h)
-pr_auc_haz = auc(recall_haz, precision_haz)
-precision_haz = precision_haz[1:-1]
-recall_haz = recall_haz[1:-1]
 
 
 
@@ -76,15 +70,17 @@ plt.figure(figsize=(12, 5))
 plt.subplot(1, 2, 1)
 plt.plot(recall_model, precision_model, marker='.', label=f'Model PR AUC: {pr_auc_model:.2f}')
 plt.plot(recall_rand, precision_rand, linestyle='--', label=f'Random PR AUC: {pr_auc_rand:.2f}', color='orange')
-plt.plot(recall_haz, precision_haz, linestyle='--', label=f'Hazard PR AUC: {pr_auc_rand:.2f}', color='blue')
 
 plt.axhline(y=random_precision, color='r', linestyle='--', label=f'Random Baseline: {random_precision:.2f}')
 plt.xlabel("Recall")
 plt.ylabel("Precision")
-plt.title("Precision-Recall Curve: Model vs. Random & Hazard")
+plt.title("Precision-Recall Curve: Model vs. Random")
 plt.legend()
 plt.grid()
 plt.show()
+
+print(f'Random AUC:{pr_auc_rand}')
+print(f'Probability AUC:{pr_auc_model}')
 
 #-----------------
 #histogram plots
@@ -109,3 +105,49 @@ plt.grid()
 
 # Show plot
 plt.show()
+
+#----------------------
+#percentile comparison
+#----------------------
+
+# Example user input for the 40th and 90th percentiles
+# For Variable 1:
+var1_40 = percentile_40  # 40th percentile
+var1_90 = percentile_90  # 90th percentile
+
+# For Variable 2:
+var2_40 = 0.001911  # 40th percentile
+var2_90 = 0.137872 # 90th percentile
+
+# Prepare data for each variable in the format expected by bxp
+box_data = [
+    {
+        'label': 'Full Data',
+        'whislo': var1_40,                  # Lower whisker (40th percentile)
+        'q1': var1_40,                      # Lower quartile (set equal to the 40th percentile)
+        'med': (var1_40 + var1_90) / 2,       # Median (here using the midpoint between 40th and 90th)
+        'q3': var1_90,                      # Upper quartile (set equal to the 90th percentile)
+        'whishi': var1_90,                  # Upper whisker (90th percentile)
+        'fliers': []                        # No outliers to display
+    },
+    {
+        'label': 'WUI Subset',
+        'whislo': var2_40,
+        'q1': var2_40,
+        'med': (var2_40 + var2_90) / 2,
+        'q3': var2_90,
+        'whishi': var2_90,
+        'fliers': []
+    }
+]
+
+# Create the box and whisker plot using bxp
+fig, ax = plt.subplots()
+ax.bxp(box_data, showfliers=False)
+
+# Add labels and title
+ax.set_ylabel('Value')
+ax.set_title('Box and Whisker Plot (40th & 90th Percentiles)')
+
+plt.show()
+
