@@ -27,12 +27,14 @@
 
 In public policy, models are expected to provide reliable, evidence-based insights that inform critical decisions. They must be rigorously validated and demonstrate predictive performance well above trivial baselines. It is unacceptable for a model—especially one that influences resource allocation and public safety—to perform on par with a random number generator.
 
-Our analysis of Oregon State's Wildfire Hazard Model reveals alarming shortcomings:
-- **Inaccuracy in Probability Assignment:** The model fails to distinguish between fire and no-fire events.
-- **Randomness Equivalence:** When benchmarked against a random number generator, the model's ability to classify fire occurrences is no better than chance.
-- **Severe Risk Overestimation:** The model inflates wildfire risk by nearly 80%, potentially leading to misdirected policy and resource decisions.
+Our long-run evaluation of **Oregon State's Wildfire Hazard Model**, using 21 years of wildfire data, reveals **critical failures that undermine its credibility as a predictive tool**:
 
-These findings raise serious questions about the validity of the methods used in assessing the model's outputs. For a tool intended to guide public policy, the expectation is clear: models must deliver actionable, robust, and clearly superior predictions—not results that mimic random chance.
+- **Failure to Distinguish Fire and Non-Fire Zones:** A well-designed wildfire risk model should indicate that high-risk areas have historically experienced more fire than low-risk areas. However, this model does not meet that expectation. Instead, its classification performance is statistically indistinguishable from that of a random number generator, meaning it offers no meaningful ability to separate areas that have burned from those that have not.
+- **Severe Overclassification of Risk:** The model’s hazard classification thresholds are misaligned with actual fire history. The high hazard threshold (0.13787), originally set at the 90th percentile within the wildland-urban interface (WUI), corresponds to the 40th percentile when applied to the full dataset. As a result, **nearly 60% of tax lots are classified as high hazard instead of the intended 10%, significantly inflating perceived wildfire risk.**
+- **Inaccuracy in Probability Assignment:** The model systematically **overestimates wildfire likelihood by approximately 78%** over the long term. Within its highest risk category, extreme fire risk is overstated by 74%, further reinforcing a pattern of exaggerated predictions.
+
+These findings raise serious questions about the validity of the methods used to develop and assess the model’s outputs. **For a tool intended to guide public policy, the expectation is clear: models must deliver actionable, robust, and clearly superior predictions—not results that mimic random chance.** Without fundamental improvements, the Oregon Wildfire Hazard Model risks misinforming decision-makers, misallocating resources, and eroding public trust in wildfire risk assessments.
+
 
 <hr>
 
