@@ -3,8 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-
-df = pd.read_csv('D:/fire_data/final_analysis/scrub_data.csv')
+path = #insert path to downloaded data here
+df = pd.read_csv(path)
 
 
 
