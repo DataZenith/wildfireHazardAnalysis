@@ -86,21 +86,21 @@ To better illustrate the structure and granularity of the dataset, the following
 
 #### **Figure 1: Oregon Coast**
 <div align="center">
-    <img src="images/point3.PNG" width="80%">
+    <img src="images/point3.PNG" width="60%">
 </div>
 
 The first chart displays the entire dataset, highlighting the spatial distribution of data points across the region.
 
 #### **Figure 2: Mid-Level Zoom**
 <div align="center">
-    <img src="images/points_2.PNG" width="80%">
+    <img src="images/points_2.PNG" width="60%">
 </div>
 
 This second chart provides a mid-level zoom, showing how individual data points become more distinguishable.
 
 #### **Figure 3: High-Granularity Zoom**
 <div align="center">
-    <img src="images/points.PNG" width="80%">
+    <img src="images/points.PNG" width="60%">
 </div>
 
 The final chart provides a close-up of a **small section** of the dataset, emphasizing the **500-foot pixel resolution** and illustrating the spatial density of the points.
