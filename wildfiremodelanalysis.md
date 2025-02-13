@@ -610,11 +610,11 @@ $$
 
 
 At the selected threshold:  
-- **False Positives (FP):** `2,062,943`  
-- **True Positives (TP):** `527,835`  
-- **Overprediction Rate:** `79.63%`  
+- **False Positives (FP):** `6,279,511` 
+- **True Positives (TP):** `2,132,259` 
+- **Overprediction Rate:** `74.65%`  
 
-This means that **nearly 80% of areas classified as high fire risk did not actually experience a fire**.
+This means that **nearly 75% of areas classified as high fire risk did not actually experience a fire**.
 
 ---
 
