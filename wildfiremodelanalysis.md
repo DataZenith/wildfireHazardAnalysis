@@ -222,31 +222,39 @@ This map overlays the model’s burn probability layer with historical fire occu
 The data was processed using **QGIS**, an open-source geographic information system. A full guide to downloading and installing **QGIS** can be found in the **[GitHub README](https://github.com/yourusername/wildfire-risk-analysis/blob/main/README.md)**. The following steps were taken to compile the **Transformed Data** for analysis:  
 
 1. **Loading the Data:**  
-   - The **burn probability layer** from the wildfire hazard model was uploaded into QGIS.  
-   - The **historical fire occurrence dataset** was also uploaded.  
+   - Load **burn probability layer** into QGIS.
+   - Load **Wildfire Hazard layer** into QGIS.  
+   - Load **historical fire occurrence dataset** into QGIS.  
 
 2. **Ensuring Consistent Coordinate Reference System (CRS):**  
-   - Both datasets were checked to confirm they used the same **Coordinate Reference System (CRS)** to ensure spatial accuracy.
+   - ALL 3 datasets were checked to confirm they used the same **Coordinate Reference System (CRS)** to ensure spatial accuracy.
 
 3. **Creating a Grid of Points:**  
    - A grid of points was generated, with each point spaced **500 feet apart** both **vertically** and **horizontally** across Oregon.  
    - This ensured that the data was evenly sampled across the study area.
 
-4. **Extracting Burn Probability and Fire Occurrence:**  
-   - For each grid point, the corresponding **burn probability** value was captured from the model output.  
+4. **Extracting Burn Probability, Wildfire Hazard, and Fire Occurrence:**  
+   - For each grid point, the corresponding **burn probability** value was captured from the model output.
+   - For each grid point, the corresponding **wildfire hazard** value was captured from the model output.  
    - The historical fire dataset was overlaid, and a **binary fire occurrence flag** was assigned:  
      - `1` if a fire was recorded at that location.  
-     - `0` if no fire was recorded.
+     
 
 5. **Handling Null Values:**  
    - Some fires extended beyond **Oregon's boundaries**, resulting in missing burn probability values.  
    - These **null values** were removed to ensure clean and complete data.
+   - Null values were dropped from Hazard values as well.
+   - The non fire areas were set to '0'
 
 6. **Exporting the Final Dataset:**  
    - The cleaned grid layer was saved and exported as a **CSV file**.  
-   - This CSV file, referred to as the **Transformed Data**, is available in the **ZIP file linked in the README**.  
+   - This CSV file, referred to as the **Transformed Data**, is available in the **ZIP file linked in the README**.
+  
+7. **Create Columns Based on Risk**
+   - **High Hazard** (hazard value > 0.137872)
+   - **Moderate Hazard** (hazard value > 0.001911 and ≤ 0.137872)
+   - **Low Hazard** (hazard value ≤ 0.001911)
 
-This transformed dataset serves as the foundation for evaluating the **relationship between burn probability estimates and actual fire occurrences** in Oregon.
 
 
 ---
