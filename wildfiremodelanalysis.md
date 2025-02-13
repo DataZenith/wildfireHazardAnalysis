@@ -408,6 +408,30 @@ $$
 
 By measuring overestimation, we assess whether the model **exaggerates wildfire likelihood**, ensuring its predictions are **accurate and not misleading**.
 
+### Step 5: Normalizing Fire Occurrence at the Pixel Level
+
+To assess wildfire risk across different hazard bands, we normalize the **number of pixels that experienced fire** by the **total number of pixels** within each risk band. This provides a measure of **fire occurrence per pixel**, allowing for a standardized comparison across hazard classifications.
+
+#### **Formula for Fire Occurrence per Pixel**
+
+$$
+\text{Relative Risk} = \frac{\text{Number of Pixels That Experienced Fire in Risk Band}}{\text{Total Pixels in Risk Band}}
+$$
+
+- This represents the **fire occurrence rate per pixel** within each hazard band.
+- It provides a way to compare **fire likelihood per unit of classified area**.
+
+#### **Overestimation of Hazard Risk**
+Since the hazard model predicts that higher risk bands should experience more fires, we measure **overestimation** as:
+
+$$
+\text{Overestimation of Hazard Risk} = 1 - \text{Relative Risk}
+$$
+
+- This quantifies **how much the model overstates fire occurrence** compared to actual fire data.
+
+By applying this method, we create a **standardized metric** to evaluate whether the model **realistically reflects wildfire occurrence** across different hazard classifications.
+
 
 ---
 
