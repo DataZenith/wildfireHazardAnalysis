@@ -23,7 +23,7 @@
 
 <hr>
 
-# 1. Executive Summary
+# **1. Executive Summary**
 
 In public policy, models are expected to provide reliable, evidence-based insights that inform critical decisions. They must be rigorously validated and demonstrate predictive performance well above trivial baselines. It is unacceptable for a model—especially one that influences resource allocation and public safety—to perform on par with a random number generator.
 
@@ -39,7 +39,7 @@ These findings raise serious questions about the validity of the methods used to
 <hr>
 
 
-# 2. Introduction
+# **2. Introduction**
 
 Wildfire hazard assessment is a critical tool for land management, public policy, and disaster preparedness. These assessments rely on models designed to estimate the likelihood and potential impact of wildfires based on environmental conditions, historical data, and fire behavior simulations. A fundamental expectation of these models is their ability to accurately distinguish between areas historically prone to wildfires and those with little to no fire history.
 
@@ -64,7 +64,7 @@ This analysis examines model outputs across the entire state of Oregon, assessin
 
 <hr>
 
-# 3. Data and Methodology
+# **3. Data** 
 
 ## Data Sources  
 
@@ -262,7 +262,7 @@ Wildfire hazard values were categorized into **three risk bands**:
 - **Low Hazard**: Hazard value **≤ 0.001911**
 
 ---
-# **Methodology**
+# **4. Methodology**
 
 To evaluate how well the model predicts fire occurrences, we conducted several tests. These tests help determine whether the model provides meaningful predictions or if its results are no better than random guessing. Below, we explain these tests in simple terms and why they matter.
 
@@ -451,7 +451,7 @@ A percentile represents the relative standing of a value within a dataset, indic
 - **Histogram analysis provides a visual check** on whether predicted probabilities actually differentiate fire-prone and non-fire areas.  
 - **The overestimation analysis ensures** that the model is not **artificially inflating fire risk** by predicting too many false fires.  
 
-# 4. Results & Analysis
+# **5. Results & Analysis**
 
 ## Understanding the Evaluation Process  
 The **burn probability model** is designed to classify areas based on the likelihood of fire occurrence. Since our goal is to assess how well it differentiates between fire and no-fire events, we evaluate it as a **classification model**.
@@ -697,7 +697,7 @@ These findings indicate that **hazard classifications based on the WUI subset ma
 
 
 ---
-# 5. Discussion & Implications  
+# **6. Discussion & Implications**  
 
 
 ## **Why Model Accuracy Matters in Public Policy**  
