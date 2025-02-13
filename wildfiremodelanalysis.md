@@ -697,75 +697,36 @@ These findings indicate that **hazard classifications based on the WUI subset ma
 
 
 ---
-# **6. Discussion & Implications**  
 
+# **6. Discussion and Implications**  
 
-## **Why Model Accuracy Matters in Public Policy**  
+Wildfire risk models are intended to provide **actionable, data-driven insights** that guide public policy, emergency planning, and resource allocation. Their credibility depends on their ability to produce **meaningful predictions that separate fire-prone areas from those unlikely to burn**. However, this evaluation of the **Oregon Wildfire Hazard Model** highlights fundamental shortcomings, including **overclassification, weak hazard differentiation, threshold misalignment, and poor long-term predictive performance**.  
 
-The findings in this report demonstrate that the **burn probability model does not provide meaningful predictive power**. Since the **Hazard Risk Map** relies on this model to classify wildfire risk, this raises serious concerns about **policy decisions being made based on unreliable data**.  
+## **Overclassification and Risk Inflation**  
+A primary concern is the **significant inflation of fire risk classifications**. The model assigns **high hazard labels to nearly 60% of tax lots**, even though the original intent was to classify only the highest-risk 10%. This misalignment stems from the fact that the **90th percentile in the WUI subset corresponds only to the 40th percentile in the full dataset**, meaning hazard scores do not scale as expected when applied statewide.  
 
-Furthermore, not only does the model fail to predict fire occurrence, but it also **grossly overestimates actual fire risk**. This overestimation means that **a significant number of areas classified as high-risk may not actually be at risk**, leading to **unwarranted regulations, increased costs for property owners, and potential misallocation of fire mitigation resources**.  
+Beyond classification issues, the model **routinely overestimates the probability of fire occurrence**. Across all hazard categories, the model overpredicts fire risk by **78% in the long term**, with **extreme hazard areas overstated by 74%**. These inflated estimates could lead to **unwarranted fire mitigation requirements** for property owners and **misallocation of state and federal resources**.  
 
-In public policy, models should meet **two key requirements**:  
-1️⃣ **Empirical Accuracy** → The model should **differentiate between fire-prone and non-fire areas** and **should not significantly overestimate risk**.  
-2️⃣ **Legal & Ethical Justification** → Policies based on the model should comply with **Oregon’s legal standards for evidence-based decision-making**.  
+## **Failure to Distinguish Between Fire and Non-Fire Zones**  
+One of the most concerning findings is that **the model does not effectively separate areas that have historically burned from those that have not**. Over a **21-year period**, the model’s predictions are **statistically indistinguishable from random chance**—meaning that a pixel classified as high hazard is no more likely to experience fire than one classified as low hazard.  
 
-The **current burn probability model fails on both counts**, creating **unjustified regulatory burdens for property owners** and **potential legal challenges**.
+Theoretically, this model **should perform well on this long-term analysis**, as it was **trained using the same historical fire data** according to OSU’s point of contact. The fact that it fails to differentiate between fire-prone and non-fire areas suggests **serious flaws in the modeling process or the assumptions behind its risk classifications**. A well-calibrated model should **show a strong relationship between hazard classifications and actual fire history**, yet this analysis demonstrates that **fire occurrence is poorly correlated with assigned risk scores**. If hazard scores fail to differentiate between fire-prone and fire-free areas over time, the model cannot be relied upon to guide **mitigation planning, land-use decisions, or emergency preparedness strategies**.  
 
----
+## **Weak Differentiation Between Hazard Tiers**  
+For a hazard model to be useful, it must clearly distinguish between **low, moderate, and extreme** risk areas. This evaluation demonstrates that **the difference in fire occurrence between moderate and extreme hazard zones is minimal**, suggesting that the model does not effectively scale risk levels. While there is a clear increase in fire occurrence when moving from **low to moderate hazard zones**, the transition from **moderate to extreme hazard** is far less pronounced, **calling into question the value of the extreme hazard classification**.  
 
-## **Regulatory Implications for Property Owners**  
+## **Threshold Misalignment and Generalization Issues**  
+The model’s hazard classifications were developed using **the WUI subset**, under the assumption that **these areas represent the highest fire risk**. However, the analysis shows that **hazard thresholds derived from the WUI do not translate well to the full dataset**. If the WUI truly represented the most fire-prone areas, the hazard scores within it should be **consistently higher** than in the full dataset, yet this comparison reveals that **the risk scores in the WUI subset are not meaningfully different** from those assigned across the broader landscape.  
 
-The Oregon Department of Forestry (ODF) uses the **Hazard Risk Map**, which incorporates burn probability into its overall wildfire risk classifications. **These classifications directly impact property owners**, as they determine:  
+## **Economic and Property Market Implications**  
+Beyond its impact on **policy and fire management strategies**, the model’s poor performance could have **significant economic consequences**. Fire hazard classifications **directly influence property values, mortgage eligibility, insurance premiums, and a homeowner’s ability to sell their property**.  
 
-- **Defensible space requirements** for fire mitigation.  
-- **Property development restrictions** in high-risk zones.  
-- **Potential financial burdens** for compliance.  
+- **Depressed Property Values:** If a model **misclassifies a large percentage of properties as high risk**, it could lead to **decreased property values**, as buyers and lenders may perceive these areas as unsafe. This could **negatively impact home equity and personal wealth** for property owners.  
+- **Difficulty Selling a Home:** Properties classified as high hazard may face **reduced buyer interest**, as potential homeowners may struggle to secure financing or be forced to pay significantly higher insurance rates. This could lead to **longer time on the market and financial losses for sellers**.  
+- **Increased Costs for Homeowners:** Homeowners in **falsely classified high-risk areas** may be required to **spend unnecessary money on fire mitigation efforts**, such as **defensible space, home hardening, and vegetation removal**, even if their actual fire risk is low.  
+- **Tax Revenue Losses:** If widespread overclassification results in **lower property values**, this could **reduce taxable property assessments**, ultimately **decreasing tax revenue for local and state governments**. These reductions could impact funding for **public services, infrastructure, and emergency response capabilities**, further exacerbating the challenges of wildfire mitigation.  
 
-If the burn probability model **does not actually predict fire occurrence** and **systematically overestimates fire risk**, then these **risk classifications may be fundamentally flawed**, leading to **unnecessary and costly regulations** for property owners.  
-
-🚨 **Key Concern:** 🔹 **Property owners may be required to take costly mitigation actions based on unreliable wildfire risk classifications.**  
-
----
-
-## **Legal Concerns: Evidence-Based Policy Requirements in Oregon**  
-
-### **Oregon’s Evidence-Based Policy Mandates**  
-Oregon law emphasizes **evidence-based decision-making** in public policy. **ORS 182.525** requires state agencies to allocate funding to **programs backed by scientific research and empirical validation**.  
-
-🔹 **Applying This to the Burn Probability Model:**  
-- If **burn probability fails to distinguish fire-prone areas** and **overestimates fire risk**, then it **does not meet the legal standard for evidence-based policymaking**.  
-- Using a **scientifically unvalidated model** to impose regulations could **violate Oregon’s legal requirements** for public policy decisions.  
-
-🚨 **Key Concern:** 🔹 **If the model is not empirically valid, its use in regulatory decision-making may not comply with Oregon law.**  
-
----
-
-## **Potential Insurance Implications**  
-
-Although **Oregon law prohibits insurance companies from using the Hazard Risk Map directly**, many homeowners **have reported premium increases or policy cancellations** since the map’s release.  
-
-📌 **Key Considerations:**  
-- **There is no direct proof that insurance companies are using this map.**  
-- **Housing costs and other economic factors may also contribute to changes in premiums.**  
-- **Without transparency, it remains unclear whether insurers are indirectly using the wildfire risk classifications.**  
-
-If insurers **informally incorporate** the classifications from the Hazard Risk Map into underwriting decisions, **then any errors in the burn probability model could have financial consequences for homeowners**.  
-
-🚨 **Key Concern:** 🔹 **A flawed model could be indirectly influencing insurance costs, even if the law prohibits its direct use.**  
-
----
-
-## **Public Trust & Policy Legitimacy**  
-
-Wildfire risk models should be **transparent, scientifically validated, and publicly accountable**. If the burn probability model:  
-- **Does not differentiate fire-prone from non-fire areas**,  
-- **Overestimates fire risk**, and  
-- **Is still used to justify regulations and land-use decisions**,  
-
-then the **legitimacy of the entire Hazard Risk Map is undermined**.  
-
-🚨 **Key Concern:** 🔹 **If policymakers use an unreliable model to enforce regulations, it could erode public trust in wildfire risk management policies.**  
+The reliance on a model that **fails to perform better than a random number generator** introduces **unnecessary economic and policy risks**. By producing inaccurate hazard classifications, the model could **cause financial harm to homeowners and communities, while providing no meaningful benefit in terms of fire risk mitigation**. Without a model that reliably distinguishes **fire-prone areas from low-risk zones**, decision-makers risk **enacting policies that do more harm than good**.  
 
 ---
 
