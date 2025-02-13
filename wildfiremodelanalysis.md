@@ -216,46 +216,50 @@ This map overlays the model’s burn probability layer with historical fire occu
 
 ![Burn Probability + Fire Overlay](images/burn_overlay.JPG)
 
+### Loading and Processing the Data
 
-## Data Preparation  
+This section outlines the **data preparation steps** used to construct the final dataset for analysis.
 
-The data was processed using **QGIS**, an open-source geographic information system. A full guide to downloading and installing **QGIS** can be found in the **[GitHub README](https://github.com/yourusername/wildfire-risk-analysis/blob/main/README.md)**. The following steps were taken to compile the **Transformed Data** for analysis:  
+#### **Loading the Data**
+1. **Load the Burn Probability Layer** into QGIS.
+2. **Load the Wildfire Hazard Layer** into QGIS.
+3. **Load the Historical Fire Occurrence Dataset** into QGIS.
 
-1. **Loading the Data:**  
-   - Load **burn probability layer** into QGIS.
-   - Load **Wildfire Hazard layer** into QGIS.  
-   - Load **historical fire occurrence dataset** into QGIS.  
+#### **Ensuring a Consistent Coordinate Reference System (CRS)**
+- All three datasets were checked to confirm they used the **same CRS** to maintain spatial accuracy and alignment.
 
-2. **Ensuring Consistent Coordinate Reference System (CRS):**  
-   - ALL 3 datasets were checked to confirm they used the same **Coordinate Reference System (CRS)** to ensure spatial accuracy.
+#### **Fixing Overlapping Fire Data**
+- Some fire records **overlapped**, causing multiple entries for the same area.
+- To correct this, **overlapping fires were merged** into a single fire occurrence per affected pixel.
+- The merged fire was treated as **one fire event** rather than multiple fires in the same location.
 
-3. **Creating a Grid of Points:**  
-   - A grid of points was generated, with each point spaced **500 feet apart** both **vertically** and **horizontally** across Oregon.  
-   - This ensured that the data was evenly sampled across the study area.
+#### **Creating a Grid of Points**
+- A **grid of points** was generated, with each point spaced **500 feet apart** both vertically and horizontally across Oregon.
+- This ensured **consistent spatial sampling** across the study area.
 
-4. **Extracting Burn Probability, Wildfire Hazard, and Fire Occurrence:**  
-   - For each grid point, the corresponding **burn probability** value was captured from the model output.
-   - For each grid point, the corresponding **wildfire hazard** value was captured from the model output.  
-   - The historical fire dataset was overlaid, and a **binary fire occurrence flag** was assigned:  
-     - `1` if a fire was recorded at that location.  
-     
+#### **Extracting Burn Probability, Wildfire Hazard, and Fire Occurrence**
+For each **grid point**, the following values were extracted:
+- **Burn Probability Value** from the model output.
+- **Wildfire Hazard Value** from the model output.
+- **Fire Occurrence Flag** assigned based on historical wildfire data:
+  - `1` if a fire was recorded at that location (after merging overlapping fires).
+  - `0` if no fire was recorded.
 
-5. **Handling Null Values:**  
-   - Some fires extended beyond **Oregon's boundaries**, resulting in missing burn probability values.  
-   - These **null values** were removed to ensure clean and complete data.
-   - Null values were dropped from Hazard values as well.
-   - The non fire areas were set to '0'
+#### **Handling Null Values**
+- Some fires extended beyond Oregon’s boundaries, **resulting in missing burn probability values**.
+- These **null values were removed** to ensure clean and complete data.
+- **Null hazard values were dropped**, ensuring only valid data was included.
+- **Non-fire areas were explicitly set to `0`** for fire occurrence.
 
-6. **Exporting the Final Dataset:**  
-   - The cleaned grid layer was saved and exported as a **CSV file**.  
-   - This CSV file, referred to as the **Transformed Data**, is available in the **ZIP file linked in the README**.
-  
-7. **Create Columns Based on Risk**
-   - **High Hazard** (hazard value > 0.137872)
-   - **Moderate Hazard** (hazard value > 0.001911 and ≤ 0.137872)
-   - **Low Hazard** (hazard value ≤ 0.001911)
+#### **Exporting the Final Dataset**
+- The cleaned **grid layer** was **saved and exported as a CSV file**.
+- This **CSV file**, referred to as the **Transformed Data**, is included in the ZIP file linked in the README.
 
-
+#### **Creating Columns Based on Risk Classification**
+Wildfire hazard values were categorized into **three risk bands**:
+- **High Hazard**: Hazard value **> 0.137872**
+- **Moderate Hazard**: Hazard value **> 0.001911 and ≤ 0.137872**
+- **Low Hazard**: Hazard value **≤ 0.001911**
 
 ---
 # **Methodology**
