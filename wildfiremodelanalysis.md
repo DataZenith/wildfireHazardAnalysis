@@ -743,6 +743,7 @@ The consequences of these failures extend beyond **policy and emergency planning
 Ultimately, this analysis highlights the **critical need for empirical validation** in wildfire risk modeling. A model intended to **inform public policy, insurance rates, and land-use regulations** must provide **clear, evidence-based classifications** that align with **historical fire data**. Without substantial improvements in **hazard classification thresholds, probability calibration, and fire occurrence prediction**, this model risks misinforming decision-makers, misallocating resources, and creating unnecessary financial and regulatory burdens for communities.  
 
 
+# **8. References**
 
 ### Machine Learning & Model Evaluation
 
