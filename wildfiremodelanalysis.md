@@ -400,7 +400,6 @@ $$
 1 - \text{Precision} = \text{Overestimation Rate}
 $$
 
-✔️ **Q.E.D.**
 
 ### **How to Interpret Overestimation**
 - **High Overestimation Rate** → The model **predicts too many fires that never occur**, inflating fire risk.
