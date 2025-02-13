@@ -680,6 +680,20 @@ The figure below illustrates the distribution of actual fire occurrences across 
 The results indicate that **fire risk classification is highly inflated**, particularly in extreme hazard zones, where fire occurrence is only marginally higher than in moderate zones. A well-calibrated model should show clear **progression in risk between tiers**, yet the lack of separation suggests that hazard bands may not accurately reflect true fire probabilities. Future adjustments to risk thresholds should ensure that each tier corresponds to a **meaningful increase in fire occurrence**, avoiding unnecessary overclassification that could misallocate resources and policy efforts.  
 
 
+## **Comparison of WUI Subset to Full Dataset**  
+
+The wildfire hazard model assumes that areas within the **Wildland-Urban Interface (WUI)** are the most hazardous due to their proximity to human development and fire-prone landscapes. If this assumption holds, hazard scores in the WUI should generally be higher than those in the full dataset, but the percentile thresholds used for classification should remain relatively stable when applied beyond the WUI subset. Comparing the **40th and 90th percentiles**—which were explicitly used to define hazard categories—allows us to test whether these thresholds scale appropriately across datasets.  
+
+The comparison reveals a **significant misalignment**:  
+- The **90th percentile** in the WUI subset aligns with only the **40th percentile** in the full dataset.  
+- This means that hazard thresholds set using the WUI subset **overclassify risk** when applied to the full dataset, leading to a much larger proportion of pixels being placed in high-risk categories than originally intended.
+- 
+<div align="center">
+  <img src="images/box_whisker.PNG" alt="percentilesk" width="70%">
+</div>
+
+### **Interpretation of Results**  
+These findings indicate that **hazard classifications based on the WUI subset may not generalize well** to broader landscapes. A well-calibrated model should maintain stable thresholds across different datasets, ensuring that hazard classifications retain their intended meaning. The fact that the **full dataset’s 40th percentile aligns with the WUI subset’s 90th percentile** suggests that the threshold selection process led to **substantial overclassification of wildfire risk** when applied statewide.  
 
 
 ---
