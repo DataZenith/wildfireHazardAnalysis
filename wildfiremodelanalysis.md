@@ -331,23 +331,78 @@ This **histogram analysis** helps determine if the model provides meaningful ins
 
 ---
 
-### **4. Measuring Overestimation (False Alarms and Risk Inflation)**
-To measure **how much fire risk is overestimated**, we:
-- Picked a **threshold** where **precision and recall are equal** (a balanced point).
-- Calculated the **overestimation rate** using:
+### Step 4: Measuring Overestimation (False Alarms and Risk Inflation)
+
+To quantify how much the model **overestimates fire risk**, we calculate the **overestimation rate**, which represents the proportion of predicted fires that **never actually occurred**.
+
+### **Overestimation Rate Formula**
+$$
+\text{Overestimation Rate} = \frac{\text{False Positives (FP)}}{\text{True Positives (TP)} + \text{False Positives (FP)}}
+$$
+This value represents the **percentage of predicted fires that did not happen**.
+
+Since **Precision** is defined as:
+$$
+\text{Precision} = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Positives (FP)}}
+$$
+We can equivalently express overestimation as:
+$$
+\text{Overestimation Rate} = 1 - \text{Precision}
+$$
+This shows that **as precision improves, the overestimation rate decreases**, meaning fewer false alarms.
+
+### **Algebraic Proof: Overestimation Rate = 1 - Precision**
+We start with the definition of **Precision**:
 
 $$
-\text{Overestimate Rate} = \frac{\text{False Positives (FP)}}{\text{True Positives (TP)} + \text{False Positives (FP)}}
+\text{Precision} = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Positives (FP)}}
 $$
 
-This value represents the percentage of predicted fires that **never actually occurred**.
+Now, subtract **Precision** from 1:
+
+$$
+1 - \text{Precision} = 1 - \frac{\text{TP}}{\text{TP} + \text{FP}}
+$$
+
+Express **1** as a fraction with the same denominator:
+
+$$
+1 - \text{Precision} = \frac{\text{TP} + \text{FP}}{\text{TP} + \text{FP}} - \frac{\text{TP}}{\text{TP} + \text{FP}}
+$$
+
+Since both terms have the same denominator, we subtract the numerators:
+
+$$
+1 - \text{Precision} = \frac{(\text{TP} + \text{FP}) - \text{TP}}{\text{TP} + \text{FP}}
+$$
+
+Simplify the numerator:
+
+$$
+1 - \text{Precision} = \frac{\text{FP}}{\text{TP} + \text{FP}}
+$$
+
+But this is **exactly** the formula for the **Overestimation Rate**:
+
+$$
+\text{Overestimation Rate} = \frac{\text{False Positives (FP)}}{\text{True Positives (TP)} + \text{False Positives (FP)}}
+$$
+
+Thus, we have proved:
+
+$$
+1 - \text{Precision} = \text{Overestimation Rate}
+$$
+
+✔️ **Q.E.D.**
 
 ### **How to Interpret Overestimation**
-- If the overestimation rate is **high**, it means the model **predicts too many fires that never happen**, inflating fire risk.
-- If the rate is **low**, it suggests the model is more conservative but may **miss some real fires**.
-- This overestimation can be **expressed as a percentage**, meaning the model overstates fire risk by **X% more than actual fires**.
+- **High Overestimation Rate** → The model **predicts too many fires that never occur**, inflating fire risk.
+- **Low Overestimation Rate** → The model is **more conservative** but may **fail to predict actual fires**.
+- The **overestimation percentage** quantifies how much the model **overstates fire risk compared to actual fire occurrences**.
 
-This analysis **quantifies how much the model exaggerates fire likelihood**, ensuring its predictions are **not misleading**.
+By measuring overestimation, we assess whether the model **exaggerates wildfire likelihood**, ensuring its predictions are **accurate and not misleading**.
+
 
 ---
 
