@@ -331,7 +331,7 @@ This **histogram analysis** helps determine if the model provides meaningful ins
 
 ---
 
-### Step 4: Measuring Overestimation (False Alarms and Risk Inflation)
+### **4. Measuring Overestimation (False Alarms and Risk Inflation)**
 
 To quantify how much the model **overestimates fire risk**, we calculate the **overestimation rate**, which represents the proportion of predicted fires that **never actually occurred**.
 
@@ -408,7 +408,7 @@ $$
 
 By measuring overestimation, we assess whether the model **exaggerates wildfire likelihood**, ensuring its predictions are **accurate and not misleading**.
 
-### Step 5: Normalizing Fire Occurrence at the Pixel Level
+### **5.Normalizing Fire Occurrence at the Pixel Level**
 
 To assess wildfire risk across different hazard bands, we normalize the **number of pixels that experienced fire** by the **total number of pixels** within each risk band. This provides a measure of **fire occurrence per pixel**, allowing for a standardized comparison across hazard classifications.
 
