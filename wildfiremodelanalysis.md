@@ -768,38 +768,21 @@ Ultimately, this analysis highlights the **critical need for empirical validatio
    - Medium Article on Precision-Recall Curves:  
      [Precision-Recall Curves](https://medium.com/@douglaspsteen/precision-recall-curves-d32e5b290248)
 
-### Legal & Policy Considerations in Oregon
+### OSU Wildfire Risk Map
 
-6. **Oregon Revised Statutes (ORS) 182.525) – Evidence-Based Programs Requirement**  
-   - Retrieved from: [Oregon Public Law](https://oregon.public.law/statutes/ors_182.525)
 
-7. **Oregon Wildfire Hazard Map: Methodology & Data Sources**  
+6. **Oregon Wildfire Hazard Map: Methodology & Data Sources**  
    - Oregon State University, 2025  
    - Retrieved from: [OSU Wildfire Hazard Map Methods](https://hazardmap.forestry.oregonstate.edu/sites/default/files/OSU_2025_HazardMapMethods.pdf)
 
-8. **Pew-MacArthur Results First Initiative: Oregon’s Evidence-Based Policy Framework**  
-   - Retrieved from: [Pew Trusts](https://www.pewtrusts.org/en/research-and-analysis/articles/2017/03/15/oregons-framework-of-laws-advances-evidence-based-policymaking)
 
-9. **Oregon Department of Forestry – Wildfire Risk Map**  
+7. **Oregon Department of Forestry – Wildfire Risk Map**  
    - **Public Map Interface**: [ODF Wildfire Hazard Map](https://hazardmap.forestry.oregonstate.edu/understand-map)
 
-### Comparative Wildfire Models
-
-10. **[Zhou, X., et al. (2024). "Advancements in Burn Probability Modeling."](https://www.nature.com/articles/s41598-024-52821-x)**  
-    *Fire Science Journal.*
-
-11. **[Soto, J., et al. (2023). "Evaluating Fire Spread and Risk Using Machine Learning."](https://www.mdpi.com/2571-6255/6/8/319)**  
-    *Wildfire Research Quarterly.*
-
-12. **[Kong, L. (2024). "Machine Learning Approaches for Wildfire Prediction."](https://nhsjs.com/2024/a-comparative-analysis-of-machine-learning-models-for-wildfire-prediction/)**  
-    *Journal of Environmental Hazards.*
-
-13. **[Faivre, N., et al. (2024). "Best Practices for Burn Probability Modeling."](https://www.mdpi.com/2571-6255/7/12/482)**  
-    *Fire Management Journal.*
 
 ### Data Sources
 
-14. **Dataset Repository & README File (Contains Burn Probability & Historical Fire Data).**  
+8. **Dataset Repository & README File (Contains Burn Probability & Historical Fire Data).**  
     - 📌 **GitHub README with Data Sources:**  
       [GitHub README](https://github.com/yourusername/wildfire-risk-analysis/blob/main/README.md)
 
