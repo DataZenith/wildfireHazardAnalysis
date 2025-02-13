@@ -508,7 +508,7 @@ This confirms that the **burn probability model does not provide any additional 
 
   ![PR AUC Comparison](images/PR_AUC_final.PNG)
 </div>
----
+
 
 ### Interpreting the Results  
 
