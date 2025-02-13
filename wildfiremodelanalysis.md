@@ -637,7 +637,7 @@ The model’s **severe overestimation** of wildfire risk has **direct consequenc
 - Fire insurance policies and land management decisions may be **negatively impacted by excessive risk classifications**.  
 - Public policy decisions that rely on this model may be **based on inaccurate, overly cautious fire risk assessments** rather than actual fire-prone conditions.
 
-# **Results: Overestimation of Hazard**  
+## **Results: Overestimation of Hazard**  
 
 To assess the degree of overestimation in the wildfire hazard classifications, we compute the **relative risk** for each hazard band—**extreme, moderate, and low**. The relative risk is defined as the proportion of pixels within a given hazard band that have experienced fire over the 21-year study period:
 
@@ -655,7 +655,7 @@ To quantify overestimation, we compute:
 
 where values closer to **1** indicate a high degree of overprediction (i.e., many pixels are classified as high hazard despite rarely experiencing fire).  
 
-## **Long-Term Overestimation Across Hazard Bands**
+### **Long-Term Overestimation Across Hazard Bands**
 The results over the **21-year dataset** reveal a consistent pattern of overestimation across all hazard bands:
 
 - **Extreme Hazard Band:** Overestimation is **74%**, indicating that only about **26%** of pixels classified as extreme hazard have actually burned.  
@@ -664,7 +664,7 @@ The results over the **21-year dataset** reveal a consistent pattern of overesti
 
 These findings suggest that **wildfire risk is persistently overstated**, especially in areas labeled as "extreme hazard." This long-run analysis raises concerns about the accuracy of hazard classifications and their implications for policy and resource allocation.  
 
-## **Visualization of Overestimation**  
+### **Visualization of Overestimation**  
 The figure below illustrates the distribution of actual fire occurrences across different hazard bands, visually demonstrating the overestimation trend.  
 
 <div align="center">
@@ -672,7 +672,6 @@ The figure below illustrates the distribution of actual fire occurrences across 
 </div>
 
 
----
 
 ---
 # 5. Discussion & Implications  
