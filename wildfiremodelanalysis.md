@@ -576,7 +576,7 @@ These results strongly suggest that the **burn probability model is not a reliab
 
 Since the burn probability model provides **continuous probability estimates**, we must set a **threshold** to classify whether a fire is predicted to occur.  
 
-We selected the **threshold where precision was at its maximum for the PR AUC curve** designating all probabilities above and equal to this as fire and all probabilities below as non-fire.  We choose this because precision appears to peak to the baseline and stay there.  
+We selected the **threshold where precision was at its maximum for the PR AUC curve** designating all probabilities above and equal to this as fire and all probabilities below as non-fire.  We choose this because precision appears to peak around the baseline and stay there.  
 - Selected Threshold: `0.001810912741348`**  
 - Precision at selected threshold: `0.2534851761282108`  
 
