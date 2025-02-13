@@ -614,7 +614,7 @@ At the selected threshold:
 - **True Positives (TP):** `2,132,259` 
 - **Overprediction Rate:** `74.65%`  
 
-This means that **nearly 75% of areas classified as high fire risk did not actually experience a fire**.
+This means that over the long run (21 years of data) **nearly 75% of areas classified as high fire risk did not actually experience a fire**.
 
 ---
 
@@ -622,20 +622,20 @@ This means that **nearly 75% of areas classified as high fire risk did not actua
 
 The model’s **severe overestimation** of wildfire risk has **direct consequences** that affect both **resource allocation and public trust**.
 
-### **1️⃣ Misallocation of Resources**  
-❌ **Fire management resources may be deployed inefficiently**, focusing on areas that are not actually at risk.  
-❌ Firefighters and emergency responders may be directed **away from actual fire-prone areas**, increasing the risk of uncontrolled wildfires in critical regions.  
-❌ Public funds may be **misallocated**, prioritizing fuel reduction efforts and fire mitigation strategies in areas with little actual wildfire threat.
+### **1. Misallocation of Resources**  
+- **Fire management resources may be deployed inefficiently**, focusing on areas that are not actually at risk.  
+- Firefighters and emergency responders may be directed **away from actual fire-prone areas**, increasing the risk of uncontrolled wildfires in critical regions.  
+- Public funds may be **misallocated**, prioritizing fuel reduction efforts and fire mitigation strategies in areas with little actual wildfire threat.
 
-### **2️⃣ Loss of Public Trust in Wildfire Models**  
-❌ If **false alarms become frequent**, landowners, policymakers, and the public may **lose confidence in wildfire risk assessments**.  
-❌ Communities may **ignore future warnings**, assuming fire risk predictions are unreliable.  
-❌ Overuse of exaggerated hazard maps may create **fire fatigue**, where stakeholders no longer react to critical fire danger warnings.
+### **2. Loss of Public Trust in Wildfire Models**  
+- If **false alarms become frequent**, landowners, policymakers, and the public may **lose confidence in wildfire risk assessments**.  
+- Communities may **ignore future warnings**, assuming fire risk predictions are unreliable.  
+- Overuse of exaggerated hazard maps may create **fire fatigue**, where stakeholders no longer react to critical fire danger warnings.
 
-### **3️⃣ Overstating Actual Wildfire Hazard Risk**  
-❌ A **79.63% overestimation rate** inflates perceived wildfire hazard, **misrepresenting true fire danger**.  
-❌ Fire insurance policies and land management decisions may be **negatively impacted by excessive risk classifications**.  
-❌ Public policy decisions that rely on this model may be **based on inaccurate, overly cautious fire risk assessments** rather than actual fire-prone conditions.
+### **3. Overstating Actual Wildfire Hazard Risk**  
+- A **75.65% overestimation rate** inflates perceived wildfire hazard, **misrepresenting true fire danger**.  
+- Fire insurance policies and land management decisions may be **negatively impacted by excessive risk classifications**.  
+- Public policy decisions that rely on this model may be **based on inaccurate, overly cautious fire risk assessments** rather than actual fire-prone conditions.
 
 ---
 # 5. Discussion & Implications  
