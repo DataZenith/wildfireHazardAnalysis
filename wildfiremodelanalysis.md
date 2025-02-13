@@ -435,7 +435,7 @@ $$
 
 By applying this method, we create a **standardized metric** to evaluate whether the model **realistically reflects wildfire occurrence** across different hazard classifications.
 
-## **Section 5: Threshold Comparison and Percentile Interpretation**  
+## **5: Threshold Comparison and Percentile Interpretation**  
 
 A percentile represents the relative standing of a value within a dataset, indicating the percentage of data points that fall below it. For example, a value at the 90th percentile means that 90% of the data falls below it, while a value at the 40th percentile means only 40% of the data falls below it. In a well-calibrated model, the hazard thresholds derived from the full dataset should align closely with those established using the WUI subset. If these thresholds differ significantly—such as the high hazard threshold corresponding to the 90th percentile in the WUI subset but only the 40th percentile in the full dataset—it suggests a misalignment in how hazard values are distributed across different data groupings. Ideally, a properly functioning model should produce similar thresholds regardless of whether they are derived from the WUI subset or the full dataset, ensuring consistency in hazard classification.
 
