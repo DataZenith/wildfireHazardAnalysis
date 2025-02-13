@@ -576,12 +576,9 @@ These results strongly suggest that the **burn probability model is not a reliab
 
 Since the burn probability model provides **continuous probability estimates**, we must set a **threshold** to classify whether a fire is predicted to occur.  
 
-We selected the **threshold where precision and recall are equal**, ensuring that:  
-- The model is **not favoring one metric over the other**.  
-- Predictions balance the **trade-off between missing fires (false negatives) and overpredicting fire risk (false positives)**.
-
-**Selected Threshold: `0.015`**  
-- **Best Threshold (Equal Precision & Recall):** `0.015`  
+We selected the **threshold where precision was at its maximum for the PR AUC curve** designating all probabilities above and equal to this as fire and all probabilities below as non-fire.  We choose this because precision appears to peak to the baseline and stay there.  
+- Selected Threshold: `0.001810912741348`**  
+- Precision at selected threshold: `0.2534851761282108`  
 
 At this threshold, the model classifies fire risk as follows:
 
@@ -589,12 +586,12 @@ At this threshold, the model classifies fire risk as follows:
   
 | Metric | Value |
 |--------|--------|
-| **True Negatives (TN)** | `7,365,736` |
-| **True Positives (TP)** | `527,835` |
-| **False Positives (FP)** | `2,062,943` |
-| **False Negatives (FN)** | `2,062,943` |
-| **Precision** | `0.2037` |
-| **Recall** | `0.2037` |
+| **True Negatives (TN)** | `2,963,665` |
+| **True Positives (TP)** | `2,132,259` |
+| **False Positives (FP)** | `6,279,511` |
+| **False Negatives (FN)** | `458,360` |
+| **Precision** | `0.2534851761282108` |
+| **Recall** | ` 0.823069312778143` |
 
 </div>
 
@@ -607,7 +604,9 @@ One of the most concerning findings is the **high rate of false positives**, lea
 We calculate the **Overprediction Rate** as:
 
 $$
+
 \text{Overprediction Rate} = \frac{\text{False Positives (FP)}}{\text{False Positives (FP)} + \text{True Positives (TP)}}
+
 $$
 
 
