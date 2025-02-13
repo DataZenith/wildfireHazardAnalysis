@@ -444,12 +444,12 @@ A percentile represents the relative standing of a value within a dataset, indic
 ---
 
 ### **Why This Matters**
-✅ **A high PR-AUC** means the model is **better than random guessing** and can help identify fire-prone areas.  
-✅ **Understanding precision and recall** helps determine whether the model is prone to **false alarms or missed fires**.  
-✅ **The PR-AUC score reflects the model’s overall ability** to distinguish fire-prone areas, rather than relying on a single threshold.  
-✅ **Comparing to the baseline (random model)** ensures we are measuring true predictive power rather than overfitting.  
-✅ **Histogram analysis provides a visual check** on whether predicted probabilities actually differentiate fire-prone and non-fire areas.  
-✅ **The overestimation analysis ensures** that the model is not **artificially inflating fire risk** by predicting too many false fires.  
+- **A high PR-AUC** means the model is **better than random guessing** and can help identify fire-prone areas.  
+- **Understanding precision and recall** helps determine whether the model is prone to **false alarms or missed fires**.  
+- **The PR-AUC score reflects the model’s overall ability** to distinguish fire-prone areas, rather than relying on a single threshold.  
+- **Comparing to the baseline (random model)** ensures we are measuring true predictive power rather than overfitting.  
+- **Histogram analysis provides a visual check** on whether predicted probabilities actually differentiate fire-prone and non-fire areas.  
+- **The overestimation analysis ensures** that the model is not **artificially inflating fire risk** by predicting too many false fires.  
 
 # 4. Results & Analysis
 
