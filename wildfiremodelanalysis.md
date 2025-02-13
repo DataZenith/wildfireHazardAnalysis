@@ -769,28 +769,8 @@ then the **legitimacy of the entire Hazard Risk Map is undermined**.
 
 ---
 
-# **Next Steps & Recommendations**  
 
-🚨 **The final wildfire risk classifications in the Hazard Risk Map were not based on a scientific approach.**  
-It was confirmed via **email correspondence with the OSU point of contact** that the **thresholds for wildfire risk were determined by a vote among 26 board members, rather than an empirical analysis**.  
-
-This decision-making process **does not align with Oregon’s laws on evidence-based policymaking** and raises serious concerns about **the validity of the final classifications used to enforce regulations on property owners**.  
-
-🔹 **Recommended Next Steps:**  
-
-1️⃣ **Empirical Validation of Final Hazard Scores** → The final wildfire risk classifications (not just burn probability) should be tested against **historical wildfire data** using an approach similar to this report. If the **Hazard Risk Map’s classifications do not align with actual fire occurrences**, they should be revised or removed.  
-
-2️⃣ **Transparency in Model Development** → The decision-making process for wildfire risk classifications should be **publicly disclosed**, including how thresholds were set and whether they align with scientific best practices.  
-
-3️⃣ **Disclosure of Board Members' Classifications** → The 26 board members who voted on the risk classification thresholds should **disclose which classification their own properties fall under**. If those who determined the risk thresholds are **exempt from the classifications they impose on others**, this raises ethical concerns and potential conflicts of interest.  
-
-4️⃣ **Re-Evaluation of Risk Classifications** → If the final hazard scores **do not align with real-world fire data**, the **Hazard Risk Map should be revised** to avoid misclassification.  
-
-5️⃣ **Public Accountability & Policy Justification** → State agencies should provide **clear evidence** that wildfire risk classifications **are based on sound science** before imposing regulatory requirements on property owners.  
-
-🚨 **Key Concern:** 🔹 **Without these improvements, the use of burn probability in public policy may remain legally and scientifically unjustified.**  
-
-# 6. Conclusion  
+# **7. Conclusion**  
 
 The findings in this report raise **serious concerns** about the validity and reliability of the **burn probability model** used in Oregon’s **Hazard Risk Map**. Our analysis demonstrates that:  
 
