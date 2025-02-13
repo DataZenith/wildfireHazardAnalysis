@@ -315,7 +315,7 @@ Since PR-AUC is particularly useful for **imbalanced datasets**, it is important
 
 ---
 
-### **2. Comparing to a Random Model**
+### **1.4 Comparing to a Random Model**
 To test whether the model is **actually predicting fires or just guessing**, we compared it to a **random number generator** that assigns probabilities at random.
 
 - If the model **performs better than random**, it means it has **some ability to identify fire-prone areas**.
@@ -324,7 +324,7 @@ To test whether the model is **actually predicting fires or just guessing**, we 
 
 ---
 
-### **3. Visual Analysis: Histogram Layover**
+## **2. Visual Analysis: Histogram Layover**
 To further evaluate the model, we **compared the histograms of predicted probabilities** for locations where fires occurred and where they did not.
 
 - If the model is working well, the histogram of fire locations should **show higher predicted probabilities** compared to non-fire locations.
@@ -335,7 +335,7 @@ This **histogram analysis** helps determine if the model provides meaningful ins
 
 ---
 
-### **4. Measuring Overestimation (False Alarms and Risk Inflation)**
+## **3. Measuring Overestimation (False Alarms and Risk Inflation)**
 
 To quantify how much the model **overestimates fire risk**, we calculate the **overestimation rate**, which represents the proportion of predicted fires that **never actually occurred**.
 
@@ -412,7 +412,7 @@ $$
 
 By measuring overestimation, we assess whether the model **exaggerates wildfire likelihood**, ensuring its predictions are **accurate and not misleading**.
 
-### **5.Normalizing Fire Occurrence at the Pixel Level**
+## **4. Normalizing Fire Occurrence at the Pixel Level**
 
 To assess wildfire risk across different hazard bands, we normalize the **number of pixels that experienced fire** by the **total number of pixels** within each risk band. This provides a measure of **fire occurrence per pixel**, allowing for a standardized comparison across hazard classifications.
 
@@ -439,7 +439,7 @@ By applying this method, we create a **standardized metric** to evaluate whether
 
 ---
 
-### **5. Why This Matters**
+### Why This Matters**
 ✅ **A high PR-AUC** means the model is **better than random guessing** and can help identify fire-prone areas.  
 ✅ **Understanding precision and recall** helps determine whether the model is prone to **false alarms or missed fires**.  
 ✅ **The PR-AUC score reflects the model’s overall ability** to distinguish fire-prone areas, rather than relying on a single threshold.  
