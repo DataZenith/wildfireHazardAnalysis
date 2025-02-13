@@ -687,7 +687,7 @@ The wildfire hazard model assumes that areas within the **Wildland-Urban Interfa
 The comparison reveals a **significant misalignment**:  
 - The **90th percentile** in the WUI subset aligns with only the **40th percentile** in the full dataset.  
 - This means that hazard thresholds set using the WUI subset **overclassify risk** when applied to the full dataset, leading to a much larger proportion of pixels being placed in high-risk categories than originally intended.
-- 
+
 <div align="center">
   <img src="images/box_whisker.PNG" alt="percentilesk" width="70%">
 </div>
@@ -699,7 +699,6 @@ These findings indicate that **hazard classifications based on the WUI subset ma
 ---
 # 5. Discussion & Implications  
 
-# Discussion & Implications  
 
 ## **Why Model Accuracy Matters in Public Policy**  
 
