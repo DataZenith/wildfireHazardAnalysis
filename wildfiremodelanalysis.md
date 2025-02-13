@@ -641,17 +641,17 @@ The model’s **severe overestimation** of wildfire risk has **direct consequenc
 
 To assess the degree of overestimation in the wildfire hazard classifications, we compute the **relative risk** for each hazard band—**extreme, moderate, and low**. The relative risk is defined as the proportion of pixels within a given hazard band that have experienced fire over the 21-year study period:
 
-\[
+$$
 \text{Relative Risk} = \frac{\text{Pixels Experiencing Fire}}{\text{Total Pixels in Hazard Band}}
-\]
+$$
 
 A well-calibrated model should produce relative risks that closely match the expected hazard levels. However, if a hazard classification systematically overstates fire probability, this will be evident in a large discrepancy between the assigned hazard category and the actual historical fire occurrence.  
 
 To quantify overestimation, we compute:
 
-\[
+$$
 \text{Overestimation} = 1 - \text{Relative Risk}
-\]
+$$
 
 where values closer to **1** indicate a high degree of overprediction (i.e., many pixels are classified as high hazard despite rarely experiencing fire).  
 
