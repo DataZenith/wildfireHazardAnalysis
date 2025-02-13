@@ -510,7 +510,7 @@ This confirms that the **burn probability model does not provide any additional 
 </div>
 ---
 
-## Interpreting the Results  
+### Interpreting the Results  
 
 The Precision-Recall AUC comparison shows that the **Burn Probability Model does not meaningfully distinguish fire from non-fire events**.  
 
@@ -637,7 +637,7 @@ The model’s **severe overestimation** of wildfire risk has **direct consequenc
 - Fire insurance policies and land management decisions may be **negatively impacted by excessive risk classifications**.  
 - Public policy decisions that rely on this model may be **based on inaccurate, overly cautious fire risk assessments** rather than actual fire-prone conditions.
 
-## **Results: Overestimation of Hazard**  
+## **Overestimation of Hazard**  
 
 To assess the degree of overestimation in the wildfire hazard classifications, we compute the **relative risk** for each hazard band—**extreme, moderate, and low**. The relative risk is defined as the proportion of pixels within a given hazard band that have experienced fire over the 21-year study period:
 
