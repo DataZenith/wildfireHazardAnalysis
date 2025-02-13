@@ -343,14 +343,18 @@ $$
 
 This value represents the **percentage of predicted fires that did not happen**.
 
-Since **Precision** is defined as:
+Since **Precision** is defined as: 
+
 $$
 \text{Precision} = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Positives (FP)}}
 $$
+
 We can equivalently express overestimation as:
+
 $$
 \text{Overestimation Rate} = 1 - \text{Precision}
 $$
+
 This shows that **as precision improves, the overestimation rate decreases**, meaning fewer false alarms.
 
 ### **Algebraic Proof: Overestimation Rate = 1 - Precision**
