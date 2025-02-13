@@ -290,7 +290,7 @@ These two measures often **trade off** against each other.
 We need a **balance**, which leads us to the **Precision-Recall Curve**.
 
 ### **1.2 Precision-Recall Curve and AUC Calculation**
-Since precision and recall change depending on the model’s confidence threshold, we plot a **Precision-Recall Curve** to analyze its performance across different thresholds.
+Since precision and recall change depending on the model’s cut off, we plot a **Precision-Recall Curve** to analyze its performance across different thresholds.
 
 - The model assigns a **probability score** (e.g., 0.02, 0.08, 0.15, etc.) to each location, estimating the likelihood of fire occurring.
 - We **vary the threshold** (the cutoff point for deciding what counts as a "fire prediction") and calculate precision and recall at **each threshold**.
