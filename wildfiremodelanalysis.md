@@ -671,6 +671,15 @@ The figure below illustrates the distribution of actual fire occurrences across 
   <img src="images/risk.PNG" alt="Overclassification of risk" width="70%">
 </div>
 
+### **Interpretation of Results**  
+
+- **Significant Overestimation:** The model overstates wildfire risk by **74% in extreme**, **81% in moderate**, and **98% in low hazard areas**, indicating systematic overprediction.  
+- **Weak Separation Between Hazard Tiers:** While the **low-to-moderate jump** shows a clear increase in fire occurrence, the **moderate-to-extreme transition** lacks a comparable increase, suggesting poor differentiation at higher risk levels.  
+- **Thresholds for Preventative Measures:** OSU’s wildfire hazard map classifies **high-risk properties in the WUI as requiring defensible space and home hardening**, yet the thresholds used may not align with actual fire frequency.  
+
+The results indicate that **fire risk classification is highly inflated**, particularly in extreme hazard zones, where fire occurrence is only marginally higher than in moderate zones. A well-calibrated model should show clear **progression in risk between tiers**, yet the lack of separation suggests that hazard bands may not accurately reflect true fire probabilities. Future adjustments to risk thresholds should ensure that each tier corresponds to a **meaningful increase in fire occurrence**, avoiding unnecessary overclassification that could misallocate resources and policy efforts.  
+
+
 
 
 ---
