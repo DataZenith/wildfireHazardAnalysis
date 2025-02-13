@@ -327,9 +327,9 @@ To test whether the model is **actually predicting fires or just guessing**, we 
 ## **2. Visual Analysis: Histogram Layover**
 To further evaluate the model, we **compared the histograms of predicted probabilities** for locations where fires occurred and where they did not.
 
-- If the model is working well, the histogram of fire locations should **show higher predicted probabilities** compared to non-fire locations.
-- If the two histograms **overlap significantly**, it suggests the model struggles to distinguish between fire-prone and non-fire areas.
-- This comparison **visually confirms whether the model's predictions form a pattern or are randomly distributed**.
+ -When probability histograms for fire-prone and non-fire areas are overlaid on the same chart, a well-functioning model should show clear separation between the two distributions.         
+  If the model is effective, high-hazard areas should have consistently higher burn probabilities than low-hazard areas. 
+  A lack of separation—or significant overlap—indicates that the model fails to distinguish between fire and non-fire zones, reducing its predictive reliability.
 
 This **histogram analysis** helps determine if the model provides meaningful insights or if it fails to separate fire-prone areas from non-fire areas.
 
