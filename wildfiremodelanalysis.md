@@ -529,7 +529,7 @@ The histograms display the **distribution of burn probabilities** assigned by th
 - **Fire Pixels** → Locations where actual wildfires occurred.  
 - **No-Fire Pixels** → Locations where no wildfire was recorded.  
 
-Each pixel in the dataset is assigned a **burn probability** between **0 and 1**, indicating how likely the model believes a fire will occur at that location. If the model is performing well, **fire pixels should have systematically higher probabilities than no-fire pixels**.
+Each pixel in the dataset is assigned a **burn probability** between **0 and 1**, indicating how likely the model believes a fire will occur at that location. If the model is performing well, there should be clear seperation of the probabilities.
 
 ---
 
@@ -548,7 +548,7 @@ When visualized in a **histogram**, this would appear as two distributions with 
 The histogram below overlays the **burn probability distributions** for both fire and no-fire pixels.
 
 <div align="center">
-  <img src="images/histogram.JPG" alt="Burn Probability Histogram" width="70%">
+  <img src="images/histogram.PNG" alt="Burn Probability Histogram" width="70%">
 </div>
 
 ---
@@ -558,13 +558,12 @@ The histogram below overlays the **burn probability distributions** for both fir
 A well-performing model should **assign significantly different burn probabilities to fire and no-fire locations**, resulting in two distinct histogram distributions.
 
 However, in this case:  
-❌ **The fire and no-fire distributions overlap significantly**, meaning the model **fails to meaningfully separate fire-prone areas** from non-fire areas.  
-❌ **Fire locations do not have significantly higher burn probabilities than no-fire locations**.  
-❌ **The burn probabilities are not predictive of actual fire occurrence** and appear to be assigned randomly.  
+- **The fire and no-fire distributions overlap significantly**, meaning the model **fails to meaningfully separate fire-prone areas** from non-fire areas.  
+- **The burn probabilities are not predictive of actual fire occurrence** and appear to be assigned randomly.  
 
 Since the **burn probability distributions for fire and no-fire pixels are nearly identical**, this confirms that:  
 - **The model does not successfully differentiate between high-risk and low-risk areas.**  
-- **Burn probabilities are not useful for decision-making in wildfire risk assessment.**  
+- **The models burn probabilities are not useful for decision-making in wildfire risk assessment.**  
 - **This supports the PR AUC findings, which showed that the model performs no better than random guessing.**  
 
 These results strongly suggest that the **burn probability model is not a reliable tool for wildfire risk assessment**.
