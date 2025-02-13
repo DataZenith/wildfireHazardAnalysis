@@ -469,7 +469,7 @@ For imbalanced datasets, standard metrics like **accuracy can be misleading**, s
 ---
 
 ## Performance of the Burn Probability Model  
-To evaluate the **Burn Probability Model (OSU’s model)**, we compute the **Precision-Recall AUC (PR AUC)** score.
+To evaluate the **Burn Probability Model (OSU’s model)**, we compute the **Precision-Recall AUC (PR AUC)** score on the probability output from the model trimming off the first and last datapoints.
 
 - **PR AUC of OSU’s Model** = **0.22**
 - **AUC Interpretation**: Higher values indicate better classification performance.
