@@ -733,35 +733,16 @@ The reliance on a model that **fails to perform better than a random number gene
 
 # **7. Conclusion**  
 
-The findings in this report raise **serious concerns** about the validity and reliability of the **burn probability model** used in Oregon’s **Hazard Risk Map**. Our analysis demonstrates that:  
 
-- **The model provides no meaningful predictive power** and does not successfully distinguish between fire-prone and non-fire areas.  
-- **It grossly overestimates fire risk**, which results in a large number of misclassified areas.  
-- **The final hazard classifications were determined by a vote rather than scientific validation**, making them **arbitrary rather than evidence-based**.  
-- **Oregon law (ORS 182.525) requires evidence-based policymaking**, yet the model and risk classifications do not align with these legal standards.  
+This evaluation of the **Oregon Wildfire Hazard Model** reveals fundamental flaws in its ability to accurately classify fire risk, raising serious concerns about its reliability as a predictive tool. Over a **21-year period**, the model **systematically overestimated wildfire probability**, misclassified a **disproportionate number of properties as high hazard**, and **failed to distinguish between fire-prone and non-fire areas** better than random chance. A well-calibrated model should demonstrate **a clear relationship between hazard classifications and actual fire occurrence**, yet this analysis shows that **risk scores do not meaningfully correspond to fire history**, undermining the model’s utility in guiding fire mitigation efforts.  
 
-Since the **Hazard Risk Map** directly impacts **property regulations, insurance considerations, and public trust in wildfire risk management**, these findings highlight **significant flaws** in how fire risk is being assessed and enforced.
+Compounding these performance issues are questions regarding **how hazard classification thresholds were determined**. The decision to establish risk bands by **voting on the 90th and 40th percentiles of a subset dataset** introduces **a level of subjectivity that is difficult to justify in a model expected to inform public policy**. If hazard classifications are based on thresholds that **lack empirical validation or fail to generalize to the full dataset**, the model cannot be expected to produce meaningful or reliable outputs. The fact that these thresholds, once applied more broadly, **result in a drastic overclassification of high-risk areas** suggests that the initial methodology was flawed.  
 
-### **The Need for Immediate Action**  
+The consequences of these failures extend beyond **policy and emergency planning**—they have **direct economic and social impacts**. Homeowners may be required to **spend unnecessary money on fire mitigation efforts** due to inflated hazard classifications, while misclassifications could lead to **declining property values, difficulty selling homes, and reduced tax revenue** for local governments. If **hazard classifications do not reflect actual wildfire risk**, public trust in fire management policies may erode, making it harder to implement **effective prevention strategies**.  
 
-Given the model’s failure to provide reliable risk assessments, **the following steps should be taken immediately**:  
+Ultimately, this analysis highlights the **critical need for empirical validation** in wildfire risk modeling. A model intended to **inform public policy, insurance rates, and land-use regulations** must provide **clear, evidence-based classifications** that align with **historical fire data**. Without substantial improvements in **hazard classification thresholds, probability calibration, and fire occurrence prediction**, this model risks misinforming decision-makers, misallocating resources, and creating unnecessary financial and regulatory burdens for communities.  
 
-1️⃣ **Empirical Validation of Final Hazard Scores** → The classifications should be tested against **historical fire data** to determine if they reflect real fire risk.  
-2️⃣ **Full Transparency in Methodology** → The decision-making process behind burn probability assignments and final hazard classifications should be **publicly disclosed and independently reviewed**.  
-3️⃣ **Re-Evaluation of Policy Implementation** → If the **burn probability model cannot be improved**, its role in determining wildfire risk should be **reconsidered or removed** from regulatory decision-making.  
-4️⃣ **Public Accountability** → The board members who voted on classification thresholds should **disclose whether their own properties were affected**, ensuring fairness and transparency.  
 
-### **Final Thoughts**  
-
-Wildfire risk management is a critical public safety issue, and it **must be grounded in sound science**. A model that **fails to predict fire risk and overestimates danger** should not be used as the foundation for **statewide regulatory decisions**.  
-
-Without **urgent validation and reform**, the continued use of this flawed burn probability model in policy decisions **risks imposing unnecessary financial burdens on property owners, eroding public trust, and violating Oregon’s legal standards for evidence-based policymaking**.  
-
-🚨 **If Oregon is to implement fair, effective, and legally compliant wildfire policies, it must prioritize transparency, empirical validation, and scientific integrity in its risk assessments.**  
-
-# References
-
-Below are the sources used to support the methodology, evaluation of the model, and supporting data sources.
 
 ### Machine Learning & Model Evaluation
 
