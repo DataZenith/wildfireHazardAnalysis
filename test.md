@@ -3,4 +3,9 @@ The probability of fire occurrence is given by $P(F) = \frac{X}{Y}$, where $X$ i
 The probability of fire occurrence is given by \\( P(F) = \frac{X}{Y} \\).
 
 
+\[
+P(F) = \frac{X}{Y}
+\]
+
+
 
