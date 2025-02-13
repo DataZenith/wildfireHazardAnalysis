@@ -62,7 +62,7 @@ This report evaluates two critical aspects of the wildfire hazard model:
 ## Scope  
 This analysis examines model outputs across the entire state of Oregon, assessing whether the wildfire hazard model meets the necessary standards for **accurate classification, predictive reliability, and policy relevance** in wildfire risk assessment.
 
-<hr>
+---
 
 # **3. Data** 
 
