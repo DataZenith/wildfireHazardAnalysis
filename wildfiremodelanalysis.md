@@ -336,9 +336,11 @@ This **histogram analysis** helps determine if the model provides meaningful ins
 To quantify how much the model **overestimates fire risk**, we calculate the **overestimation rate**, which represents the proportion of predicted fires that **never actually occurred**.
 
 ### **Overestimation Rate Formula**
+
 $$
 \text{Overestimation Rate} = \frac{\text{False Positives (FP)}}{\text{True Positives (TP)} + \text{False Positives (FP)}}
 $$
+
 This value represents the **percentage of predicted fires that did not happen**.
 
 Since **Precision** is defined as:
