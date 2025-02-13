@@ -479,7 +479,7 @@ To understand whether the model is **better than random guessing**, we compare i
 ---
 
 ## Benchmarking Against Random Predictions  
-When a classification model **performs no better than random**, its performance simply reflects the balance of the dataset. Since **fires occur in 21.55% of the dataset**, a completely **random model’s PR AUC should be approximately 0.22**.
+When a classification model **performs no better than random**, its performance simply reflects the balance of the dataset. Since **fires occur in 21.89% of the dataset**, a completely **random model’s PR AUC should be approximately 0.22**.
 
 To determine if the **OSU burn probability model provides meaningful classification**, we generate **random probabilities** and calculate the **PR AUC** for these random scores.
 
