@@ -458,8 +458,8 @@ The **burn probability model** is designed to classify areas based on the likeli
 
 A key challenge in this analysis is the **imbalance in the dataset**, where **fire events are much rarer than no-fire events**:
 
-- **No Fire (0): 78.45% of pixels**  
-- **Fire Occurred (1): 21.55% of pixels**  
+- **No Fire (0): 78.11% of pixels**  
+- **Fire Occurred (1): 21.89% of pixels**  
 
 For imbalanced datasets, standard metrics like **accuracy can be misleading**, since a model could predict **"No Fire" for all pixels and still achieve high accuracy**. Instead, we focus on **Precision-Recall AUC (PR AUC)** because:
 
