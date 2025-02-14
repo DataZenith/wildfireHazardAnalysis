@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.metrics import precision_recall_curve, auc, roc_curve, roc_auc_score
+from sklearn.metrics import precision_score, precision_recall_curve, auc, roc_curve, roc_auc_score, confusion_matrix, recall_score
 #import seaborn as sns
 
 
@@ -46,6 +46,7 @@ z = np.random.rand(len(df))
 
 # Compute Precision-Recall curve for Model
 precision_model, recall_model, thresh = precision_recall_curve(y, X)
+
 pr_auc_model = auc(recall_model, precision_model)
 precision_model = precision_model[1:-1]
 recall_model = recall_model[1:-1]
@@ -62,6 +63,16 @@ recall_rand = recall_rand[1:-1]
 # Calculate the random baseline precision (same as positive class proportion)
 random_precision = np.mean(y)
 overestimate = 1 - max(precision_model)
+
+max_precision_idx = np.argmax(precision_model)
+best_threshold = thresh[max_precision_idx]
+
+y_pred = (X >= best_threshold).astype(int)
+
+# Compute confusion matrix
+tn, fp, fn, tp = confusion_matrix(y, y_pred).ravel()
+precision_at_best_threshold = precision_score(y, y_pred)
+recall_at_best_threshold = recall_score(y, y_pred)
 
 
 print(f'Overestimate : {overestimate}')
@@ -81,6 +92,11 @@ plt.show()
 
 print(f'Random AUC:{pr_auc_rand}')
 print(f'Probability AUC:{pr_auc_model}')
+print(f"Best Threshold: {best_threshold}")
+print(f"Precision at Best Threshold: {precision_at_best_threshold}")
+print(f"Recall at Best Threshold: {recall_at_best_threshold}")
+
+print(f"Confusion Matrix:\nTP={tp}, FP={fp}, TN={tn}, FN={fn}")
 
 #-----------------
 #histogram plots
@@ -89,6 +105,22 @@ print(f'Probability AUC:{pr_auc_model}')
 
 df_fire = df[df["FIre_flag"] == 1]["burn_prob1"]  # Subset where fire occurred
 df_no_fire = df[df["FIre_flag"] == 0]["burn_prob1"]  # Subset where no fire occurred
+
+# Create the boxplot
+plt.figure(figsize=(8, 6))
+plt.boxplot([df_fire, df_no_fire], labels=["Fire Occurred", "No Fire"], patch_artist=False)
+
+# Formatting
+plt.ylabel("Probability")
+plt.title("Boxplot Comparison: Fire vs No Fire Probabilities")
+plt.grid(True)
+
+# Show plot
+plt.show()
+
+# Show plot
+plt.show()
+
 
 # Plot histograms (No KDE in Matplotlib)
 plt.figure(figsize=(8, 6))
@@ -100,6 +132,7 @@ plt.hist(df_no_fire, bins=30, color="blue", alpha=0.5, density = True, label="No
 plt.xlabel("Probability")
 plt.ylabel("Frequency")
 plt.title("Overlayed Histogram of Probabilities (Fire vs. No Fire)")
+
 plt.legend()
 plt.grid()
 
@@ -146,8 +179,10 @@ fig, ax = plt.subplots()
 ax.bxp(box_data, showfliers=False)
 
 # Add labels and title
-ax.set_ylabel('Value')
-ax.set_title('Box and Whisker Plot (40th & 90th Percentiles)')
+ax.set_ylabel('Percentiles')
+ax.set_title('Percentile Comparison')
+plt.grid(True)
 
 plt.show()
+
 
