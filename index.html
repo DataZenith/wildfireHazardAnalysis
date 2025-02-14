@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildfire Hazard Analysis</title>
     <style>
-        /* Background styling */
+        /* Background Fix */
         body {
             font-family: Arial, sans-serif;
-            background: url('images/fire-bg.jpg') no-repeat center center fixed;
+            background: url('images/fire-bg.jpg') no-repeat center center;
             background-size: cover;
-            text-align: center;
+            background-attachment: fixed;
+            height: 100vh;
             margin: 0;
             padding: 0;
             color: white;
@@ -28,9 +29,18 @@
             padding: 20px;
         }
 
-        /* Container for buttons */
+        /* Responsive container */
+        .content {
+            max-width: 90%;
+            width: 600px;
+            padding: 20px;
+        }
+
+        /* Responsive button container */
         .button-container {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 15px;
             margin-top: 20px;
         }
@@ -47,6 +57,8 @@
             cursor: pointer;
             text-decoration: none;
             transition: transform 0.2s, background 0.3s;
+            min-width: 150px;
+            text-align: center;
         }
 
         /* Hover effect */
@@ -67,18 +79,42 @@
             max-width: 600px;
             margin: 0 auto 20px;
         }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .overlay {
+                height: auto;
+                padding: 40px 20px;
+            }
+            .button-container {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                padding: 15px 20px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="overlay">
-        <h1>🔥 Wildfire Hazard Analysis</h1>
-        <p>A critical evaluation of Oregon State's wildfire hazard model.</p>
+        <div class="content">
+            <h1>🔥 Wildfire Hazard Analysis</h1>
+            <p>A critical evaluation of Oregon State's wildfire hazard model.</p>
 
-        <div class="button-container">
-            <a href="https://github.com/DataZenith/wildfireHazardAnalysis/blob/main/abstract.md" class="btn" target="_blank">📜 Read Abstract</a>
-            <a href="https://github.com/DataZenith/wildfireHazardAnalysis/blob/main/wildfiremodelanalysis.md" class="btn" target="_blank">📖 Read Full Paper</a>
-            <a href="https://github.com/DataZenith/wildfireHazardAnalysis" class="btn" target="_blank">🔗 View on GitHub</a>
+            <div class="button-container">
+                <a href="https://github.com/DataZenith/wildfireHazardAnalysis/blob/main/abstract.md" class="btn" target="_blank">📜 Read Abstract</a>
+                <a href="https://github.com/DataZenith/wildfireHazardAnalysis/blob/main/wildfiremodelanalysis.md" class="btn" target="_blank">📖 Read Full Paper</a>
+                <a href="https://github.com/DataZenith/wildfireHazardAnalysis" class="btn" target="_blank">🔗 View on GitHub</a>
+            </div>
         </div>
     </div>
 
