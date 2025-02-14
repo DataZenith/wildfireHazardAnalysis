@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildfire Hazard Analysis</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.0.3/showdown.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
+            background-color: #f8f9fa;
             margin: 0;
             padding: 20px;
-            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
         .container {
             max-width: 800px;
-            margin: auto;
             background: white;
-            padding: 20px;
+            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
         }
         h1 {
             color: #333;
@@ -40,6 +44,10 @@
         #content {
             text-align: left;
             margin-top: 30px;
+            padding: 20px;
+            border-radius: 5px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -65,8 +73,8 @@
             fetch(file)
                 .then(response => response.text())
                 .then(md => {
-                    document.getElementById("content").innerHTML = 
-                        "<pre style='text-align: left; white-space: pre-wrap;'>" + md + "</pre>";
+                    let converter = new showdown.Converter();
+                    document.getElementById("content").innerHTML = converter.makeHtml(md);
                 })
                 .catch(error => console.error('Error loading Markdown:', error));
         }
