@@ -1,8 +1,3 @@
----
-layout: default
-title: Wildfire Hazard Analysis
----
-
 # 🔥 Wildfire Hazard Analysis  
 *A critical evaluation of Oregon State's wildfire hazard model.*
 
