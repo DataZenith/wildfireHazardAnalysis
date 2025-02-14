@@ -324,13 +324,13 @@ To test whether the model is **actually predicting fires or just guessing**, we 
 
 ---
 
-## **2. Visual Analysis: Histogram Layover**
-To further evaluate the model, we **compared the histograms of predicted probabilities** for locations where fires occurred and where they did not.
+## **2. Visual Analysis**
+To further evaluate the model, we use **histogram overlays** and **box and whisker plots** to compare probability distributions for locations where fires occurred and where they did not.  
 
-- If the fire liklihood can distinguish between fire and non-fire zones then there should be clear seperation of probabilities when overlapping the histogram of historical fire and non-fire probability outputs.
-- Significant probability overlap indicates the model cannot distinguish between fire and non fire zones.
+- If the **fire likelihood effectively distinguishes** between fire-prone and non-fire areas, we should see a **clear separation** between distributions in both the histogram and boxplot comparisons.  
+- **Significant overlap** between fire and no-fire probabilities suggests that the model **fails to differentiate** between fire-prone and non-fire zones, reducing its predictive reliability.  
 
-This **histogram analysis** helps determine if the model provides meaningful insights or if it fails to separate fire-prone areas from non-fire areas.
+This **boxplot and histogram analysis** helps determine whether the model assigns **meaningfully different probabilities** to fire-prone areas or if probability values are **too similar across all locations**, limiting the model’s usefulness.
 
 ---
 
@@ -521,52 +521,59 @@ The Precision-Recall AUC comparison shows that the **Burn Probability Model does
 These results indicate that the **Burn Probability Model does not provide actionable fire risk predictions**. If a model’s **classification power is no better than random**, then its outputs **cannot be relied upon for decision-making**.
 
 ---
-## Histogram Overlap of Burn Probabilities  
+## Histogram and Boxplot Comparison of Burn Probabilities  
 
-### **Understanding the Burn Probability Histograms**  
+### **Understanding the Burn Probability Distributions**  
 
-The histograms display the **distribution of burn probabilities** assigned by the OSU model for two different classes:  
+To assess whether the model effectively differentiates between fire-prone and non-fire areas, we examine **histogram overlays** and **box and whisker plots** of assigned burn probabilities.  
+
 - **Fire Pixels** → Locations where actual wildfires occurred.  
 - **No-Fire Pixels** → Locations where no wildfire was recorded.  
 
-Each pixel in the dataset is assigned a **burn probability** between **0 and 1**, indicating how likely the model believes a fire will occur at that location. If the model is performing well, there should be clear seperation of the probabilities.
+Each pixel in the dataset is assigned a **burn probability** between **0 and 1**, indicating how likely the model believes a fire will occur at that location. If the model is performing well, there should be **clear separation** between fire and no-fire probability distributions.
 
 ---
 
 ### **Why Overlapping Should Show Separation Between Classes**  
 
-In a well-calibrated classification model, burn probabilities should serve as a **meaningful decision boundary** between fire-prone and safe areas. That means:  
-- Fire-prone areas should have **higher burn probabilities**, forming a **distribution shifted to the right**.  
-- No-fire areas should have **lower burn probabilities**, forming a **distribution shifted to the left**.  
+A well-calibrated classification model should **assign higher probabilities to fire-prone areas** while keeping non-fire probabilities lower. That means:  
+- Fire-prone areas should have **higher burn probabilities**, shifting their distribution to the right.  
+- No-fire areas should have **lower burn probabilities**, shifting their distribution to the left.  
+- **Boxplots should show a clear distinction**, with the median and interquartile range (IQR) for fire pixels significantly higher than for no-fire pixels.  
 
-When visualized in a **histogram**, this would appear as two distributions with **minimal overlap**, clearly distinguishing high-risk areas from low-risk areas.
+When visualized, this would appear as:
+- **Histograms with minimal overlap**, where fire and no-fire distributions are clearly separated.  
+- **Boxplots with distinct median values**, confirming fire probabilities are consistently higher.  
 
 ---
 
-### **Histogram Comparison of Burn Probabilities**  
+### **Comparison of Burn Probabilities in Boxplots and Histograms**  
 
-The histogram below overlays the **burn probability distributions** for both fire and no-fire pixels.
+The figures below display both **histogram overlays** and **boxplots** comparing fire vs. no-fire probabilities.
+
+#### **Histogram Overlay**
+The histogram overlays the **burn probability distributions** for both fire and no-fire pixels.
 
 <div align="center">
   <img src="images/histogram.PNG" alt="Burn Probability Histogram" width="70%">
 </div>
 
+#### **Boxplot Comparison**
+The boxplot visualizes the **spread and median values** of fire and no-fire probabilities.
+
+<div align="center">
+  <img src="images/prob_box_whisker.PNG" alt="Burn Probability Boxplot" width="70%">
+</div>
+
 ---
 
-### **Interpreting the Results**  
+### **Interpretation of Results*  
+- **No distinguishable separation** is observed between fire and no-fire probability distributions in either the **histogram or boxplot**.  
+- **Significant overlap** in the histogram suggests the model does not effectively differentiate fire-prone areas.  
+- **Boxplots show similar interquartile ranges (IQR) and medians**, further indicating that fire and no-fire probabilities are nearly indistinguishable.  
+- These results suggest the model may **not be providing meaningful predictive power** for fire risk classification.  
 
-A well-performing model should **assign significantly different burn probabilities to fire and no-fire locations**, resulting in two distinct histogram distributions.
 
-However, in this case:  
-- **The fire and no-fire distributions overlap significantly**, meaning the model **fails to meaningfully separate fire-prone areas** from non-fire areas.  
-- **The burn probabilities are not predictive of actual fire occurrence** and appear to be assigned randomly.  
-
-Since the **burn probability distributions for fire and no-fire pixels are nearly identical**, this confirms that:  
-- **The model does not successfully differentiate between high-risk and low-risk areas.**  
-- **The models burn probabilities are not useful for decision-making in wildfire risk assessment.**  
-- **This supports the PR AUC findings, which showed that the model performs no better than random guessing.**  
-
-These results strongly suggest that the **burn probability model is not a reliable tool for wildfire risk assessment**.
 
 ---
 
