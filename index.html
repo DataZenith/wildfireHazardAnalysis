@@ -5,38 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildfire Hazard Analysis</title>
     <style>
-        /* Background Fix */
+        /* Prevent scrolling */
+        html, body {
+            height: 100%;
+            overflow: hidden; /* Stops scrolling */
+        }
+
+        /* Background Styling */
         body {
             font-family: Arial, sans-serif;
-            background: url('images/fire-bg.jpg') no-repeat center center;
+            background: url('images/fire-bg.jpg') no-repeat center center fixed;
             background-size: cover;
-            background-attachment: fixed;
-            height: 100vh;
             margin: 0;
             padding: 0;
             color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         /* Dark overlay for readability */
         .overlay {
             background: rgba(0, 0, 0, 0.7);
             width: 100%;
-            height: 100vh;
+            height: 100vh; /* Lock height */
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            padding: 20px;
         }
 
-        /* Responsive container */
+        /* Content container */
         .content {
             max-width: 90%;
             width: 600px;
             padding: 20px;
+            text-align: center;
         }
 
-        /* Responsive button container */
+        /* Button container */
         .button-container {
             display: flex;
             flex-wrap: wrap;
@@ -67,23 +74,10 @@
             transform: scale(1.1);
         }
 
-        /* Title */
-        h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        /* Subtitle */
-        p {
-            font-size: 18px;
-            max-width: 600px;
-            margin: 0 auto 20px;
-        }
-
         /* Mobile Optimization */
         @media (max-width: 768px) {
             .overlay {
-                height: auto;
+                height: 100vh; /* Keep it locked */
                 padding: 40px 20px;
             }
             .button-container {
