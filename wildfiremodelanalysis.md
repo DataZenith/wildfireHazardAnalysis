@@ -567,7 +567,7 @@ The boxplot visualizes the **spread and median values** of fire and no-fire prob
 
 ---
 
-### **Interpretation of Results*  
+### **Interpretation of Results**  
 - **No distinguishable separation** is observed between fire and no-fire probability distributions in either the **histogram or boxplot**.  
 - **Significant overlap** in the histogram suggests the model does not effectively differentiate fire-prone areas.  
 - **Boxplots show similar interquartile ranges (IQR) and medians**, further indicating that fire and no-fire probabilities are nearly indistinguishable.  
