@@ -1,3 +1,8 @@
+---
+layout: default
+---
+
+
 <div align="center">
 
 # Under Fire: Rethinking Wildfire Predictions
