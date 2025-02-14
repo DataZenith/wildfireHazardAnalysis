@@ -70,7 +70,10 @@
 
     <script>
         function loadMarkdown(file) {
-            fetch(file)
+            // Get the raw GitHub link for the Markdown file
+            const rawGitHubUrl = `https://raw.githubusercontent.com/DataZenith/wildfireHazardAnalysis/main/${file}`;
+
+            fetch(rawGitHubUrl)
                 .then(response => response.text())
                 .then(md => {
                     let converter = new showdown.Converter();
