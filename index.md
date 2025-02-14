@@ -1,8 +1,14 @@
-# Wildfire Hazard Analysis
+---
+layout: default
+title: Wildfire Hazard Analysis
+---
 
-## 📄 Read the Papers
-- [📜 Abstract](abstract.md)
-- [📖 Full Paper](wildfiremodelanalysis.md)
+# 🔥 Wildfire Hazard Analysis  
+*A critical evaluation of Oregon State's wildfire hazard model.*
 
-## 🔗 More Resources
-- [🔍 View on GitHub](https://github.com/DataZenith/wildfireHazardAnalysis)
+## 📄 Research Papers  
+📜 **[Abstract](abstract.md)**  
+📖 **[Full Paper](wildfiremodelanalysis.md)**  
+
+## 🔗 More Resources  
+🔍 **[View on GitHub](https://github.com/DataZenith/wildfireHazardAnalysis)**
