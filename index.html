@@ -9,20 +9,16 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            padding: 20px;
             background-color: #f8f9fa;
         }
         .container {
+            max-width: 800px;
+            margin: auto;
             background: white;
-            padding: 30px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            max-width: 500px;
         }
         h1 {
             color: #333;
@@ -41,6 +37,10 @@
         a:hover {
             text-decoration: underline;
         }
+        #content {
+            text-align: left;
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
@@ -49,13 +49,28 @@
         <h1>Wildfire Hazard Analysis</h1>
         <p>A critical evaluation of Oregon State's wildfire hazard model.</p>
 
-         <div class="link-container">
-            <a href="https://github.com/DataZenith/wildfireHazardAnalysis/blob/main/abstract.md" target="_blank">📄 Read Abstract</a>
-            <a href="https://github.com/DataZenith/wildfireHazardAnalysis/blob/main/wildfiremodelanalysis.md" target="_blank">📄 Read Full Paper</a>
+        <div class="link-container">
+            <a href="#" onclick="loadMarkdown('abstract.md')">📄 Read Abstract</a>
+            <a href="#" onclick="loadMarkdown('wildfiremodelanalysis.md')">📄 Read Full Paper</a>
             <a href="https://github.com/DataZenith/wildfireHazardAnalysis" target="_blank">🔗 View on GitHub</a>
         </div>
 
+        <div id="content">
+            <p>Select a document above to view it.</p>
+        </div>
     </div>
+
+    <script>
+        function loadMarkdown(file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(md => {
+                    document.getElementById("content").innerHTML = 
+                        "<pre style='text-align: left; white-space: pre-wrap;'>" + md + "</pre>";
+                })
+                .catch(error => console.error('Error loading Markdown:', error));
+        }
+    </script>
 
 </body>
 </html>
