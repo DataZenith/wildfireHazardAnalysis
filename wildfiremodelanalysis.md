@@ -707,33 +707,88 @@ These findings indicate that **hazard classifications based on the WUI subset ma
 
 # **6. Discussion and Implications**  
 
-Wildfire risk models are intended to provide **actionable, data-driven insights** that guide public policy, emergency planning, and resource allocation. Their credibility depends on their ability to produce **meaningful predictions that separate fire-prone areas from those unlikely to burn**. However, this evaluation of the **Oregon Wildfire Hazard Model** highlights fundamental shortcomings, including **overclassification, weak hazard differentiation, threshold misalignment, and poor long-term predictive performance**.  
+Wildfire risk models are intended to provide **actionable, data-driven insights** that guide public policy, emergency planning, and resource allocation. Their **credibility depends on their ability to separate fire-prone areas from those unlikely to burn**. However, this evaluation of the **Oregon Wildfire Hazard Model** highlights **fundamental shortcomings**, including **overclassification, weak hazard differentiation, threshold misalignment, and poor predictive performance**.  
 
-## **Overclassification and Risk Inflation**  
-A primary concern is the **significant inflation of fire risk classifications**. The model assigns **high hazard labels to nearly 60% of tax lots**, even though the original intent was to classify only the highest-risk 10%. This misalignment stems from the fact that the **90th percentile in the WUI subset corresponds only to the 40th percentile in the full dataset**, meaning hazard scores do not scale as expected when applied statewide.  
+---
 
-Beyond classification issues, the model **routinely overestimates the probability of fire occurrence**. Across all hazard categories, the model overpredicts fire risk by **78% in the long term**, with **extreme hazard areas overstated by 74%**. These inflated estimates could lead to **unwarranted fire mitigation requirements** for property owners and **misallocation of state and federal resources**.  
+## 1. Key Findings  
+- The model **fails to distinguish** between burned and non-burned areas.  
+- **Probability distributions overlap heavily**, meaning it does not effectively rank fire risk.  
+- The model’s performance **is equivalent to a random number generator**, as both produced a **PR AUC of approximately 0.22**.  
+- Even when tested on **its own training data (21 years)**, the model **failed to differentiate risk**, raising doubts about its ability to generalize to future predictions.  
+- The model **overclassifies risk**, assigning **high hazard labels to nearly 60% of tax lots**, despite the original intent being to classify only the highest-risk 10%.  
+- The model’s hazard classification method **contradicts its stated focus on the Wildland-Urban Interface (WUI)**—if WUI areas are the intended priority, their hazard scores should be **higher**, not lower, than the full dataset.  
 
-## **Failure to Distinguish Between Fire and Non-Fire Zones**  
-One of the most concerning findings is that **the model does not effectively separate areas that have historically burned from those that have not**. Over a **21-year period**, the model’s predictions are **statistically indistinguishable from random chance**—meaning that a pixel classified as high hazard is no more likely to experience fire than one classified as low hazard.  
+---
 
-Theoretically, this model **should perform well on this long-term analysis**, as it was **trained using the same historical fire data** according to OSU’s point of contact. The fact that it fails to differentiate between fire-prone and non-fire areas suggests **serious flaws in the modeling process or the assumptions behind its risk classifications**. A well-calibrated model should **show a strong relationship between hazard classifications and actual fire history**, yet this analysis demonstrates that **fire occurrence is poorly correlated with assigned risk scores**. If hazard scores fail to differentiate between fire-prone and fire-free areas over time, the model cannot be relied upon to guide **mitigation planning, land-use decisions, or emergency preparedness strategies**.  
+## 2. Addressing Potential Counterarguments  
 
-## **Weak Differentiation Between Hazard Tiers**  
-For a hazard model to be useful, it must clearly distinguish between **low, moderate, and extreme** risk areas. This evaluation demonstrates that **the difference in fire occurrence between moderate and extreme hazard zones is minimal**, suggesting that the model does not effectively scale risk levels. While there is a clear increase in fire occurrence when moving from **low to moderate hazard zones**, the transition from **moderate to extreme hazard** is far less pronounced, **calling into question the value of the extreme hazard classification**.  
+### **“The model is probabilistic, not a classifier.”**  
+→ Even in a probabilistic framework, a well-calibrated model should assign **higher probabilities to areas that actually burned**. If a **random number generator performs equally well**, the model **isn’t providing meaningful risk estimates**.  
 
-## **Threshold Misalignment and Generalization Issues**  
-The model’s hazard classifications were developed using **the WUI subset**, under the assumption that **these areas represent the highest fire risk**. However, the analysis shows that **hazard thresholds derived from the WUI do not translate well to the full dataset**. If the WUI truly represented the most fire-prone areas, the hazard scores within it should be **consistently higher** than in the full dataset, yet this comparison reveals that **the risk scores in the WUI subset are not meaningfully different** from those assigned across the broader landscape.  
+### **“It’s designed for 100-year risk, not 21 years.”**  
+→ If the model **fails within its own training data**, why should we trust it for long-term predictions? A good model should show **at least some predictive power** over shorter time frames.  
 
-## **Economic and Property Market Implications**  
-Beyond its impact on **policy and fire management strategies**, the model’s poor performance could have **significant economic consequences**. Fire hazard classifications **directly influence property values, mortgage eligibility, insurance premiums, and a homeowner’s ability to sell their property**.  
+### **“The dataset is imbalanced, so PR AUC is naturally low.”**  
+→ While class imbalance affects PR AUC, a **useful model should still outperform random chance**. The fact that a **random number generator** produced **the same results** suggests the model is **not learning meaningful patterns**.  
 
-- **Depressed Property Values:** If a model **misclassifies a large percentage of properties as high risk**, it could lead to **decreased property values**, as buyers and lenders may perceive these areas as unsafe. This could **negatively impact home equity and personal wealth** for property owners.  
-- **Difficulty Selling a Home:** Properties classified as high hazard may face **reduced buyer interest**, as potential homeowners may struggle to secure financing or be forced to pay significantly higher insurance rates. This could lead to **longer time on the market and financial losses for sellers**.  
-- **Increased Costs for Homeowners:** Homeowners in **falsely classified high-risk areas** may be required to **spend unnecessary money on fire mitigation efforts**, such as **defensible space, home hardening, and vegetation removal**, even if their actual fire risk is low.  
-- **Tax Revenue Losses:** If widespread overclassification results in **lower property values**, this could **reduce taxable property assessments**, ultimately **decreasing tax revenue for local and state governments**. These reductions could impact funding for **public services, infrastructure, and emergency response capabilities**, further exacerbating the challenges of wildfire mitigation.  
+### **“Fire occurrence is stochastic, so no model can be perfect.”**  
+→ Even if wildfire occurrence has stochastic elements, a **useful model should still rank high-risk areas above low-risk ones**. The model’s **failure to do so** suggests it is not capturing meaningful fire risk patterns at all.  
+→ **If fire spread is inherently unpredictable at the property level, then the model should not be used to inform micro-level policies such as tax lot classifications.** A model that cannot reliably distinguish risk at fine scales **should not drive mitigation requirements, insurance policies, or property regulations**.  
 
-The reliance on a model that **fails to perform better than a random number generator** introduces **unnecessary economic and policy risks**. By producing inaccurate hazard classifications, the model could **cause financial harm to homeowners and communities, while providing no meaningful benefit in terms of fire risk mitigation**. Without a model that reliably distinguishes **fire-prone areas from low-risk zones**, decision-makers risk **enacting policies that do more harm than good**.  
+### **“This is the best we can do; other models perform similarly.”**  
+→ If all models struggle this much, **perhaps we need a different modeling approach altogether**. A **simpler statistical model** might perform **just as well or better** while being more interpretable.  
+
+---
+
+## 3. Overclassification and Risk Inflation  
+A primary concern is the **significant inflation of fire risk classifications**. The model assigns **high hazard labels to nearly 60% of tax lots**, even though the **original intent was to classify only the highest-risk 10%**.  
+
+- The **90th percentile in the WUI subset** corresponds only to the **40th percentile in the full dataset**, meaning hazard scores **do not scale as expected when applied statewide**.  
+- Across all hazard categories, the model **overpredicts fire risk by 78% in the long term**, with extreme hazard areas **overstated by 74%**.  
+- **Implication:** These inflated estimates could lead to **unwarranted fire mitigation requirements** for property owners and **misallocation of state and federal resources**.  
+
+---
+
+## 4. Failure to Distinguish Between Fire and Non-Fire Zones  
+One of the most concerning findings is that the model **does not effectively separate areas that have historically burned from those that have not**.  
+
+- Over a **21-year period**, the model’s predictions are **statistically indistinguishable from random chance**—meaning that a pixel classified as **high hazard is no more likely to experience fire than one classified as low hazard**.  
+- The model was trained on **historical fire data**, yet it **fails to differentiate between fire-prone and non-fire areas**, suggesting serious flaws in either the **modeling process** or the **assumptions behind its risk classifications**.  
+- **Implication:** If hazard scores **fail to correlate with actual fire history**, the model **cannot be relied upon** to guide mitigation planning, land-use decisions, or emergency preparedness strategies.  
+
+---
+
+## 5. Weak Differentiation Between Hazard Tiers  
+- The **difference in fire occurrence between moderate and extreme hazard zones is minimal**.  
+- While there is a **clear increase in fire occurrence when moving from low to moderate hazard zones**, the **transition from moderate to extreme hazard is far less pronounced**.  
+- **Implication:** This calls into question the **value of the extreme hazard classification**, as it does not appear to meaningfully capture increased risk.  
+
+---
+
+## 6. Contradiction in the WUI Fire Risk Assumptions  
+- If the WUI truly represented the most fire-prone areas, the hazard scores within it should be **consistently higher** than in the full dataset.  
+- However, **risk scores in the WUI subset are actually lower than in the full dataset**.  
+- **Implication:** This contradicts the **stated focus on the WUI**—if the goal was to assess and mitigate fire risk where people live, then **their own model suggests that the WUI is not the most at-risk area**.  
+
+---
+
+## 7. Economic and Property Market Implications  
+- **Depressed Property Values:** Misclassified high-risk properties may **lose value**, as buyers and lenders perceive them as unsafe.  
+- **Difficulty Selling a Home:** High hazard classifications could lead to **reduced buyer interest** and **higher insurance costs**.  
+- **Increased Costs for Homeowners:** False high-risk areas may be required to **spend unnecessary money on fire mitigation efforts**.  
+- **Tax Revenue Losses:** Overclassification could lead to **reduced property values** and **lower taxable assessments**, impacting **public service funding**.  
+
+---
+
+## 8. Implications for Decision-Making  
+- **Property-level risk assessment is unreliable** → Tax lot owners may receive **misleading fire risk scores**.  
+- **Misallocation of Mitigation Efforts** → High-risk areas may be **underfunded**, while low-risk areas get **unnecessary resources**.  
+- **Legal and financial risks** → If used in insurance or zoning, **property owners may challenge its validity** in court.  
+- **A false sense of security** → The model’s **poor performance** may lead to **underpreparedness in high-risk areas**.  
+- **Policy risk** → Agencies relying on this model may be **wasting resources** or making **misguided decisions**, reducing public trust.  
+
+This analysis strongly suggests that **alternative modeling approaches**—including **simpler, better-calibrated models or different feature selection methods**—are necessary to ensure wildfire risk assessments provide **useful, actionable, and transparent insights**.
 
 ---
 
