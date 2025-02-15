@@ -39,13 +39,12 @@
       padding: 20px;
       text-align: center;
     }
-    /* 🔹 Fixed Button Alignment */
+    /* Vertical button stacking */
     .button-container {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
       gap: 15px;
       margin-top: 20px;
       width: 100%;
@@ -80,21 +79,33 @@
       width: 100%;
       height: 100%;
       background-color: rgba(0,0,0,0.5);
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.3s;
     }
     /* Modal content box */
     .modal-content {
       background-color: #fff;
-      margin: 10% auto;
+      margin: auto;
       padding: 20px;
       border: 1px solid #888;
       width: 300px;
       text-align: center;
       border-radius: 8px;
+      position: relative;
+      animation: slideIn 0.3s;
+    }
+    /* Rounded QR Code image */
+    .modal-content img {
+      max-width: 100%;
+      border-radius: 10px;
     }
     /* Close button style */
     .close {
       color: #aaa;
-      float: right;
+      position: absolute;
+      right: 10px;
+      top: 5px;
       font-size: 28px;
       font-weight: bold;
       cursor: pointer;
@@ -103,15 +114,20 @@
     .close:focus {
       color: black;
     }
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes slideIn {
+      from {transform: translateY(-20px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
     /* Mobile Optimization */
     @media (max-width: 768px) {
       .overlay {
         height: 100vh;
         padding: 40px 20px;
-      }
-      .button-container {
-        flex-direction: column;
-        align-items: center;
       }
       .btn {
         width: 100%;
@@ -136,7 +152,7 @@
         <a href="https://rpubs.com/ThinkAI/orwildfirehazard25abstract" class="btn" target="_blank">📜 Read Abstract</a>
         <a href="https://rpubs.com/ThinkAI/Orwildfirehazard25" class="btn" target="_blank">📖 Read Full Paper</a>
         <a href="https://github.com/DataZenith/wildfireHazardAnalysis" class="btn" target="_blank">🔗 GitHub Data</a>
-        <!-- New QR Code button -->
+        <!-- QR Code Button -->
         <button id="qrBtn" class="btn">📱 Show QR Code</button>
       </div>
     </div>
@@ -146,8 +162,7 @@
   <div id="qrModal" class="modal">
     <div class="modal-content">
       <span class="close" id="closeModal">&times;</span>
-      <!-- Dynamic QR code for your site -->
-      <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https%3A%2F%2Fdatazenith.github.io%2FwildfireHazardAnalysis%2F&choe=UTF-8" alt="QR Code" style="max-width: 100%;">
+      <img src="images/qr_wildfire.PNG" alt="QR Code">
     </div>
   </div>
 
@@ -159,7 +174,7 @@
 
     // Show the modal when the QR Code button is clicked
     qrBtn.addEventListener("click", function() {
-      modal.style.display = "block";
+      modal.style.display = "flex";
     });
 
     // Hide the modal when the close button is clicked
