@@ -44,7 +44,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: center; /* Ensures vertical alignment */
+      align-items: center;
       text-align: center;
       gap: 15px;
       margin-top: 20px;
@@ -72,7 +72,7 @@
     }
     /* Modal overlay */
     .modal {
-      display: none; /* Hidden by default */
+      display: none;
       position: fixed;
       z-index: 1000;
       left: 0;
@@ -146,8 +146,8 @@
   <div id="qrModal" class="modal">
     <div class="modal-content">
       <span class="close" id="closeModal">&times;</span>
-      <!-- Replace with your actual QR code image path -->
-      <img src="images/qr-code.png" alt="QR Code" style="max-width: 100%;">
+      <!-- Dynamic QR code for your site -->
+      <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https%3A%2F%2Fdatazenith.github.io%2FwildfireHazardAnalysis%2F&choe=UTF-8" alt="QR Code" style="max-width: 100%;">
     </div>
   </div>
 
