@@ -49,7 +49,7 @@
       margin-top: 20px;
       width: 100%;
     }
-    /* Button styles */
+    /* Button styles with fixed width */
     .btn {
       background-color: rgba(255, 69, 0, 0.8);
       color: white;
@@ -61,7 +61,7 @@
       cursor: pointer;
       text-decoration: none;
       transition: transform 0.2s, background 0.3s;
-      min-width: 150px;
+      width: 300px; /* Fixed width for uniformity */
       text-align: center;
     }
     /* Hover effect */
@@ -95,7 +95,7 @@
       position: relative;
       animation: slideIn 0.3s;
     }
-    /* Rounded QR Code image */
+    /* Rounded image for QR Code */
     .modal-content img {
       max-width: 100%;
       border-radius: 10px;
@@ -154,6 +154,8 @@
         <a href="https://github.com/DataZenith/wildfireHazardAnalysis" class="btn" target="_blank">🔗 GitHub Data</a>
         <!-- QR Code Button -->
         <button id="qrBtn" class="btn">📱 Show QR Code</button>
+        <!-- Contact Button -->
+        <button id="contactBtn" class="btn">📧 Contact Me</button>
       </div>
     </div>
   </div>
@@ -166,26 +168,49 @@
     </div>
   </div>
 
+  <!-- Modal for Contact Email -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeContactModal">&times;</span>
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:wildfirehazard1776@gmail.com">wildfirehazard1776@gmail.com</a></p>
+    </div>
+  </div>
+
   <script>
-    // Get modal and button elements
+    // QR Code Modal
     const modal = document.getElementById("qrModal");
     const qrBtn = document.getElementById("qrBtn");
     const closeModal = document.getElementById("closeModal");
 
-    // Show the modal when the QR Code button is clicked
     qrBtn.addEventListener("click", function() {
       modal.style.display = "flex";
     });
 
-    // Hide the modal when the close button is clicked
     closeModal.addEventListener("click", function() {
       modal.style.display = "none";
     });
 
-    // Hide the modal when clicking outside the modal content
+    // Contact Modal
+    const contactModal = document.getElementById("contactModal");
+    const contactBtn = document.getElementById("contactBtn");
+    const closeContactModal = document.getElementById("closeContactModal");
+
+    contactBtn.addEventListener("click", function() {
+      contactModal.style.display = "flex";
+    });
+
+    closeContactModal.addEventListener("click", function() {
+      contactModal.style.display = "none";
+    });
+
+    // Hide modals if clicking outside of modal content
     window.addEventListener("click", function(event) {
       if (event.target === modal) {
         modal.style.display = "none";
+      }
+      if (event.target === contactModal) {
+        contactModal.style.display = "none";
       }
     });
   </script>
