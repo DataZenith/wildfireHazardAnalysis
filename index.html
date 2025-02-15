@@ -1,120 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wildfire Hazard Analysis</title>
-    <style>
-        /* Prevent scrolling */
-        html, body {
-            height: 100%;
-            overflow: hidden;
-        }
-
-        /* Background Styling */
-        body {
-            font-family: Arial, sans-serif;
-            background: url('images/burn-bg.jpg') no-repeat center center fixed;
-            background-size: cover;
-            margin: 0;
-            padding: 0;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Dark overlay for readability */
-        .overlay {
-            background: rgba(0, 0, 0, 0.7);
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        /* Content container */
-        .content {
-            max-width: 90%;
-            width: 600px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* 🔹 Fixed Button Alignment */
-        .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center; /* Ensures vertical alignment */
-            text-align: center;
-            gap: 15px;
-            margin-top: 20px;
-            width: 100%;
-        }
-
-        /* Button styles */
-        .btn {
-            background-color: rgba(255, 69, 0, 0.8);
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: transform 0.2s, background 0.3s;
-            min-width: 150px;
-            text-align: center;
-        }
-
-        /* Hover effect */
-        .btn:hover {
-            background-color: rgba(255, 140, 0, 1);
-            transform: scale(1.1);
-        }
-
-        /* Mobile Optimization */
-        @media (max-width: 768px) {
-            .overlay {
-                height: 100vh;
-                padding: 40px 20px;
-            }
-            .button-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .btn {
-                width: 100%;
-                max-width: 300px;
-                padding: 15px 20px;
-            }
-            h1 {
-                font-size: 28px;
-            }
-            p {
-                font-size: 16px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wildfire Hazard Analysis</title>
+  <style>
+    /* Prevent scrolling */
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+    /* Background Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background: url('images/burn-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Dark overlay for readability */
+    .overlay {
+      background: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    /* Content container */
+    .content {
+      max-width: 90%;
+      width: 600px;
+      padding: 20px;
+      text-align: center;
+    }
+    /* 🔹 Fixed Button Alignment */
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; /* Ensures vertical alignment */
+      text-align: center;
+      gap: 15px;
+      margin-top: 20px;
+      width: 100%;
+    }
+    /* Button styles */
+    .btn {
+      background-color: rgba(255, 69, 0, 0.8);
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.3s;
+      min-width: 150px;
+      text-align: center;
+    }
+    /* Hover effect */
+    .btn:hover {
+      background-color: rgba(255, 140, 0, 1);
+      transform: scale(1.1);
+    }
+    /* Modal overlay */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    /* Modal content box */
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 300px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    /* Close button style */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+    }
+    /* Mobile Optimization */
+    @media (max-width: 768px) {
+      .overlay {
+        height: 100vh;
+        padding: 40px 20px;
+      }
+      .button-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px 20px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-
-    <div class="overlay">
-        <div class="content">
-            <h1>🔥 Wildfire Hazard Analysis</h1>
-            <p>A critical evaluation of Oregon State's wildfire hazard model.</p>
-
-            <div class="button-container">
-                <a href="https://rpubs.com/ThinkAI/orwildfirehazard25abstract" class="btn" target="_blank">📜 Read Abstract</a>
-                <a href="https://rpubs.com/ThinkAI/Orwildfirehazard25" class="btn" target="_blank">📖 Read Full Paper</a>
-                <a href="https://github.com/DataZenith/wildfireHazardAnalysis" class="btn" target="_blank">🔗 GitHub Data</a>
-            </div>
-        </div>
+  <div class="overlay">
+    <div class="content">
+      <h1>🔥 Wildfire Hazard Analysis</h1>
+      <p>A critical evaluation of Oregon State's wildfire hazard model.</p>
+      <div class="button-container">
+        <a href="https://rpubs.com/ThinkAI/orwildfirehazard25abstract" class="btn" target="_blank">📜 Read Abstract</a>
+        <a href="https://rpubs.com/ThinkAI/Orwildfirehazard25" class="btn" target="_blank">📖 Read Full Paper</a>
+        <a href="https://github.com/DataZenith/wildfireHazardAnalysis" class="btn" target="_blank">🔗 GitHub Data</a>
+        <!-- New QR Code button -->
+        <button id="qrBtn" class="btn">📱 Show QR Code</button>
+      </div>
     </div>
+  </div>
 
+  <!-- Modal for QR Code -->
+  <div id="qrModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <!-- Replace with your actual QR code image path -->
+      <img src="images/qr-code.png" alt="QR Code" style="max-width: 100%;">
+    </div>
+  </div>
+
+  <script>
+    // Get modal and button elements
+    const modal = document.getElementById("qrModal");
+    const qrBtn = document.getElementById("qrBtn");
+    const closeModal = document.getElementById("closeModal");
+
+    // Show the modal when the QR Code button is clicked
+    qrBtn.addEventListener("click", function() {
+      modal.style.display = "block";
+    });
+
+    // Hide the modal when the close button is clicked
+    closeModal.addEventListener("click", function() {
+      modal.style.display = "none";
+    });
+
+    // Hide the modal when clicking outside the modal content
+    window.addEventListener("click", function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
 </body>
 </html>
