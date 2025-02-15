@@ -22,7 +22,6 @@
     .content {
       text-align: center;
       z-index: 1;
-      /* Optionally add a subtle background or box-shadow for readability */
       background: rgba(0, 0, 0, 0.4);
       padding: 20px;
       border-radius: 10px;
@@ -91,6 +90,10 @@
       width: 100%;
       border-radius: 10px;
     }
+    /* Change the close button color specifically for QR modal */
+    .modal-content.qr .close {
+      color: #000;
+    }
     /* Contact Modal: Modern Contact Card */
     .modal-content.contact {
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -118,7 +121,7 @@
     .modal-content.contact .email-btn:hover {
       background: #16a085;
     }
-    /* Close button styling for all modals */
+    /* Common Close button style for other modals (contact modal) */
     .close {
       position: absolute;
       top: 10px;
