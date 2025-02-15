@@ -64,7 +64,7 @@
       width: 300px; /* Fixed width for uniformity */
       text-align: center;
     }
-    /* Hover effect */
+    /* Hover effect for buttons */
     .btn:hover {
       background-color: rgba(255, 140, 0, 1);
       transform: scale(1.1);
@@ -95,26 +95,44 @@
       position: relative;
       animation: slideIn 0.3s;
     }
-    /* QR Code modal image styling */
+    /* Rounded image for QR Code modal */
     .modal-content img {
       max-width: 100%;
       border-radius: 10px;
     }
     /* Contact modal custom styling */
     .modal-content.contact {
-      background: linear-gradient(135deg, #2c3e50, #34495e);
-      color: #ecf0f1;
+      background: linear-gradient(135deg, #3a3f44, #2c2f33);
+      color: #f1f1f1;
       border: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+      width: 300px;
     }
     .modal-content.contact h2 {
-      margin-top: 0;
+      font-size: 24px;
+      margin-bottom: 20px;
     }
+    .modal-content.contact p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    /* Style the email link to appear as a button in the contact modal */
     .modal-content.contact a {
-      color: #1abc9c;
-      text-decoration: underline;
+      background-color: #1abc9c;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
     }
-    /* Close button style */
+    .modal-content.contact a:hover {
+      background-color: #16a085;
+    }
+    /* Close button style for all modals */
     .close {
       color: #aaa;
       position: absolute;
@@ -182,7 +200,7 @@
     </div>
   </div>
 
-  <!-- Modal for Contact Email with Spiced Up Styling -->
+  <!-- Modal for Contact Email with Enhanced Visual Design -->
   <div id="contactModal" class="modal">
     <div class="modal-content contact">
       <span class="close" id="closeContactModal">&times;</span>
@@ -193,16 +211,16 @@
 
   <script>
     // QR Code Modal
-    const modal = document.getElementById("qrModal");
+    const qrModal = document.getElementById("qrModal");
     const qrBtn = document.getElementById("qrBtn");
     const closeModal = document.getElementById("closeModal");
 
     qrBtn.addEventListener("click", function() {
-      modal.style.display = "flex";
+      qrModal.style.display = "flex";
     });
 
     closeModal.addEventListener("click", function() {
-      modal.style.display = "none";
+      qrModal.style.display = "none";
     });
 
     // Contact Modal
@@ -220,8 +238,8 @@
 
     // Hide modals if clicking outside of modal content
     window.addEventListener("click", function(event) {
-      if (event.target === modal) {
-        modal.style.display = "none";
+      if (event.target === qrModal) {
+        qrModal.style.display = "none";
       }
       if (event.target === contactModal) {
         contactModal.style.display = "none";
