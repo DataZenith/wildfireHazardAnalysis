@@ -83,7 +83,7 @@
       justify-content: center;
       animation: fadeIn 0.3s;
     }
-    /* Modal content box */
+    /* Default Modal content box */
     .modal-content {
       background-color: #fff;
       margin: auto;
@@ -95,10 +95,24 @@
       position: relative;
       animation: slideIn 0.3s;
     }
-    /* Rounded image for QR Code */
+    /* QR Code modal image styling */
     .modal-content img {
       max-width: 100%;
       border-radius: 10px;
+    }
+    /* Contact modal custom styling */
+    .modal-content.contact {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: #ecf0f1;
+      border: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .modal-content.contact h2 {
+      margin-top: 0;
+    }
+    .modal-content.contact a {
+      color: #1abc9c;
+      text-decoration: underline;
     }
     /* Close button style */
     .close {
@@ -112,7 +126,7 @@
     }
     .close:hover,
     .close:focus {
-      color: black;
+      color: #fff;
     }
     /* Animations */
     @keyframes fadeIn {
@@ -168,9 +182,9 @@
     </div>
   </div>
 
-  <!-- Modal for Contact Email -->
+  <!-- Modal for Contact Email with Spiced Up Styling -->
   <div id="contactModal" class="modal">
-    <div class="modal-content">
+    <div class="modal-content contact">
       <span class="close" id="closeContactModal">&times;</span>
       <h2>Contact Me</h2>
       <p>Email: <a href="mailto:wildfirehazard1776@gmail.com">wildfirehazard1776@gmail.com</a></p>
