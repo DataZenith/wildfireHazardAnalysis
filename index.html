@@ -78,33 +78,8 @@
       width: 320px;
       padding: 20px;
       text-align: center;
-      animation: slideIn 0.3s ease-out;
-    }
-    /* QR Code Modal */
-    .modal-content.qr {
       background: #fff;
-    }
-    .modal-content.qr img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    /* Contact Modal */
-    .modal-content.contact {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #ecf0f1;
-    }
-    .modal-content.contact .email-btn {
-      display: inline-block;
-      background: #1abc9c;
-      padding: 12px 20px;
-      border-radius: 5px;
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    .modal-content.contact .email-btn:hover {
-      background: #16a085;
+      color: #000;
     }
     .close {
       position: absolute;
@@ -114,9 +89,31 @@
       font-weight: bold;
       cursor: pointer;
     }
-    @keyframes slideIn {
-      from { transform: translateY(-20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    /* Mailing List Form */
+    .modal-content form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .modal-content input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .modal-content input[type="submit"] {
+      background: rgba(255, 69, 0, 0.8);
+      color: #fff;
+      font-size: 16px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .modal-content input[type="submit"]:hover {
+      background: rgba(255, 140, 0, 1);
     }
   </style>
 </head>
@@ -125,8 +122,9 @@
     <h1>🔥 Wildfire Hazard Analysis</h1>
     <p>A critical evaluation of Oregon State's wildfire hazard model.</p>
     <div class="button-container">
-        <a href="https://datazenith.github.io/wildfireHazardAnalysis/Research.html" class="btn" target="_blank">📊 View Wildfire Research</a>
+        <a href="https://datazenith.github.io/wildfireHazardAnalysis/research.html" class="btn" target="_blank">📊 View Wildfire Research</a>
         <a href="https://github.com/DataZenith/wildfireHazardAnalysis" class="btn" target="_blank">🔗 View GitHub Repository</a>
+        <button id="mailingListBtn" class="btn">📩 Join Mailing List</button>
         <button id="qrBtn" class="btn">📱 Show QR Code</button>
         <button id="contactBtn" class="btn">📧 Contact Me</button>
     </div>
@@ -134,7 +132,7 @@
 
 <!-- QR Code Modal -->
 <div id="qrModal" class="modal">
-  <div class="modal-content qr">
+  <div class="modal-content">
     <span class="close" id="closeQr">&times;</span>
     <img src="images/qr_wildfire.PNG" alt="QR Code">
   </div>
@@ -142,16 +140,36 @@
 
 <!-- Contact Modal -->
 <div id="contactModal" class="modal">
-  <div class="modal-content contact">
+  <div class="modal-content">
     <span class="close" id="closeContact">&times;</span>
     <h2>Contact Me</h2>
     <p>Have questions? Reach out!</p>
-    <a href="mailto:wildfirehazard1776@gmail.com" class="email-btn">✉️ wildfirehazard1776@gmail.com</a>
+    <a href="mailto:wildfirehazard1776@gmail.com" class="btn">✉️ wildfirehazard1776@gmail.com</a>
+  </div>
+</div>
+
+<!-- Mailing List Modal -->
+<div id="mailingListModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeMailingList">&times;</span>
+    <h2>Join Our Mailing List</h2>
+    <form action="https://yahoo.us15.list-manage.com/subscribe/post?u=334806ddb64b50e1523112b55&amp;id=f8050916b7&amp;f_id=002e9de1f0" 
+          method="post" target="_blank">
+        <input type="email" name="EMAIL" placeholder="Enter your email" required>
+        <input type="submit" value="Subscribe">
+    </form>
   </div>
 </div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+      const mailingListModal = document.getElementById("mailingListModal");
+      const mailingListBtn = document.getElementById("mailingListBtn");
+      const closeMailingList = document.getElementById("closeMailingList");
+
+      mailingListBtn.addEventListener("click", () => { mailingListModal.style.display = "flex"; });
+      closeMailingList.addEventListener("click", () => { mailingListModal.style.display = "none"; });
+
       const qrModal = document.getElementById("qrModal");
       const qrBtn = document.getElementById("qrBtn");
       const closeQr = document.getElementById("closeQr");
@@ -167,6 +185,7 @@
       closeContact.addEventListener("click", () => { contactModal.style.display = "none"; });
 
       window.addEventListener("click", function (e) {
+          if (e.target === mailingListModal) mailingListModal.style.display = "none";
           if (e.target === qrModal) qrModal.style.display = "none";
           if (e.target === contactModal) contactModal.style.display = "none";
       });
