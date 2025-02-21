@@ -58,12 +58,65 @@
       background-color: rgba(255, 140, 0, 1);
       transform: scale(1.05);
     }
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .btn {
-        width: 90%;
-        max-width: 300px;
-      }
+    /* Modals */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; 
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    .modal-content {
+      position: relative;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      width: 320px;
+      padding: 20px;
+      text-align: center;
+      animation: slideIn 0.3s ease-out;
+    }
+    /* QR Code Modal */
+    .modal-content.qr {
+      background: #fff;
+    }
+    .modal-content.qr img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    /* Contact Modal */
+    .modal-content.contact {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ecf0f1;
+    }
+    .modal-content.contact .email-btn {
+      display: inline-block;
+      background: #1abc9c;
+      padding: 12px 20px;
+      border-radius: 5px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .modal-content.contact .email-btn:hover {
+      background: #16a085;
+    }
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    @keyframes slideIn {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
@@ -72,74 +125,52 @@
     <h1>🔥 Wildfire Hazard Analysis</h1>
     <p>A critical evaluation of Oregon State's wildfire hazard model.</p>
     <div class="button-container">
-        <a href="research.html" class="btn">
-            📊 View Wildfire Research
-        </a>
-
-        <a href="https://github.com/DataZenith/wildfireHazardAnalysis" class="btn" target="_blank">
-            🔗 View GitHub Repository
-        </a>
-
+        <a href="research.html" class="btn">📊 View Wildfire Research</a>
+        <a href="https://github.com/DataZenith/wildfireHazardAnalysis" class="btn" target="_blank">🔗 View GitHub Repository</a>
         <button id="qrBtn" class="btn">📱 Show QR Code</button>
         <button id="contactBtn" class="btn">📧 Contact Me</button>
     </div>
 </div>
 
-  <!-- QR Code Modal -->
-  <div id="qrModal" class="modal">
-    <div class="modal-content qr">
-      <span class="close" id="closeQr">&times;</span>
-      <img src="images/qr_wildfire.PNG" alt="QR Code">
-    </div>
+<!-- QR Code Modal -->
+<div id="qrModal" class="modal">
+  <div class="modal-content qr">
+    <span class="close" id="closeQr">&times;</span>
+    <img src="images/qr_wildfire.PNG" alt="QR Code">
   </div>
+</div>
 
-  <!-- Contact Modal -->
-  <div id="contactModal" class="modal">
-    <div class="modal-content contact">
-      <span class="close" id="closeContact">&times;</span>
-      <h2>Contact Me</h2>
-      <p>Have questions? Reach out!</p>
-      <a href="mailto:wildfirehazard1776@gmail.com" class="email-btn">
-        <span style="margin-right:8px;">✉️</span>
-        wildfirehazard1776@gmail.com
-      </a>
-    </div>
+<!-- Contact Modal -->
+<div id="contactModal" class="modal">
+  <div class="modal-content contact">
+    <span class="close" id="closeContact">&times;</span>
+    <h2>Contact Me</h2>
+    <p>Have questions? Reach out!</p>
+    <a href="mailto:wildfirehazard1776@gmail.com" class="email-btn">✉️ wildfirehazard1776@gmail.com</a>
   </div>
+</div>
 
-  <script>
-    // QR Code Modal Controls
-    const qrModal = document.getElementById("qrModal");
-    const qrBtn = document.getElementById("qrBtn");
-    const closeQr = document.getElementById("closeQr");
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const qrModal = document.getElementById("qrModal");
+      const qrBtn = document.getElementById("qrBtn");
+      const closeQr = document.getElementById("closeQr");
 
-    qrBtn.addEventListener("click", () => {
-      qrModal.style.display = "flex";
-    });
-    closeQr.addEventListener("click", () => {
-      qrModal.style.display = "none";
-    });
+      qrBtn.addEventListener("click", () => { qrModal.style.display = "flex"; });
+      closeQr.addEventListener("click", () => { qrModal.style.display = "none"; });
 
-    // Contact Modal Controls
-    const contactModal = document.getElementById("contactModal");
-    const contactBtn = document.getElementById("contactBtn");
-    const closeContact = document.getElementById("closeContact");
+      const contactModal = document.getElementById("contactModal");
+      const contactBtn = document.getElementById("contactBtn");
+      const closeContact = document.getElementById("closeContact");
 
-    contactBtn.addEventListener("click", () => {
-      contactModal.style.display = "flex";
-    });
-    closeContact.addEventListener("click", () => {
-      contactModal.style.display = "none";
-    });
+      contactBtn.addEventListener("click", () => { contactModal.style.display = "flex"; });
+      closeContact.addEventListener("click", () => { contactModal.style.display = "none"; });
 
-    // Close modals when clicking outside modal content
-    window.addEventListener("click", function(e) {
-      if (e.target === qrModal) {
-        qrModal.style.display = "none";
-      }
-      if (e.target === contactModal) {
-        contactModal.style.display = "none";
-      }
-    });
-  </script>
+      window.addEventListener("click", function (e) {
+          if (e.target === qrModal) qrModal.style.display = "none";
+          if (e.target === contactModal) contactModal.style.display = "none";
+      });
+  });
+</script>
 </body>
 </html>
