@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wildfire Research</title>
+  <style>
+    /* Global Reset & Background */
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('images/burn-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      overflow: hidden;
+    }
+    /* Container for main content */
+    .content {
+      text-align: center;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    p {
+      margin-top: 0;
+    }
+    /* Vertical button container */
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .btn {
+      width: 300px;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background-color: rgba(255, 69, 0, 0.8);
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+      text-decoration: none;
+      text-align: center;
+    }
+    .btn:hover {
+      background-color: rgba(255, 140, 0, 1);
+      transform: scale(1.05);
+    }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .btn {
+        width: 90%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="content">
+    <h1>🔥 Wildfire Research</h1>
+    <p>Explore our wildfire hazard research and analysis.</p>
+    <div class="button-container">
+        <a href="https://rpubs.com/ThinkAI/orwildfirehazard25abstract" class="btn" target="_blank">
+            📜 Read Abstract: Under Fire – Rethinking Wildfire Predictions
+        </a>
+
+        <a href="https://rpubs.com/ThinkAI/Orwildfirehazard25" class="btn" target="_blank">
+            📖 Read Full Paper: Under Fire – Rethinking Wildfire Predictions
+        </a>
+
+        <a href="https://raw.githubusercontent.com/DataZenith/wildfireHazardAnalysis/main/wildfire_mapping_challenge.pdf" download class="btn">
+            ⚖️ Download Wildfire Mapping: Legal & Analytical Challenges (PDF)
+        </a>
+    </div>
+</div>
+</body>
+</html>
