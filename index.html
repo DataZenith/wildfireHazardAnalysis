@@ -13,6 +13,7 @@
       background: url('images/burn-bg.jpg') no-repeat center center fixed;
       background-size: cover;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       color: #fff;
@@ -25,6 +26,7 @@
       background: rgba(0, 0, 0, 0.4);
       padding: 20px;
       border-radius: 10px;
+      margin-bottom: 20px;
     }
     h1 {
       margin-bottom: 10px;
@@ -58,51 +60,34 @@
       background-color: rgba(255, 140, 0, 1);
       transform: scale(1.05);
     }
-    /* Modals */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0; 
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
-      align-items: center;
-      justify-content: center;
-      z-index: 2;
-    }
-    .modal-content {
-      position: relative;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-      width: 320px;
-      padding: 20px;
+    /* Mailchimp Signup Form */
+    .signup-container {
       text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+    }
+    #mc_embed_signup {
       background: #fff;
-      color: #000;
+      font: 14px Helvetica, Arial, sans-serif;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      margin: auto;
     }
-    .close {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
+    .mc-field-group {
+      margin-bottom: 10px;
     }
-    /* Mailing List Form */
-    .modal-content form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .modal-content input[type="email"] {
+    input[type="email"] {
       width: 100%;
       padding: 10px;
       font-size: 16px;
       border: 1px solid #ccc;
       border-radius: 5px;
     }
-    .modal-content input[type="submit"] {
+    input[type="submit"] {
       background: rgba(255, 69, 0, 0.8);
       color: #fff;
       font-size: 16px;
@@ -112,7 +97,7 @@
       cursor: pointer;
       transition: background 0.3s;
     }
-    .modal-content input[type="submit"]:hover {
+    input[type="submit"]:hover {
       background: rgba(255, 140, 0, 1);
     }
   </style>
@@ -124,9 +109,28 @@
     <div class="button-container">
         <a href="https://datazenith.github.io/wildfireHazardAnalysis/Research.html" class="btn" target="_blank">📊 View Wildfire Research</a>
         <a href="https://github.com/DataZenith/wildfireHazardAnalysis" class="btn" target="_blank">🔗 View GitHub Repository</a>
-        <button id="mailingListBtn" class="btn">📩 Join Mailing List</button>
         <button id="qrBtn" class="btn">📱 Show QR Code</button>
         <button id="contactBtn" class="btn">📧 Contact Me</button>
+    </div>
+</div>
+
+<!-- Embed Mailchimp Signup Form Below -->
+<div class="signup-container">
+    <h2>📩 Join Our Mailing List</h2>
+    <p>Stay updated with the latest research and insights.</p>
+    <div id="mc_embed_signup">
+        <form action="https://yahoo.us15.list-manage.com/subscribe/post?u=334806ddb64b50e1523112b55&amp;id=f8050916b7&amp;f_id=002c9de1f0" 
+              method="post" target="_blank" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
+            <div id="mc_embed_signup_scroll">
+                <div class="mc-field-group">
+                    <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                    <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                </div>
+                <div class="clear">
+                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" value="Subscribe">
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 
@@ -148,28 +152,8 @@
   </div>
 </div>
 
-<!-- Mailing List Modal -->
-<div id="mailingListModal" class="modal">
-  <div class="modal-content">
-    <span class="close" id="closeMailingList">&times;</span>
-    <h2>Join Our Mailing List</h2>
-    <form action="https://yahoo.us15.list-manage.com/subscribe/post?u=334806ddb64b50e1523112b55&amp;id=f8050916b7&amp;f_id=002e9de1f0" 
-          method="post" target="_blank">
-        <input type="email" name="EMAIL" placeholder="Enter your email" required>
-        <input type="submit" value="Subscribe">
-    </form>
-  </div>
-</div>
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-      const mailingListModal = document.getElementById("mailingListModal");
-      const mailingListBtn = document.getElementById("mailingListBtn");
-      const closeMailingList = document.getElementById("closeMailingList");
-
-      mailingListBtn.addEventListener("click", () => { mailingListModal.style.display = "flex"; });
-      closeMailingList.addEventListener("click", () => { mailingListModal.style.display = "none"; });
-
       const qrModal = document.getElementById("qrModal");
       const qrBtn = document.getElementById("qrBtn");
       const closeQr = document.getElementById("closeQr");
@@ -185,11 +169,22 @@
       closeContact.addEventListener("click", () => { contactModal.style.display = "none"; });
 
       window.addEventListener("click", function (e) {
-          if (e.target === mailingListModal) mailingListModal.style.display = "none";
           if (e.target === qrModal) qrModal.style.display = "none";
           if (e.target === contactModal) contactModal.style.display = "none";
       });
   });
 </script>
+
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+<script type="text/javascript">
+    (function($) {
+        window.fnames = new Array();
+        window.ftypes = new Array();
+        fnames[0]='EMAIL';
+        ftypes[0]='email';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);
+</script>
+
 </body>
 </html>
