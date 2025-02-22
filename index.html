@@ -182,7 +182,7 @@
       window[callbackName] = function(response) {
         if (response.result === "success") {
           document.getElementById("mc-response").style.color = "green";
-          document.getElementById("mc-response").innerText = "Thank you for subscribing! Check your email to confirm.";
+          document.getElementById("mc-response").innerText = "Thank you for subscribing!";
         } else {
           document.getElementById("mc-response").style.color = "red";
           document.getElementById("mc-response").innerText = "Subscription failed: " + response.msg;
