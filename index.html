@@ -177,22 +177,21 @@
       var url = form.action;
       var data = new FormData(form);
       var params = new URLSearchParams(data).toString();
-      fetch(url + '&' + params, {
-        method: 'GET',
-        mode: 'cors'
-      }).then(response => response.json())
-      .then(data => {
-        if (data.result === "success") {
+      
+      var script = document.createElement("script");
+      script.src = url + '&' + params + '&c=mcCallback';
+      document.body.appendChild(script);
+      
+      window.mcCallback = function(response) {
+        if (response.result === "success") {
           document.getElementById("mc-response").style.color = "green";
           document.getElementById("mc-response").innerText = "Thank you for subscribing! Check your email to confirm.";
         } else {
           document.getElementById("mc-response").style.color = "red";
-          document.getElementById("mc-response").innerText = "Subscription failed: " + data.msg;
+          document.getElementById("mc-response").innerText = "Subscription failed: " + response.msg;
         }
-      }).catch(error => {
-        document.getElementById("mc-response").style.color = "red";
-        document.getElementById("mc-response").innerText = "There was an error. Please try again.";
-      });
+        document.body.removeChild(script);
+      };
     });
   </script>
 </body>
