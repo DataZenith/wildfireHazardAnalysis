@@ -104,6 +104,19 @@
     </div>
   </div>
 
+  <!-- Mailing List Modal -->
+  <div id="subscribeModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeSubscribe">&times;</span>
+      <h2>Wildfire Mailing List</h2>
+      <form action="https://yahoo.us15.list-manage.com/subscribe/post?u=334806ddb64b50e1523112b55&amp;id=f8050916b7&amp;f_id=002c9de1f0" method="post" target="_blank">
+        <label for="mce-EMAIL">Email Address</label>
+        <input type="email" name="EMAIL" required>
+        <input type="submit" value="Subscribe" class="btn">
+      </form>
+    </div>
+  </div>
+
   <!-- QR Code Modal -->
   <div id="qrModal" class="modal">
     <div class="modal-content">
@@ -123,29 +136,23 @@
   </div>
 
   <script>
-    document.getElementById("subscribeBtn").addEventListener("click", function() {
-        document.getElementById("subscribeModal").style.display = "flex";
-    });
-    document.getElementById("closeSubscribe").addEventListener("click", function() {
-        document.getElementById("subscribeModal").style.display = "none";
-    });
-    document.getElementById("qrBtn").addEventListener("click", function() {
-        document.getElementById("qrModal").style.display = "flex";
-    });
-    document.getElementById("closeQr").addEventListener("click", function() {
-        document.getElementById("qrModal").style.display = "none";
-    });
-    document.getElementById("contactBtn").addEventListener("click", function() {
-        document.getElementById("contactModal").style.display = "flex";
-    });
-    document.getElementById("closeContact").addEventListener("click", function() {
-        document.getElementById("contactModal").style.display = "none";
-    });
-    window.addEventListener("click", function(e) {
-        if (e.target.classList.contains("modal")) {
-            e.target.style.display = "none";
+    function setupModal(buttonId, modalId, closeId) {
+      document.getElementById(buttonId).addEventListener("click", function() {
+        document.getElementById(modalId).style.display = "flex";
+      });
+      document.getElementById(closeId).addEventListener("click", function() {
+        document.getElementById(modalId).style.display = "none";
+      });
+      window.addEventListener("click", function(e) {
+        if (e.target === document.getElementById(modalId)) {
+          document.getElementById(modalId).style.display = "none";
         }
-    });
+      });
+    }
+    
+    setupModal("subscribeBtn", "subscribeModal", "closeSubscribe");
+    setupModal("qrBtn", "qrModal", "closeQr");
+    setupModal("contactBtn", "contactModal", "closeContact");
   </script>
 </body>
 </html>
