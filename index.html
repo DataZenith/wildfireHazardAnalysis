@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wildfire Hazard Analysis</title>
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
   <style>
     /* Global Reset & Background */
     html, body {
@@ -19,7 +20,6 @@
       color: #fff;
       overflow: hidden;
     }
-    /* Container for main content */
     .content {
       text-align: center;
       z-index: 1;
@@ -28,13 +28,8 @@
       border-radius: 10px;
       margin-bottom: 20px;
     }
-    h1 {
-      margin-bottom: 10px;
-    }
-    p {
-      margin-top: 0;
-    }
-    /* Vertical button container */
+    h1 { margin-bottom: 10px; }
+    p { margin-top: 0; }
     .button-container {
       display: flex;
       flex-direction: column;
@@ -60,142 +55,62 @@
       background-color: rgba(255, 140, 0, 1);
       transform: scale(1.05);
     }
-    /* Modals - Hidden by default */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0; 
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
-      align-items: center;
-      justify-content: center;
-      z-index: 2;
-    }
-    .modal-content {
-      position: relative;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-      width: 320px;
+    /* Mailchimp Form Styling */
+    #mc_embed_signup {
+      background: #fff;
       padding: 20px;
-      text-align: center;
-      background: #fff;
-      color: #000;
-    }
-    /* QR Code Modal */
-    .modal-content.qr {
-      background: #fff;
-    }
-    /* Contact Modal - Styled with a modern look */
-    .modal-content.contact {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #ecf0f1;
-    }
-    .modal-content.contact h2 {
-      margin-top: 0;
-      font-size: 24px;
-    }
-    .modal-content.contact p {
-      font-size: 18px;
-      margin: 20px 0;
-    }
-    /* Email button inside Contact Modal */
-    .modal-content.contact .email-btn {
-      display: inline-block;
-      background: #1abc9c;
-      padding: 12px 20px;
-      border-radius: 5px;
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    .modal-content.contact .email-btn:hover {
-      background: #16a085;
-    }
-    /* Close button */
-    .close {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-    .close:hover {
-      color: #ccc;
-    }
-    .modal-content.qr img {
-      width: 80%;  /* Ensures the QR code scales down */
-      max-width: 250px; /* Prevents it from becoming too large */
       border-radius: 10px;
+      width: 100%;
+      max-width: 600px;
+      color: #000;
+      margin-top: 20px;
     }
-
   </style>
 </head>
 <body>
-<div class="content">
+  <div class="content">
     <h1>🔥 Wildfire Hazard Analysis</h1>
     <p>A critical evaluation of Oregon State's wildfire hazard model.</p>
     <div class="button-container">
         <a href="https://datazenith.github.io/wildfireHazardAnalysis/Research.html" class="btn" target="_blank">📊 View Wildfire Research</a>
         <a href="https://github.com/DataZenith/wildfireHazardAnalysis" class="btn" target="_blank">🔗 View GitHub Repository</a>
-        <button id="qrBtn" class="btn">📱 Show QR Code</button>
-        <button id="contactBtn" class="btn">📧 Contact Me</button>
     </div>
-</div>
-
-<!-- QR Code Modal (Hidden by Default) -->
-<div id="qrModal" class="modal">
-  <div class="modal-content qr">
-    <span class="close" id="closeQr">&times;</span>
-    <img src="images/qr_wildfire.PNG" alt="QR Code">
+    
+    <!-- Mailchimp Signup Form -->
+    <div id="mc_embed_shell">
+      <div id="mc_embed_signup">
+          <form action="https://yahoo.us15.list-manage.com/subscribe/post?u=334806ddb64b50e1523112b55&amp;id=f8050916b7&amp;f_id=002c9de1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+              <div id="mc_embed_signup_scroll">
+                  <h2>Wildfire Mailing List</h2>
+                  <div class="mc-field-group">
+                      <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                      <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="">
+                  </div>
+                  <div id="mce-responses" class="clear">
+                      <div class="response" id="mce-error-response" style="display: none;"></div>
+                      <div class="response" id="mce-success-response" style="display: none;"></div>
+                  </div>
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                      <input type="text" name="b_334806ddb64b50e1523112b55_f8050916b7" tabindex="-1" value="">
+                  </div>
+                  <div class="clear">
+                      <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                  </div>
+              </div>
+          </form>
+      </div>
+    </div>
   </div>
-</div>
 
-<!-- Contact Modal (Hidden by Default, Modern Styled) -->
-<div id="contactModal" class="modal">
-  <div class="modal-content contact">
-    <span class="close" id="closeContact">&times;</span>
-    <h2>Contact Me</h2>
-    <p>Have questions? Reach out!</p>
-    <a href="mailto:wildfirehazard1776@gmail.com" class="email-btn">
-      ✉️ wildfirehazard1776@gmail.com
-    </a>
-  </div>
-</div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-      // QR Code Modal
-      document.getElementById("qrBtn").addEventListener("click", () => {
-          document.getElementById("qrModal").style.display = "flex";
-      });
-      document.getElementById("closeQr").addEventListener("click", () => {
-          document.getElementById("qrModal").style.display = "none";
-      });
-
-      // Contact Modal
-      document.getElementById("contactBtn").addEventListener("click", () => {
-          document.getElementById("contactModal").style.display = "flex";
-      });
-      document.getElementById("closeContact").addEventListener("click", () => {
-          document.getElementById("contactModal").style.display = "none";
-      });
-
-      // Close modals when clicking outside modal content
-      window.addEventListener("click", function (e) {
-          if (e.target === document.getElementById("qrModal")) {
-              document.getElementById("qrModal").style.display = "none";
-          }
-          if (e.target === document.getElementById("contactModal")) {
-              document.getElementById("contactModal").style.display = "none";
-          }
-      });
-  });
-</script>
-
+  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+  <script type="text/javascript">
+    (function($) {
+      window.fnames = new Array(); 
+      window.ftypes = new Array();
+      fnames[0] = 'EMAIL';
+      ftypes[0] = 'email';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);
+  </script>
 </body>
 </html>
