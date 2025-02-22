@@ -170,5 +170,30 @@
     setupModal("qrBtn", "qrModal", "closeQr");
     setupModal("contactBtn", "contactModal", "closeContact");
   </script>
+<script>
+    document.getElementById("mc-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var form = this;
+      var url = form.action;
+      var data = new FormData(form);
+      var params = new URLSearchParams(data).toString();
+      fetch(url + '&' + params, {
+        method: 'GET',
+        mode: 'cors'
+      }).then(response => response.json())
+      .then(data => {
+        if (data.result === "success") {
+          document.getElementById("mc-response").style.color = "green";
+          document.getElementById("mc-response").innerText = "Thank you for subscribing! Check your email to confirm.";
+        } else {
+          document.getElementById("mc-response").style.color = "red";
+          document.getElementById("mc-response").innerText = "Subscription failed: " + data.msg;
+        }
+      }).catch(error => {
+        document.getElementById("mc-response").style.color = "red";
+        document.getElementById("mc-response").innerText = "There was an error. Please try again.";
+      });
+    });
+  </script>
 </body>
 </html>
