@@ -56,14 +56,39 @@
       transform: scale(1.05);
     }
     /* Mailchimp Form Styling */
-    #mc_embed_signup {
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    .modal-content {
       background: #fff;
       padding: 20px;
       border-radius: 10px;
       width: 100%;
       max-width: 600px;
       color: #000;
-      margin-top: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .close:hover {
+      color: #ccc;
     }
   </style>
 </head>
@@ -74,43 +99,41 @@
     <div class="button-container">
         <a href="https://datazenith.github.io/wildfireHazardAnalysis/Research.html" class="btn" target="_blank">📊 View Wildfire Research</a>
         <a href="https://github.com/DataZenith/wildfireHazardAnalysis" class="btn" target="_blank">🔗 View GitHub Repository</a>
+        <button id="subscribeBtn" class="btn">📩 Join Mailing List</button>
     </div>
-    
-    <!-- Mailchimp Signup Form -->
-    <div id="mc_embed_shell">
+  </div>
+
+  <!-- Mailchimp Signup Form Modal -->
+  <div id="subscribeModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeSubscribe">&times;</span>
       <div id="mc_embed_signup">
           <form action="https://yahoo.us15.list-manage.com/subscribe/post?u=334806ddb64b50e1523112b55&amp;id=f8050916b7&amp;f_id=002c9de1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-              <div id="mc_embed_signup_scroll">
-                  <h2>Wildfire Mailing List</h2>
-                  <div class="mc-field-group">
-                      <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
-                      <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="">
-                  </div>
-                  <div id="mce-responses" class="clear">
-                      <div class="response" id="mce-error-response" style="display: none;"></div>
-                      <div class="response" id="mce-success-response" style="display: none;"></div>
-                  </div>
-                  <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                      <input type="text" name="b_334806ddb64b50e1523112b55_f8050916b7" tabindex="-1" value="">
-                  </div>
-                  <div class="clear">
-                      <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                  </div>
+              <h2>Wildfire Mailing List</h2>
+              <div class="mc-field-group">
+                  <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                  <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="">
+              </div>
+              <div class="clear">
+                  <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
               </div>
           </form>
       </div>
     </div>
   </div>
 
-  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-  <script type="text/javascript">
-    (function($) {
-      window.fnames = new Array(); 
-      window.ftypes = new Array();
-      fnames[0] = 'EMAIL';
-      ftypes[0] = 'email';
-    }(jQuery));
-    var $mcj = jQuery.noConflict(true);
+  <script>
+    document.getElementById("subscribeBtn").addEventListener("click", function() {
+        document.getElementById("subscribeModal").style.display = "flex";
+    });
+    document.getElementById("closeSubscribe").addEventListener("click", function() {
+        document.getElementById("subscribeModal").style.display = "none";
+    });
+    window.addEventListener("click", function(e) {
+        if (e.target === document.getElementById("subscribeModal")) {
+            document.getElementById("subscribeModal").style.display = "none";
+        }
+    });
   </script>
 </body>
 </html>
