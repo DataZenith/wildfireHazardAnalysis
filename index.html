@@ -76,6 +76,11 @@
       color: #000;
       text-align: center;
       box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      position: relative;
+    }
+    .modal-content.contact {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ecf0f1;
     }
     .close {
       position: absolute;
@@ -104,19 +109,6 @@
     </div>
   </div>
 
-  <!-- Mailing List Modal -->
-  <div id="subscribeModal" class="modal">
-    <div class="modal-content">
-      <span class="close" id="closeSubscribe">&times;</span>
-      <h2>Wildfire Mailing List</h2>
-      <form action="https://yahoo.us15.list-manage.com/subscribe/post?u=334806ddb64b50e1523112b55&amp;id=f8050916b7&amp;f_id=002c9de1f0" method="post" target="_blank">
-        <label for="mce-EMAIL">Email Address</label>
-        <input type="email" name="EMAIL" required>
-        <input type="submit" value="Subscribe" class="btn">
-      </form>
-    </div>
-  </div>
-
   <!-- QR Code Modal -->
   <div id="qrModal" class="modal">
     <div class="modal-content">
@@ -127,7 +119,7 @@
 
   <!-- Contact Modal -->
   <div id="contactModal" class="modal">
-    <div class="modal-content">
+    <div class="modal-content contact">
       <span class="close" id="closeContact">&times;</span>
       <h2>Contact Me</h2>
       <p>Have questions? Reach out!</p>
@@ -144,12 +136,11 @@
         document.getElementById(modalId).style.display = "none";
       });
       window.addEventListener("click", function(e) {
-        if (e.target === document.getElementById(modalId)) {
-          document.getElementById(modalId).style.display = "none";
+        if (e.target.classList.contains("modal")) {
+          e.target.style.display = "none";
         }
       });
     }
-    
     setupModal("subscribeBtn", "subscribeModal", "closeSubscribe");
     setupModal("qrBtn", "qrModal", "closeQr");
     setupModal("contactBtn", "contactModal", "closeContact");
