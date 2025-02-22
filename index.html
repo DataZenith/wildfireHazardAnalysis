@@ -55,7 +55,6 @@
       background-color: rgba(255, 140, 0, 1);
       transform: scale(1.05);
     }
-    /* Mailchimp Form Styling */
     .modal {
       display: none;
       position: fixed;
@@ -100,25 +99,26 @@
         <a href="https://datazenith.github.io/wildfireHazardAnalysis/Research.html" class="btn" target="_blank">📊 View Wildfire Research</a>
         <a href="https://github.com/DataZenith/wildfireHazardAnalysis" class="btn" target="_blank">🔗 View GitHub Repository</a>
         <button id="subscribeBtn" class="btn">📩 Join Mailing List</button>
+        <button id="qrBtn" class="btn">📱 Show QR Code</button>
+        <button id="contactBtn" class="btn">📧 Contact Me</button>
     </div>
   </div>
 
-  <!-- Mailchimp Signup Form Modal -->
-  <div id="subscribeModal" class="modal">
+  <!-- QR Code Modal -->
+  <div id="qrModal" class="modal">
     <div class="modal-content">
-      <span class="close" id="closeSubscribe">&times;</span>
-      <div id="mc_embed_signup">
-          <form action="https://yahoo.us15.list-manage.com/subscribe/post?u=334806ddb64b50e1523112b55&amp;id=f8050916b7&amp;f_id=002c9de1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-              <h2>Wildfire Mailing List</h2>
-              <div class="mc-field-group">
-                  <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
-                  <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="">
-              </div>
-              <div class="clear">
-                  <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-              </div>
-          </form>
-      </div>
+      <span class="close" id="closeQr">&times;</span>
+      <img src="images/qr_wildfire.PNG" alt="QR Code">
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeContact">&times;</span>
+      <h2>Contact Me</h2>
+      <p>Have questions? Reach out!</p>
+      <a href="mailto:wildfirehazard1776@gmail.com" class="btn">✉️ wildfirehazard1776@gmail.com</a>
     </div>
   </div>
 
@@ -129,9 +129,21 @@
     document.getElementById("closeSubscribe").addEventListener("click", function() {
         document.getElementById("subscribeModal").style.display = "none";
     });
+    document.getElementById("qrBtn").addEventListener("click", function() {
+        document.getElementById("qrModal").style.display = "flex";
+    });
+    document.getElementById("closeQr").addEventListener("click", function() {
+        document.getElementById("qrModal").style.display = "none";
+    });
+    document.getElementById("contactBtn").addEventListener("click", function() {
+        document.getElementById("contactModal").style.display = "flex";
+    });
+    document.getElementById("closeContact").addEventListener("click", function() {
+        document.getElementById("contactModal").style.display = "none";
+    });
     window.addEventListener("click", function(e) {
-        if (e.target === document.getElementById("subscribeModal")) {
-            document.getElementById("subscribeModal").style.display = "none";
+        if (e.target.classList.contains("modal")) {
+            e.target.style.display = "none";
         }
     });
   </script>
