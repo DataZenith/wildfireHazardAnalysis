@@ -178,11 +178,8 @@
       var data = new FormData(form);
       var params = new URLSearchParams(data).toString();
       
-      var script = document.createElement("script");
-      script.src = url + '&' + params + '&c=mcCallback';
-      document.body.appendChild(script);
-      
-      window.mcCallback = function(response) {
+      var callbackName = "mcCallback" + new Date().getTime();
+      window[callbackName] = function(response) {
         if (response.result === "success") {
           document.getElementById("mc-response").style.color = "green";
           document.getElementById("mc-response").innerText = "Thank you for subscribing! Check your email to confirm.";
@@ -191,7 +188,12 @@
           document.getElementById("mc-response").innerText = "Subscription failed: " + response.msg;
         }
         document.body.removeChild(script);
+        delete window[callbackName];
       };
+      
+      var script = document.createElement("script");
+      script.src = url + '&' + params + '&c=' + callbackName;
+      document.body.appendChild(script);
     });
   </script>
 </body>
