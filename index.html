@@ -123,6 +123,8 @@
         <div class="mc-field-group">
           <label for="mce-EMAIL">Email Address</label>
           <input type="email" name="EMAIL" required>
+        </div>
+        <div class="mc-field-group">
           <input type="submit" value="Subscribe" class="btn">
         </div>
       </form>
@@ -146,5 +148,24 @@
       <a href="mailto:wildfirehazard1776@gmail.com" class="btn">✉️ wildfirehazard1776@gmail.com</a>
     </div>
   </div>
+
+  <script>
+    function setupModal(buttonId, modalId, closeId) {
+      document.getElementById(buttonId).addEventListener("click", function() {
+        document.getElementById(modalId).style.display = "flex";
+      });
+      document.getElementById(closeId).addEventListener("click", function() {
+        document.getElementById(modalId).style.display = "none";
+      });
+      window.addEventListener("click", function(e) {
+        if (e.target.classList.contains("modal")) {
+          e.target.style.display = "none";
+        }
+      });
+    }
+    setupModal("subscribeBtn", "subscribeModal", "closeSubscribe");
+    setupModal("qrBtn", "qrModal", "closeQr");
+    setupModal("contactBtn", "contactModal", "closeContact");
+  </script>
 </body>
 </html>
