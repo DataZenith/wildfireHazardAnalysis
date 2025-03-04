@@ -6,6 +6,28 @@
   <title>Wildfire Hazard Analysis</title>
   <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
   <style>
+    /* Header Bar */
+    .header-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      z-index: 3;
+    }
+    .home-button {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .home-button:hover {
+      text-decoration: underline;
+    }
+
     /* Global Reset & Background */
     html, body {
       height: 100%;
@@ -26,6 +48,7 @@
       background: rgba(0, 0, 0, 0.4);
       padding: 20px;
       border-radius: 10px;
+      margin-top: 70px; /* Added margin to avoid header overlap */
       margin-bottom: 20px;
     }
     h1 { margin-bottom: 10px; }
@@ -104,15 +127,20 @@
   </style>
 </head>
 <body>
+  <!-- Header Bar -->
+  <header class="header-bar">
+    <a href="index.html" class="home-button">🔥 Home</a>
+  </header>
+
   <div class="content">
     <h1>🔥 Wildfire Hazard Analysis</h1>
     <p>A critical evaluation of Oregon State's wildfire hazard model.</p>
     <div class="button-container">
-        <a href="https://datazenith.github.io/wildfireHazardAnalysis/Research.html" class="btn" target="_blank">📊 View Wildfire Research</a>
-        <a href="https://github.com/DataZenith/wildfireHazardAnalysis" class="btn" target="_blank">🔗 View GitHub Repository</a>
-        <button id="subscribeBtn" class="btn">📩 Join Mailing List</button>
-        <button id="qrBtn" class="btn">📱 Show QR Code</button>
-        <button id="contactBtn" class="btn">📧 Contact Me</button>
+      <a href="https://datazenith.github.io/wildfireHazardAnalysis/Research.html" class="btn" target="_blank">📊 View Wildfire Research</a>
+      <a href="https://github.com/DataZenith/wildfireHazardAnalysis" class="btn" target="_blank">🔗 View GitHub Repository</a>
+      <button id="subscribeBtn" class="btn">📩 Join Mailing List</button>
+      <button id="qrBtn" class="btn">📱 Show QR Code</button>
+      <button id="contactBtn" class="btn">📧 Contact Me</button>
     </div>
   </div>
 
@@ -169,8 +197,7 @@
     setupModal("subscribeBtn", "subscribeModal", "closeSubscribe");
     setupModal("qrBtn", "qrModal", "closeQr");
     setupModal("contactBtn", "contactModal", "closeContact");
-  </script>
-<script>
+
     document.getElementById("mc-form").addEventListener("submit", function(event) {
       event.preventDefault();
       var form = this;
