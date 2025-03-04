@@ -13,11 +13,35 @@
       background: url('images/burn-bg.jpg') no-repeat center center fixed;
       background-size: cover;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       color: #fff;
       overflow: hidden;
     }
+
+    /* Header Bar */
+    .header-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      z-index: 3;
+    }
+    .home-button {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .home-button:hover {
+      text-decoration: underline;
+    }
+
     /* Container for main content */
     .content {
       text-align: center;
@@ -25,13 +49,16 @@
       background: rgba(0, 0, 0, 0.4);
       padding: 20px;
       border-radius: 10px;
+      margin-top: 70px; /* Prevents overlap with header */
     }
+    
     h1 {
       margin-bottom: 10px;
     }
     p {
       margin-top: 0;
     }
+
     /* Vertical button container */
     .button-container {
       display: flex;
@@ -58,6 +85,7 @@
       background-color: rgba(255, 140, 0, 1);
       transform: scale(1.05);
     }
+
     /* Responsive adjustments */
     @media (max-width: 768px) {
       .btn {
@@ -68,7 +96,13 @@
   </style>
 </head>
 <body>
-<div class="content">
+
+  <!-- Header Bar -->
+  <header class="header-bar">
+    <a href="index.html" class="home-button">🔥 Home</a>
+  </header>
+
+  <div class="content">
     <h1>🔥 Wildfire Research</h1>
     <p>Explore our wildfire hazard research and analysis.</p>
     <div class="button-container">
@@ -84,6 +118,7 @@
             ⚖️ Download Wildfire Mapping: Legal & Analytical Challenges (PDF)
         </a>
     </div>
-</div>
+  </div>
+
 </body>
 </html>
