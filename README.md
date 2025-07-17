@@ -60,4 +60,12 @@ The code in this repository is organized to support reproducibility and transpar
   Download QGIS from [qgis.org](https://qgis.org/en/site/).
 
 
+## 📢 Usage Notice
+
+© 2025 DataZenith LLC. All Rights Reserved.  
+This research is the sole intellectual property of Jeremy Kauwe / DataZenith.  
+It may not be used, cited, copied, or referenced in any legal filings, appeals, political campaigns, public presentations, or derivative works without **written permission**.  
+Unauthorized use constitutes a violation of intellectual property rights.
+
+If you believe this work has been misused, please contact jeremy@datazenith.io.
 
